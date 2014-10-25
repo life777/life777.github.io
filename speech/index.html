@@ -12,6 +12,15 @@
 			left: 50%;
 		}
 
+		.slide.cover {
+		    -webkit-touch-callout: none;
+		    -webkit-user-select: none;
+		    -khtml-user-select: none;
+		    -moz-user-select: none;
+		    -ms-user-select: none;
+		    user-select: none;
+		}
+
 		#face h2 {
 			margin: -39px -44px 0 0;
 			color: #333;
@@ -284,7 +293,7 @@
 		<div>
 			<h2>Части</h2>
 			<ol>
-				<li class="next">Расспознавание речи</li>
+				<li class="next">Распознавание речи</li>
 				<li class="next">Грамматика</li>
 				<li class="next">Синтез речи</li>
 			</ol>
@@ -292,14 +301,14 @@
 	</section>
 	<section class="slide cover" id="recgnition">
 		<div>
-			<h2>Расспознавание речи</h2>
+			<h2>Распознавание речи</h2>
 			<img src="pictures/speech15.jpg" alt="">
 		</div>
 	</section>
 
 	<section class="slide">
 		<div>
-		<h2>Расспознавание речи</h2>
+		<h2>Распознавание речи</h2>
 			<pre>
 				<code>var recognition = new webkitSpeechRecognition();</code>
 
@@ -315,7 +324,7 @@
 	</section>
 	<section class="slide">
 		<div>
-		<h2>Расспознавание речи</h2>
+		<h2>Распознавание речи</h2>
 			<pre>
 				<code><mark>var recognition = new webkitSpeechRecognition();</mark></code>
 				
@@ -332,7 +341,7 @@
 	</section>
 	<section class="slide">
 		<div>
-		<h2>Расспознавание речи</h2>
+		<h2>Распознавание речи</h2>
 			<pre>
 				<code>var recognition = new webkitSpeechRecognition();</code>
 				
@@ -349,7 +358,7 @@
 	</section>
 	<section class="slide">
 		<div>
-		<h2>Расспознавание речи</h2>
+		<h2>Распознавание речи</h2>
 			<pre>
 				<code>var recognition = new webkitSpeechRecognition();</code>
 				
@@ -433,11 +442,9 @@
 		</div>
 	</section>
 	<section class="slide cover">
-		<div>
-			<video id="v" controls preload="metadata" width="900px" height="650px">
-				<source src="pictures/video1.mp4" type="video/mp4">
-			</video>
-		</div>
+		<video id="v" controls preload="metadata" width="900px" height="600px">
+			<source src="pictures/video1.mp4" type="video/mp4" >
+		</video>
 	</section>
 	<section class="slide cover h">
 		<div>
@@ -861,14 +868,26 @@
 			<img class="place" src="pictures/speech28.png" />
 		</div>
 	</section>
-	<!-- <section class="slide">
+	<section class="slide cover">
 		<div>
-			<h2>JuliusJS</h2>
-			<div>
-				<a href="http://zzmp.github.io/juliusjs/">Демо</a>
-			</div>
+			<img src="pictures/speech40.png" />
 		</div>
-	</section> -->
+	</section>
+	<section class="slide cover">
+		<div>
+			<img src="pictures/speech41.png" />
+		</div>
+	</section>
+	<section class="slide cover">
+		<div>
+			<img src="pictures/speech40.png" />
+		</div>
+	</section>
+	<section class="slide shout">
+		<div>
+			<h2>Готово!</h2>
+		</div>
+	</section>
 	<section class="slide shout">
 		<div>
 			<h2>Применение</h2>
@@ -1006,7 +1025,7 @@
 	button.addEventListener('click', function(e) {
 		var msg = new SpeechSynthesisUtterance(), voi;
 
-		msg.text = "1 2 3, We don't need no education";
+		msg.text = "1 2 3, We don't need no education!";
 		
 
 		if (voiceSelect.value) {
@@ -1197,7 +1216,7 @@ recognition.start();
 						prev = true;
 					}, 2000);
 				}
-				if (hyp.indexOf("videoOn") > -1){
+				if (hyp.indexOf("videoOn") > -1 && shower.getCurrentSlideNumber() === 38){
 					prev = false;
 					elem.play();
 					stopRecording();
@@ -1207,9 +1226,19 @@ recognition.start();
 						prev = true;
 					}, 2000);
 				}
-				if (hyp.indexOf("videoOff") > -1){
+				if (hyp.indexOf("videoOff") > -1 && shower.getCurrentSlideNumber() === 38){
 					prev = false;
 					elem.pause();
+					stopRecording();
+					startRecording();
+					outputContainer.innerHTML = "";
+					setTimeout(function(){
+						prev = true;
+					}, 2000);
+				}
+				if (hyp.indexOf("Valera") > -1 && shower.getCurrentSlideNumber() >= 85 && shower.getCurrentSlideNumber() <= 87){
+					prev = false;
+					shower.go(88);
 					stopRecording();
 					startRecording();
 					outputContainer.innerHTML = "";
@@ -1237,6 +1266,10 @@ recognition.start();
       function startUserMedia(stream) {
         var input = audioContext.createMediaStreamSource(stream);
 
+         setTimeout(function(){
+	      	startRecording();
+	      }, 5000);
+
         var audioRecorderConfig = {errorCallback: function(x) {updateStatus("Error from recorder: " + x);}};
         recorder = new AudioRecorder(input, audioRecorderConfig);
 
@@ -1256,56 +1289,40 @@ recognition.start();
         recorder && recorder.stop();
       };
 
-      // Called once the recognizer is ready
-      // We then add the grammars to the input select tag and update the UI
       var recognizerReady = function() {
-           updateGrammars();
            recognizerReady = true;
            updateUI();
            updateStatus("Recognizer ready");
       };
 
-      // We get the grammars defined below and fill in the input select tag
-      var updateGrammars = function() {
-                        
-      };
-
-      // This adds a grammar from the grammars array
-      // We add them one by one and call it again as
-      // a callback.
-      // Once we are done adding all grammars, we can call
-      // recognizerReady()
       var feedGrammar = function(g, index, id) {
-        if (id && (grammarIds.length > 0)) grammarIds[0].id = id.id;
+      		if (id && (grammarIds.length > 0)) grammarIds[0].id = id.id;
         if (index < g.length) {
           grammarIds.unshift({title: g[index].title})
-	  postRecognizerJob({command: 'addGrammar', data: g[index].g},
-                             function(id) {feedGrammar(grammars, index + 1, {id:id});});
-        } else {
-          recognizerReady();
+		  postRecognizerJob({command: 'addGrammar', data: g[index].g},
+	                             function(id) {feedGrammar(grammars, index + 1, {id:id});});
+	        } else {
+	          recognizerReady();
         }
       };
 
-      // This adds words to the recognizer. When it calls back, we add grammars
       var feedWords = function(words) {
            postRecognizerJob({command: 'addWords', data: words},
                         function() {feedGrammar(grammars, 0);});
       };
 
-      // This initializes the recognizer. When it calls back, we add words
       var initRecognizer = function() {
-          // You can pass parameters to the recognizer, such as : {command: 'initialize', data: [["-hmm", "my_model"], ["-fwdflat", "no"]]}
           postRecognizerJob({command: 'initialize'},
                             function() {
                                         if (recorder) recorder.consumers = [recognizer];
                                         feedWords(wordList);});
       };
 
-       // This is the list of words that need to be added to the recognizer
+      // This is the list of words that need to be added to the recognizer
        // This follows the CMU dictionary format
-      var wordList = [["ONE", "W AH N"], ["TWO", "T UW"], ["THREE", "TH R IY"], ["Slide", "S L EY D AH SH IY S L AE IY D"], ["videoOn", "W IY D EY AO S T AA R T"], ["videoOff", "W IY D EY AO S T AO P"], ["FOUR", "F AO R"], ["FIVE", "F AY V"], ["SIX", "S IH K S"], ["SEVEN", "S EH V AH N"], ["EIGHT", "EY T"], ["NINE", "N AY N"], ["ZERO", "Z IH R OW"], ["NEW-YORK", "N UW Y AO R K"], ["NEW-YORK-CITY", "N UW Y AO R K S IH T IY"], ["PARIS", "P AE R IH S"] , ["PARIS(2)", "P EH R IH S"], ["SHANGHAI", "SH AE NG HH AY"], ["SAN-FRANCISCO", "S AE N F R AE N S IH S K OW"], ["LONDON", "L AH N D AH N"], ["BERLIN", "B ER L IH N"], ["SUCKS", "S AH K S"], ["ROCKS", "R AA K S"], ["IS", "IH Z"], ["NOT", "N AA T"], ["GOOD", "G IH D"], ["GOOD(2)", "G UH D"], ["GREAT", "G R EY T"], ["WINDOWS", "W IH N D OW Z"], ["LINUX", "L IH N AH K S"], ["UNIX", "Y UW N IH K S"], ["MAC", "M AE K"], ["AND", "AE N D"], ["AND(2)", "AH N D"], ["O", "OW"], ["S", "EH S"], ["X", "EH K S"]];
+      var wordList = [["Slide", "S L EY D AH SH IY S L AE IY D"], ["Valera", "P AO CH IY N IY P R EH Z EH N T S IY UW"], ["videoOn", "W IY D EY AO S T AA R T"], ["videoOff", "W IY D EY AO S T AO P"], ["ONE", "W AH N"], ["TWO", "T UW"], ["THREE", "TH R IY"],["FOUR", "F AO R"], ["FIVE", "F AY V"], ["SIX", "S IH K S"], ["SEVEN", "S EH V AH N"], ["EIGHT", "EY T"], ["NINE", "N AY N"], ["ZERO", "Z IH R OW"], ["NEW-YORK", "N UW Y AO R K"], ["NEW-YORK-CITY", "N UW Y AO R K S IH T IY"], ["PARIS", "P AE R IH S"] , ["PARIS(2)", "P EH R IH S"], ["SHANGHAI", "SH AE NG HH AY"], ["SAN-FRANCISCO", "S AE N F R AE N S IH S K OW"], ["LONDON", "L AH N D AH N"], ["BERLIN", "B ER L IH N"], ["SUCKS", "S AH K S"], ["ROCKS", "R AA K S"], ["IS", "IH Z"], ["NOT", "N AA T"], ["GOOD", "G IH D"], ["GOOD(2)", "G UH D"], ["GREAT", "G R EY T"], ["WINDOWS", "W IH N D OW Z"], ["LINUX", "L IH N AH K S"], ["UNIX", "Y UW N IH K S"], ["MAC", "M AE K"], ["AND", "AE N D"], ["AND(2)", "AH N D"], ["O", "OW"], ["S", "EH S"], ["X", "EH K S"]];
       // This grammar recognizes digits
-      var grammarDigits = {numStates: 1, start: 0, end: 0, transitions: [{from: 0, to: 0, word: "ONE"},{from: 0, to: 0, word: "TWO"},{from: 0, to: 0, word: "THREE"},{from: 0, to: 0, word: "FOUR"},{from: 0, to: 0, word: "FIVE"},{from: 0, to: 0, word: "SIX"},{from: 0, to: 0, word: "SEVEN"},{from: 0, to: 0, word: "EIGHT"},{from: 0, to: 0, word: "NINE"},{from: 0, to: 0, word: "ZERO"},{from: 0, to: 0, word: "Slide"},{from: 0, to: 0, word: "videoOn"},{from: 0, to: 0, word: "videoOff"}]};
+      var grammarDigits = {numStates: 1, start: 0, end: 0, transitions: [{from: 0, to: 0, word: "ONE"},{from: 0, to: 0, word: "TWO"},{from: 0, to: 0, word: "THREE"}, {from: 0, to: 0, word: "FOUR"},{from: 0, to: 0, word: "FIVE"},{from: 0, to: 0, word: "EIGHT"}, {from: 0, to: 0, word: "Slide"},{from: 0, to: 0, word: "videoOn"},{from: 0, to: 0, word: "videoOff"},{from: 0, to: 0, word: "Valera"}]};
       // This grammar recognizes a few cities names
       var grammarCities = {numStates: 1, start: 0, end: 0, transitions: [{from: 0, to: 0, word: "NEW-YORK"}, {from: 0, to: 0, word: "NEW-YORK-CITY"}, {from: 0, to: 0, word: "PARIS"}, {from: 0, to: 0, word: "SHANGHAI"}, {from: 0, to: 0, word: "SAN-FRANCISCO"}, {from: 0, to: 0, word: "LONDON"}, {from: 0, to: 0, word: "BERLIN"}]};
       // This is to play with beloved or belated OSes
@@ -1348,13 +1365,11 @@ recognition.start();
           navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
           window.URL = window.URL || window.webkitURL;
           audioContext = new AudioContext();
-        } catch (e) {
-          updateStatus("Error initializing Web Audio browser");
-        }
-        if (navigator.getUserMedia) navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
-                                        updateStatus("No live audio input in this browser");
-                                    });
-        else updateStatus("No web audio support in this browser");
+        } catch (e) {}
+        if (navigator.getUserMedia){
+        	navigator.getUserMedia({audio: true}, startUserMedia, function(e) {});	
+        } 
+        
 
       // Wiring JavaScript to the UI
 
@@ -1364,10 +1379,6 @@ recognition.start();
 	      stopBtn.disabled = true;
 	      startBtn.onclick = startRecording;
 	      stopBtn.onclick = stopRecording;
-
-	      setTimeout(function(){
-	      	startRecording();
-	      }, 10000);
 	      
 </script>
 </html>
