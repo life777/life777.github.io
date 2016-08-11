@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Как перестать писать код с ошибками</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="styles/screen.css">	
+	<style type="text/css">
+		.pad {
+			padding-left: 50px;
+		}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Как перестать писать код с ошибками</h1>
+		<p>Владимир Дашукевич</p>
+	</header>
+	<section class="slide cover" id="face"><div>
+		<div style="color: #fff; font-size: 1.4em;">
+			<div>{</div>
+			<div class="pad">Тема: <mark>Как перестать писать код с ошибками</mark>,</div>
+			<div class="pad">Спикер: <mark>Владимир Дашукевич</mark>,</div>
+			<div class="pad">Компания: <mark>XBSoftware</mark>,</div>
+			<div class="pad">Конференция: <mark>FrontTalks</mark></div>
+			<div>}</div>
+		</div>
+	</section>
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/41.png">
+		</div>
+	</section>
+	<section class="slide shout"><div>
+		<h2>Мы пишем код с багами(</h2>
+	</section>
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/1.gif">
+		</div>
+	</section>
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/2.png">
+		</div>
+	</section>
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/1.jpg">
+		</div>
+	</section>
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/3.gif">
+		</div>
+	</section>
+	<section class="slide cover w">
+		<div>
+			<video src="pictures/video.mp4" autoplay loop muted>
+		</div>
+	</section>
+	<section class="slide cover h">
+		<div>
+			<img src="pictures/2.gif">
+		</div>
+	</section>
+	<section class="slide cover w">
+		<div>
+			<img src="pictures/3.gif">
+		</div>
+	</section>
+	<section class="slide shout">
+		<h2>Мы не виноваты</h2>
+	</section>
+	<section class="slide cover w">
+		<div>
+			<img src="pictures/2.jpg">
+		</div>
+	</section>
+	<section class="slide shout">
+		<h2>Причины ошибок</h2>
+	</section>
+	<section class="slide shout">
+		<h2>Ограниченность видимости</h2>
+	</section>
+	<section class="slide">
+		<div>
+			<pre>
+				<code>var state = {</code> 
+				<code>	isActive: false</code> 
+				<code>},</code> 
+				<code>justDoIt = function () {</code> 
+				<code>	if (state.isActive) {</code> 
+				<code>		alert("it's done!")</code> 
+				<code>	}</code> 
+				<code>	var elt = document.createElement("A");</code>
+				<code>	//	... </code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide shout"><div>
+		<h2>Hoisting</h2>
+	</section>
+	<section class="slide">
+		<div>
+			<pre>
+				<code>var <mark>state</mark> = {</code> 
+				<code>	isActive: false</code> 
+				<code>},</code> 
+				<code>justDoIt = function () {</code> 
+				<code>	if (state.isActive) {</code> 
+				<code>		alert("it's done!")</code> 
+				<code>	}</code> 
+				<code>	var elt = document.createElement("A");</code>
+				<code>	//	... </code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre>
+				<code>var <mark>state</mark> = {</code> 
+				<code>	isActive: false</code> 
+				<code>},</code> 
+				<code>justDoIt = function () {</code> 
+				<code>	if (<mark>state</mark>.isActive) {</code> 
+				<code>		alert("it's done!")</code> 
+				<code>	}</code> 
+				<code>	var elt = document.createElement("A");</code>
+				<code>	//	... </code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre>
+				<code>var state = {</code> 
+				<code>	isActive: false</code> 
+				<code>},</code> 
+				<code>justDoIt = function () {</code> 
+				<code>	if (state.isActive) {</code> 
+				<code>		alert("it's done!")</code> 
+				<code>	}</code> 
+				<code>	var elt = document.createElement("A");</code>
+				<code>	<mark>//	... </mark></code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre>
+				<code>var state = {</code> 
+				<code>	isActive: false</code> 
+				<code>},</code> 
+				<code>justDoIt = function () {</code> 
+				<code>	if (state.isActive) {</code> 
+				<code>		alert("it's done!")</code> 
+				<code>	}</code> 
+				<code>	var elt = document.createElement("A");</code>
+				<code>	<mark>var state = {}</mark></code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre>
+				<code>var state = {</code> 
+				<code>	isActive: false</code> 
+				<code>},</code> 
+				<code>justDoIt = function () {</code>
+				<code>	<mark>var elt, state;</mark></code>
+				<code>	if (state.isActive) {</code> 
+				<code>		alert("it's done!")</code> 
+				<code>	}</code> 
+				<code>	elt = document.createElement("A");</code>
+				<code>	state = {};</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre>
+				<code>var state = {</code> 
+				<code>	isActive: false</code> 
+				<code>},</code> 
+				<code>justDoIt = function () {</code>
+				<code>	var elt, <mark>state</mark>;</code>
+				<code>	if (<mark>state</mark>.isActive) {</code> 
+				<code>		alert("it's done!")</code> 
+				<code>	}</code> 
+				<code>	elt = document.createElement("A");</code>
+				<code>	state = {};</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Кто виноват и что делать?</h2>
+			<ol>
+				<li>Code review</li>
+				<li>Линтеры</li>
+				<li>ES2015</li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide shout"><div>
+		<h2>Code review</h2>
+	</section>
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/3.png">
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Правила</h2>
+			<ol>
+				<li class="next">Только один var</li>
+				<li class="next">var в начале функции</li>
+			</ol>
+			<h2 class="next">Code review</h2>
+		</div>
+	</section>
+	<section class="slide shout"><div>
+		<h2><a href="http://eslint.org/">ESLint</a></h2>
+	</section>
+	<section class="slide shout"><div>
+		<h2>JSHint + JSCS</h2>
+	</section>
+	<section class="slide shout"><div>
+		<h2><a href="https://github.com/eslint/espree">Espree</a></h2>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Правила</h2>
+			<ol>
+				<li class="next">no-redeclare</li>
+				<li class="next">one-var</li>
+				<li class="next">vars-on-top</li>
+				<li class="next">no-shadow</li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Как его использовать?</h2>
+			<ol>
+				<li class="next">npm install *-eslint</li>
+				<li class="next">.eslintrc.js, .eslintrc.json, .eslintrc.yml, .eslintrc.yaml, .eslintrc</li>
+				<li class="next">Profit!!!</li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide shout">
+		<h2><a href="https://github.com/brenolf/polyjuice">Polyjuice</a></h2>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Текстовые редакторы</h2>
+			<ol>
+				<li class="next">Web Storm</li>
+				<li class="next">VSCode, Atom, Sublime ...</li>
+				<li class="next">VIM</li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide shout">
+		<h2>ES2015</h2>
+	</section>
+	<section class="slide shout">
+		<h2>let и const</h2>
+	</section>
+	<section class="slide">
+		<div>
+			<pre>
+				<code>var state = {</code> 
+				<code>	isActive: false</code> 
+				<code>},</code> 
+				<code>justDoIt = function () {</code> 
+				<code>	if (state.isActive) {</code> 
+				<code>		alert("it's done!")</code> 
+				<code>	}</code> 
+				<code>	var elt = document.createElement("A");</code>
+				<code>	<mark>let state</mark> = {};</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre>
+				<code>var state = {</code> 
+				<code>	isActive: false</code> 
+				<code>},</code> 
+				<code>justDoIt = function () {</code> 
+				<code>	if (<mark class="important">state</mark>.isActive) {</code> 
+				<code>		alert("it's done!")</code> 
+				<code>	}</code> 
+				<code>	var elt = document.createElement("A");</code>
+				<code>	<mark>let state</mark> = {};</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Как его использовать?</h2>
+			<ol>
+				<li class="next">Текстовый редактор (VSCode, Atom, WebStorm, Sublime ...)</li>
+				<li class="next">Интерпретатор (<a href="https://babeljs.io/repl/">Babel</a>, <a href="https://github.com/google/traceur-compiler/">Traceur</a> ...)</li>
+				<li class="next">Profit!!!</li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Итоги:</h2>
+			<ol>
+				<li>Делайте code review</li>
+				<li>Обязательно используйте линтеры</li>
+				<li>Пишите на ES2015</li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide shout"><div>
+		<h2>Неизвестность</h2>
+	</section>
+	<section class="slide cover w">
+		<div>
+			<img src="pictures/4.gif">
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre> 
+				<code>var addDay = function (date) {</code> 
+				<code>	var newDate = new Date(date);</code> 
+				<code>	if (isNaN(newDate)) {</code> 
+				<code>		newDate = new Date();</code> 
+				<code>	}</code>
+				<code>	newDate.setDate(newDate.getDate() + 1);</code>
+				<code>	return newDate;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre> 
+				<code>var addDay = function (date) {</code> 
+				<code>	var newDate = <mark>new Date(date);</mark></code> 
+				<code>	if (isNaN(newDate)) {</code> 
+				<code>		newDate = new Date();</code> 
+				<code>	}</code>
+				<code>	newDate.setDate(newDate.getDate() + 1);</code>
+				<code>	return newDate;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Конструктор для Date</h2>
+			<ol>
+				<li class="next">new Date()</li>
+				<li class="next">new Date(string)</li>
+				<li class="next">new Date(number)</li>
+				<li class="next">new Date(year, month[, date[, hours[, minutes[, seconds[, ms]]]]])</li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre>
+				<code>var date = new Date();</code>  
+				<code>var newDate = <mark class="important">new Date(date);</mark></code> 
+			</pre>
+		</div>
+	</section>
+	<section class="slide cover w">
+		<div>
+			<img src="pictures/5.png">
+		</div>
+	</section>
+	<section class="slide cover w">
+		<div>
+			<img src="pictures/4.png">
+		</div>
+	</section>
+	<section class="slide shout">
+		<h2>ECMAScript 2015</h2>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Конструктор для Date</h2>
+			<ol>
+				<li>new Date()</li>
+				<li>new Date(string)</li>
+				<li>new Date(number)</li>
+				<li>new Date(year, month[, date[, hours[, minutes[, seconds[, ms]]]]])</li>
+				<li><mark>new Date(Date)</mark></li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide shout">
+		<h2>Незнание библиотеки</h2>
+	</section>
+	<section class="slide shout">
+		<h2>Datepicker</h2>
+	</section>
+	<section class="slide shout">
+		<h2>No description or website provided</h2>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Конструктор для datepicker</h2>
+			<pre> 
+				<code>_datepicker = function(elementId, options)</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Конструктор для datepicker</h2>
+			<pre> 
+				<code>_datepicker = function(<mark>elementId</mark>, options)</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Конструктор для datepicker</h2>
+			<pre> 
+				<code>_datepicker = function(elementId, <mark>options</mark>)</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Настройки для datepicker</h2>
+			<pre> 
+				<code>options.on = {};</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Настройки для datepicker</h2>
+			<pre> 
+				<code>options.on = {</code>
+				<code>	<mark>mousoever</mark>: () => { ... }</code>	
+				<code>};</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide shout">
+		<h2>Команда</h2>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Кто виноват и что делать?</h2>
+			<ol>
+				<li class="next">Code review <span class="next">- Частично</span></li>
+				<li class="next">Линтеры <span class="next">- Нет</span></li>
+				<li class="next">ES2015 (babel) <span class="next">- только новые браузеры</span></li>
+				<li class="next">Юнит тесты <span class="next">- Нет</span></li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide shout"><div>
+		<h2>TypeScript</h2>
+	</section>
+	<section class="slide shout"><div>
+		<h2>Типизированный JavaScript</h2>
+	</section>
+	<section class="slide shout"><div>
+		<h2>ES2015 + типы и интерфейсы</h2>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Инструменты TypeScript</h2>
+			<ol>
+				<li class="next">Итерпретатор</li>
+				<li class="next">Библиотеки типов (d.ts)</li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre> 
+				<code>var addDay = function (date) {</code> 
+				<code>	var newDate = <mark>new Date(date);</mark></code> 
+				<code>	if (isNaN(newDate)) {</code> 
+				<code>		newDate = new Date();</code> 
+				<code>	}</code>
+				<code>	newDate.setDate(newDate.getDate() + 1);</code>
+				<code>	return newDate;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre> 
+				<code>var addDay = function (<mark>date</mark>) {</code> 
+				<code>	var newDate = new Date(date);</code> 
+				<code>	if (isNaN(newDate)) {</code> 
+				<code>		newDate = new Date();</code> 
+				<code>	}</code>
+				<code>	newDate.setDate(newDate.getDate() + 1);</code>
+				<code>	return newDate;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre> 
+				<code>var addDay = function (date<mark>: Date</mark>) {</code> 
+				<code>	var newDate = new Date(date);</code> 
+				<code>	if (isNaN(newDate)) {</code> 
+				<code>		newDate = new Date();</code> 
+				<code>	}</code>
+				<code>	newDate.setDate(newDate.getDate() + 1);</code>
+				<code>	return newDate;</code>
+				<code>}</code>
+				<code>addDay("2016/8/10");</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre> 
+				<code>var addDay = function (date: Date) {</code> 
+				<code>	var newDate = new Date(<mark class="important">date</mark>);</code> 
+				<code>	if (isNaN(newDate)) {</code> 
+				<code>		newDate = new Date();</code> 
+				<code>	}</code>
+				<code>	newDate.setDate(newDate.getDate() + 1);</code>
+				<code>	return newDate;</code>
+				<code>}</code>
+				<code><mark class="important">addDay("2016/8/10");</mark></code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre> 
+				<code>var addDay = function (date: Date) {</code> 
+				<code>	if (isNaN(date)) {</code> 
+				<code>		date = new Date();</code> 
+				<code>	}</code>
+				<code>	date.setDate(date.getDate() + 1);</code>
+				<code>	return date;</code>
+				<code>}</code>
+				<code><mark class="important">addDay("2016/8/10");</mark></code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre> 
+				<code>var addDay = function (date: Date) {</code> 
+				<code>	if (isNaN(date)) {</code> 
+				<code>		date = new Date();</code> 
+				<code>	}</code>
+				<code>	date.setDate(date.getDate() + 1);</code>
+				<code>	return date;</code>
+				<code>}</code>
+				<code>addDay(new Date("2016/8/10"));</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Почему TypeScript?</h2>
+			<ol>
+				<li class="next">Полностью совместим с ECMAScript 2015</li>
+				<li class="next">Типы, классы, интерфейсы</li>
+				<li class="next">Исправление ошибок на этапе написания кода</li>
+				<li class="next">Поддержка существующих библиотек</li>
+				<li class="next">Рефакторинг</li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Рефакторинг</h2>
+			<pre> 
+				<code> ... </code> 
+				<code>	show: () => {</code> 
+				<code>		... </code> 
+				<code>	},</code>
+				<code>	close: () => {</code>
+				<code>		... </code>
+				<code>	}</code>
+				<code> ... </code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Рефакторинг</h2>
+			<pre> 
+				<code> ... </code> 
+				<code>	<mark>show</mark>: () => {</code> 
+				<code>		... </code> 
+				<code>	},</code>
+				<code>	close: () => {</code>
+				<code>		... </code>
+				<code>	}</code>
+				<code> ... </code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Итоги:</h2>
+			<ol>
+				<li>Используйте статическую типизацию</li>
+				<li>Указывайте типы как минимум для публичных методов</li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide shout"><div>
+		<h2>Чертов null!</h2>
+	</section>
+	<section class="slide">
+		<div>
+			<pre> 
+				<code>var addDay = function (date: Date): Date {</code>
+				<code>	if (isNaN(date)) {</code> 
+				<code>		date = new Date();</code> 
+				<code>	}</code>
+				<code>	if (date) {</code> 
+				<code>		date.setDate(date.getDate() + 1);</code> 
+				<code>	}</code>
+				<code>	return date;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre> 
+				<code>var addDay = function (date: Date): Date {</code>
+				<code>	if (isNaN(date)) {</code> 
+				<code>		date = new Date();</code> 
+				<code>	}</code>
+				<code>	if (date) {</code> 
+				<code>		date.setDate(date.getDate() + 1);</code> 
+				<code>	}</code>
+				<code>	return <mark>date</mark>;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre> 
+				<code>var a = addDay(new Date("2016/8/10")).getTime();</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre> 
+				<code>var a = addDay(null).getTime();</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre> 
+				<code>var addDay = function (<mark>date</mark>: Date): Date {</code>
+				<code>	if (isNaN(date)) {</code> 
+				<code>		date = new Date();</code> 
+				<code>	}</code>
+				<code>	if (date) {</code> 
+				<code>		date.setDate(date.getDate() + 1);</code> 
+				<code>	}</code>
+				<code>	return date;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre> 
+				<code>var addDay = function (date: Date): Date {</code>
+				<code>	if (<mark>isNaN(date)</mark>) {</code> 
+				<code>		date = new Date();</code> 
+				<code>	}</code>
+				<code>	if (date) {</code> 
+				<code>		date.setDate(date.getDate() + 1);</code> 
+				<code>	}</code>
+				<code>	return date;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre> 
+				<code>var addDay = function (date: Date): Date {</code>
+				<code>	if (isNaN(date)) {</code> 
+				<code>		date = new Date();</code> 
+				<code>	}</code>
+				<code>	if (<mark>date</mark>) {</code> 
+				<code>		date.setDate(date.getDate() + 1);</code> 
+				<code>	}</code>
+				<code>	return date;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre> 
+				<code>var addDay = function (date: Date): Date {</code>
+				<code>	if (isNaN(date)) {</code> 
+				<code>		date = new Date();</code> 
+				<code>	}</code>
+				<code>	if (date</mark>) {</code> 
+				<code>		date.setDate(date.getDate() + 1);</code> 
+				<code>	}</code>
+				<code>	return <mark>date</mark>; //null</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<pre>
+				<code>// Uncaught TypeError: Cannot read property 'getTime' of null</code> 
+				<code>var a = addDay(null).getTime();</code>
+			</pre>
+		</div>
+	</section>
+	<section class="slide shout"><div>
+		<h2>Nullable</h2>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Кто виноват и что делать?</h2>
+			<ol>
+				<li class="next">Code review <span class="next">- Частично</span></li>
+				<li class="next">Линтеры <span class="next">- Нет</span></li>
+				<li class="next">ES2015 (babel) <span class="next">- Нет</span></li>
+				<li class="next">Юнит тесты <span class="next">- Да</span></li>
+				<li class="next">TypeScript<span class="next">- Да (beta 2.0)</span></li>
+				<li class="next">Flow<span class="next">- Да</span></li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide shout"><div>
+		<h2>Flow</h2>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Почему Flow?</h2>
+			<ol>
+				<li class="next">Flow осуществляе статический анализ</li>
+				<li class="next">Синтаксис очень похож на TypeScript</li>
+				<li class="next">Flow все типы non-nullable</li>
+				<li class="next">Поддержка TypeScript библиотек типов</li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Итоги:</h2>
+			<ol>
+				<li>Делайте code review</li>
+				<li>Используйте линтеры</li>
+				<li>Пишите на ES2015</li>
+				<li>Используйте статическую типизацию!!!</li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide shout"><div>
+		<h2>And one more thing...</h2>
+	</section>
+	<section class="slide shout"><div>
+		<h2>Перестаньте забирать у машин их хлеб!!!</h2>
+	</section>
+	<section class="slide shout"><div>
+		<h2>Перестаньте делать ошибки!!!</h2>
+	</section>
+	<section class="slide shout">
+		<div>
+			<h2>Questions</h2>
+			<div>Facebook: <a href="https://www.facebook.com/dashukevich.vova">dashukevich.vova</a></div>
+			<div>Twitter: <a href="https://twitter.com/life__777">life__777</a></div>
+		</div>
+	</section>
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/16.gif">
+		</div>
+	</section>
+</body>
+<script src="js/shower.min.js"></script>
+<script type="text/javascript">
+
+</script>
+</html>
