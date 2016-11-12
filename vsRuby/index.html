@@ -197,7 +197,7 @@
 
 	<section class="slide">
 		<div>
-			<h2></h2>
+			<h2>Паттерны борьбы с асинхронностью</h2>
 			<ol>
 				<li>promise</li>
 				<li>reactive</li>
@@ -290,10 +290,10 @@
 	<section class="slide">
 		<div>
 			<pre>
-				<code>async(function *() {</code> 
-				<code>  let conn = yield getDBConnection();</code> 
-				<code>  let tables = yield conn.getTables();</code>
-				<code>  let data = yield tables.getTables();</code>
+				<code>async(function <mark>*</mark>() {</code> 
+				<code>  let conn = <mark>yield</mark> getDBConnection();</code> 
+				<code>  let tables = <mark>yield</mark> conn.getTables();</code>
+				<code>  let data = <mark>yield</mark> tables.getTables();</code>
 				<code>}))</code>
 			</pre>
 		</div>
@@ -596,6 +596,22 @@
 	</section>
 
 	<section class="slide shout">
+		<h2>NPM scripts</h2>
+	</section>
+
+	<section class="slide cover w">
+		<div>
+			<img src="pictures/10.png">
+		</div>
+	</section>
+
+	<section class="slide cover w">
+		<div>
+			<img src="pictures/11.png">
+		</div>
+	</section>
+
+	<section class="slide shout">
 		<h2>Изоморфность</h2>
 	</section>
 
@@ -644,6 +660,12 @@
 		<h2>Gulp</h2>
 	</section>
 
+	<section class="slide cover h">
+		<div>
+			<img src="pictures/12.png">
+		</div>
+	</section>
+
 	<section class="slide shout">
 		<h2>JS везде</h2>
 	</section>
@@ -686,7 +708,7 @@
 	</section>
 
 	<section class="slide shout">
-		<h2>MEAN</h2>
+		<h2>MEAN.io</h2>
 	</section>
 
 	<section class="slide shout">
@@ -730,6 +752,21 @@
 		<h2>Зато большие estimates</h2>
 	</section>
 
+	<section class="slide cover h">
+		<div>
+			<img src="pictures/11.jpg">
+		</div>
+	</section>
+	<section class="slide cover h">
+		<div>
+			<img src="pictures/12.jpg">
+		</div>
+	</section>
+	<section class="slide cover w">
+		<div>
+			<img src="pictures/13.jpg">
+		</div>
+	</section>
 	<section class="slide cover h">
 		<div>
 			<img src="pictures/3.svg">
