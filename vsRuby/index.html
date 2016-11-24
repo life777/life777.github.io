@@ -26,9 +26,84 @@
 			<div>}</div>
 		</div>
 	</section>
+	<section class="slide cover"><div>
+		<div style="color: #fff; font-size: 1.4em;">
+			<div>{</div>
+			<div class="pad">Тема: <mark>Node vs Ruby</mark>,</div>
+			<div class="pad">Спикер: <mark>Владимир Дашукевич</mark>,</div>
+			<div class="pad">Компания: <mark>XBSoftware</mark><mark style="background: #C00; color: #FFF;">,</mark></div>
+			<div>}</div>
+		</div>
+	</section>
+	<section class="slide cover w"><div>
+		<div>
+			<img src="pictures/41.png">
+		</div>
+	</section>
 	<section class="slide cover w">
 		<div>
 			<img src="pictures/1.png">
+		</div>
+	</section>
+	<section class="slide shout">
+		<h2>Кто использует Ruby?</h2>
+	</section>
+	<section class="slide shout">
+		<h2>Устали ли вы?</h2>
+	</section>
+	<section class="slide shout">
+		<h2><a href="https://github.com/shower">Shower</a></h2>
+	</section>
+	<section class="slide shout">
+		<h2>Markdown</h2>
+	</section>
+	<section class="slide shout">
+		<h2>Ruby</h2>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Стадии запуска Ruby</h2>
+			<ol>
+				<li class="next">Отрицание</li>
+				<li class="next">Гнев</li>
+				<li class="next">Торги</li>
+				<li class="next">Депрессия</li>
+				<li class="next">Принятие</li>
+				<li class="next">Ошибка интерпретатора</li>
+				<li class="next">Ай, напишу на HTML</li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide cover h">
+		<div>
+			<img src="pictures/14.jpg">
+		</div>
+	</section>
+	<section class="slide cover w">
+		<div>
+			<img src="pictures/15.jpg">
+		</div>
+	</section>
+	<section class="slide shout">
+		<h2>Gitlab</h2>
+	</section>
+	<section class="slide">
+		<div>
+			<h2>Стадии принятия Gitlab</h2>
+			<ol>
+				<li>Отрицание</li>
+				<li>Гнев</li>
+				<li>Торги</li>
+				<li>Депрессия</li>
+				<li>Принятие</li>
+				<li>Ошибка интерпретатора</li>
+				<li>Ай, буду использовать SVN</li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide cover w">
+		<div>
+			<img src="pictures/3.gif">
 		</div>
 	</section>
 	<section class="slide shout">
@@ -71,7 +146,7 @@
 
 	<section class="slide cover w">
 		<div>
-			<img src="pictures/3.gif">
+			<video src="pictures/3.mp4" autoplay loop muted>
 		</div>
 	</section>
 
@@ -135,8 +210,14 @@
 		<h2>PurpleJS - JVM</h2>
 	</section>
 
+	<section class="slide cover w">
+		<div>
+			<img src="pictures/4.gif">
+		</div>
+	</section>
+
 	<section class="slide shout">
-		<h2>Как на счет синтаксиса?</h2>
+		<h2>Оригинальные решения Ruby</h2>
 	</section>
 
 	<section class="slide shout">
@@ -163,7 +244,37 @@
 
 	<section class="slide cover w">
 		<div>
-			<img src="pictures/8.gif">
+			<video src="pictures/2.mp4" autoplay loop muted>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<h2>a</h2>
+	</section>
+
+	<section class="slide shout">
+		<h2>Undefined local variable 'a' ...</h2>
+	</section>
+
+	<section class="slide shout">
+		<h2>a = b</h2>
+	</section>
+
+	<section class="slide shout">
+		<h2>Undefined local variable 'b' ...</h2>
+	</section>
+
+	<section class="slide shout">
+		<h2>a = a</h2>
+	</section>
+
+	<section class="slide shout">
+		<h2>nil</h2>
+	</section>
+
+	<section class="slide cover w">
+		<div>
+			<img src="pictures/16.jpg">
 		</div>
 	</section>
 
@@ -280,10 +391,6 @@
 	</section>
 
 	<section class="slide shout">
-		<h2><a href="https://github.com/ReactiveX/RxRuby">RxRuby</a></h2>
-	</section>
-
-	<section class="slide shout">
 		<h2>Generator</h2>
 	</section>
 
@@ -294,6 +401,18 @@
 				<code>  let conn = <mark>yield</mark> getDBConnection();</code> 
 				<code>  let tables = <mark>yield</mark> conn.getTables();</code>
 				<code>  let data = <mark>yield</mark> tables.getTables();</code>
+				<code>}))</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<pre>
+				<code><mark>async</mark>(function *() {</code> 
+				<code>  let conn = yield getDBConnection();</code> 
+				<code>  let tables = yield conn.getTables();</code>
+				<code>  let data = yield tables.getTables();</code>
 				<code>}))</code>
 			</pre>
 		</div>
@@ -315,52 +434,20 @@
 		</div>
 	</section>
 
+	<section class="slide">
+		<div>
+			<pre>
+				<code><mark>async</mark> function () {</code> 
+				<code>  let conn = <mark>await</mark> getDBConnection();</code> 
+				<code>  let tables = <mark>await</mark> conn.getTables();</code>
+				<code>  let data = <mark>await</mark> tables.getTables();</code>
+				<code>})</code>
+			</pre>
+		</div>
+	</section>
+
 	<section class="slide shout">
 		<h2>Паттерны</h2>
-	</section>
-
-	<section class="slide shout">
-		<h2>ООП в JavaScript</h2>
-	</section>
-
-	<section class="slide">
-		<div>
-			<pre>
-				<code>class Foo {</code> 
-				<code>  constructor () { }</code>
-				<code>  set bar (val) { }</code>
-				<code>  get bar () { return 1; }</code> 
-				<code>  do () {  }</code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-
-	<section class="slide">
-		<div>
-			<pre>
-				<code>class Foo extends Bar {</code> 
-				<code>  constructor () { </code>
-				<code>  	super()</code>
-				<code>  }</code>
-				<code>  do () {  }</code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-
-	<section class="slide">
-		<div>
-			<pre>
-				<code>class Foo extends Bar {</code> 
-				<code>  constructor () { </code>
-				<code>  	super()</code>
-				<code>  }</code>
-				<code>  <mark>@readonly</mark></code>
-				<code>  do () {  }</code>
-				<code>}</code>
-			</pre>
-		</div>
 	</section>
 	
 	<section class="slide shout">
@@ -667,6 +754,10 @@
 	</section>
 
 	<section class="slide shout">
+		<h2>Grunt</h2>
+	</section>
+
+	<section class="slide shout">
 		<h2>JS везде</h2>
 	</section>
 
@@ -805,6 +896,11 @@
 
 	<section class="slide shout">
 		<h2>+600 Upwork</h2>
+	</section>
+	<section class="slide cover h"><div>
+		<div>
+			<img src="pictures/17.jpg">
+		</div>
 	</section>
 	
 	<section class="slide shout">
