@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Тайны зеленого замочка</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+	<header class="caption">
+		<h1>Тайны зеленого замочка</h1>
+		<p>XBSoftware</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>Тайны зеленого замочка</h2>
+		<p>Владимир Дашукевич</p>
+		<img src="pictures/cover.jpg" alt="" class="cover">
+		<style>
+			#cover {
+				background-color: #000;
+			}
+			#cover h2 {
+				margin:120px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+				}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#cover p a {
+					color:#FFF;
+				}
+		</style>
+	</section>
+	<section class="slide">
+		<img src="pictures/1.png" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Вопросы на сегодня:</h2>
+		<ol>
+			<li class="next">Защищает ли полностью HTTPS?</li>
+			<li class="next">Можно ли просмотреть HTTPS траффик?</li>
+			<li class="next">Что надежнее: мобильное или Web приложение?</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2 class="shout shrink">Мир без HTTPS</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/2.png" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<img src="pictures/3.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<img src="pictures/4.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<img src="pictures/5.png" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<img src="pictures/6.png" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<img src="pictures/7.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<img src="pictures/8.png" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<img src="pictures/1.gif" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<h2 class="shout">HTTP можно подсмотреть</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Man-in-the-Middle (MITM)</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Мужик-в-середине</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Нам нужен защищенный HTTP?</h2>
+	</section>
+	<section class="slide">
+		<h2>Из чего должен состоять "защищенный HTTP"?</h2>
+		<ol>
+			<li>Шифрование</li>
+			<li>Аутентификация</li>
+			<li>Целостность</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Шифрование</h2>
+	</section>
+	<section class="slide">
+		<h2>Шифрование</h2>
+		<ol>
+			<li>Симметричное</li>
+			<li>Асимметричное</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Симметричное шифрование</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/2.gif" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Асимметричное шифрование</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/3.gif" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<h2>Шифрование</h2>
+		<ol>
+			<li>Симметричное</li>
+			<li>Асимметричное</li>
+			<li class="next">Гибридное</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<img src="pictures/9.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Хакер получил приватный ключ сервера</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Протокол Диффи — Хеллмана</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/1.jpg" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<h2>Протокол Диффи — Хеллмана с:</h2>
+		<ol>
+			<li>статичным ключом</li>
+			<li>эфимерным ключом</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Perfect forward secrecy (PFS)</h2>
+	</section>
+	<section class="slide">
+		<h2>Вывод</h2>
+		<ol>
+			<li>Шифровать данные</li>
+			<li>Использовать асимметричное щифрование для согласования ключей</li>
+			<li>Использовать симметричное щифрование для передачи данных</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Надежна ли данная схема?</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/11.png" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Контроль целостности</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">HMAC, AEAD</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/2.jpg" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Возможно ли подделать подпись?</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/12.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2>Вывод</h2>
+		<ol>
+			<li>Шифровать данные</li>
+			<li>Использовать асимметричное щифрование для согласования ключей</li>
+			<li>Использовать симметричное щифрование для передачи данных</li>
+			<li><mark>Уверенность в неизменности сообщения</mark></li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Надежна ли данная схема?</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/9.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Нужна аутентификация</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Аутентификация != Авторизация</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/10.png" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<h2>Аутентификация</h2>
+		<p>Аутентификация - это процедура проверки подлинности.</p>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Сертификаты</h2>
+	</section>
+	<section class="slide">
+		<h2>Сертификат</h2>
+		<p> - это файл, использующий электронно-цифровую подпись и связывающий открытый (публичный) ключ компьютера с его принадлежностью.</p>
+		<p class="next">Cертификаты связывают доменные имена с определенным публичным ключом</p>
+	</section>
+	<section class="slide">
+		<img src="pictures/3.jpg" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<img src="pictures/9.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Сравнить с локальным сертификатом</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/14.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<img src="pictures/13.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Certificate Authority (CA)</h2>
+	</section>
+	<section class="slide">
+		<h2>Задачи CA</h2>
+		<ol>
+			<li class="next">Выпуск сертификатов</li>
+			<li class="next">Проверка подлиности домена:</li>
+				<ul>
+					<li class="next">является ли домен реально существующим</li>
+					<li class="next">имеет ли программист доступ к домену, сертификат для которого он пытается получить</li>
+				</ul>
+			</li>
+			<li class="next">Электронная подпись сертификата</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<img src="pictures/15.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<img src="pictures/16.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2>Доверие</h2>
+		<figure>
+			<blockquote>
+				<p>Вы доверяете тому, кому доверяет ваш браузер и/или операционная система.</p>
+			</blockquote>
+			<figcaption>Дашукевич Владимир</figcaption>
+		</figure>
+	</section>
+	<section class="slide">
+		<h2>Вывод</h2>
+		<ol>
+			<li>Шифровать данные</li>
+			<li>Использовать асимметричное щифрование для согласования ключей</li>
+			<li>Использовать симметричное щифрование для передачи данных</li>
+			<li>Уверенность в неизменности сообщения</li>
+			<li><mark>Уверенность в том, с кем вы общаетесь</mark></li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Наш "защищенный HTTP"</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/4.gif" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Это и есть HTTPS</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/17.png" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<h2 class="shout"><a href="https://observatory.mozilla.org">observatory. mozilla. org</a></h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/18.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Надежна ли данная схема?</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Перенаправление на HTTP</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/9.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">HTTP Strict Transport Security (HSTS)</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/19.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<img src="pictures/20.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">А самый первый раз?</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout"><a href="https://hstspreload.org/">hstspreload</a></h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/21.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<img src="pictures/19.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Надежна ли данная схема?</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">А стоит ли доверять CA?</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">WoSign и StartCom</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">CRL и OCSP протоколы</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Но...</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/9.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">HTTP Public Key Pinning (HPKP)</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/22.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<img src="pictures/23.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">А самый первый раз?</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/1.jpeg" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<h2>Вопросы на сегодня:</h2>
+		<ol>
+			<li class="next">Защищает ли полностью HTTPS?</li>
+			<li class="next">Можно ли просмотреть HTTPS траффик?</li>
+			<li class="next">Что надежнее: мобильное или Web приложение?</li>
+		</ol>
+	</section>
+	<section class="slide shout">
+		<div>
+			<h2>Questions</h2>
+			<div>Facebook: <a href="https://www.facebook.com/dashukevich.vova">dashukevich.vova</a></div>
+			<div>Twitter: <a href="https://twitter.com/life__777">life__777</a></div>
+		</div>
+	</section>
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
