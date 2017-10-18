@@ -42,6 +42,9 @@
 		<img src="pictures/1.png" alt="" class="cover">
 	</section>
 	<section class="slide">
+		<h2 class="shout" style="font-size: 2.5em;">ECDHE-RSA-AES128-GCM-SHA256</h2>
+	</section>
+	<section class="slide">
 		<h2>Вопросы на сегодня:</h2>
 		<ol>
 			<li>Что скрывается за "зеленым замочком"?</li>
@@ -87,9 +90,6 @@
 		<img src="pictures/8.4.png" alt="" class="cover w">
 	</section>
 	<section class="slide">
-		<h2 class="shout">Без комментариев</h2>
-	</section>
-	<section class="slide">
 		<img src="pictures/8.5.png" alt="" class="cover w">
 	</section>
 	<section class="slide">
@@ -117,10 +117,20 @@
 		<h2 class="shout">SSL/TLS</h2>
 	</section>
 	<section class="slide">
-		<h2>SSL/TLS</h2>
+		<h2>SSL/TLS состоит из:</h2>
+		<ol>
+			<li>Шагов по установлению безопасного соединения (handshake)</li>
+			<li>Набора алгоритмов дла осуществления безопасного соединения (Ciphersuite)</li>
+			<li>Цифровых SSL сертификатов для аутентификации сервера</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Ciphersuite</h2>
+	</section>
+	<section class="slide">
+		<h2>Ciphersuite</h2>
 		<ol>
 			<li>Шифрование – сокрытие информации, передаваемой от одного компьютера к другому;</li>
-			<li class="next">Целостность – обнаружение подмены информации подделкой;</li>
 			<li class="next">Аутентификация – проверка авторства передаваемой информации.</li>
 		</ol>
 	</section>
@@ -220,7 +230,7 @@
 		</ol>
 	</section>
 	<section class="slide">
-		<h2 class="shout">Целостность</h2>
+		<h2 class="shout">Аутентификация</h2>
 	</section>
 	<section class="slide">
 		<h2 class="shout">HMAC</h2>
@@ -247,14 +257,32 @@
 		<img src="pictures/31.png" alt="" class="cover w">
 	</section>
 	<section class="slide">
-		<h2 class="shout">Аутентификация</h2>
+		<h2>Вывод</h2>
+		<ol>
+			<li>Аутентификация - это процедура проверки подлинности;</li>
+			<li class="next">Проверки подлинности осуществляется с помощью электронно-цифровой подписи</li>
+		</ol>
 	</section>
 	<section class="slide">
-		<h2>Аутентификация</h2>
-		<p>Аутентификация - это процедура проверки подлинности.</p>
+		<h2 class="shout">Как же выглядит ciphersuite?</h2>
 	</section>
 	<section class="slide">
-		<img src="pictures/9.png" alt="" class="cover w">
+		<img src="pictures/30.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout"><a href="https://observatory.mozilla.org" style="font-size: 0.7em;">observatory.mozilla.org</a></h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/33.com.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Надежно ли наше соединение?</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Да</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/32.png" alt="" class="cover w">
 	</section>
 	<section class="slide">
 		<h2 class="shout">Сертификаты</h2>
@@ -262,7 +290,7 @@
 	<section class="slide">
 		<h2>Сертификат</h2>
 		<p> - это файл, использующий электронно-цифровую подпись и связывающий открытый (публичный) ключ компьютера с его принадлежностью.</p>
-		<p class="next">Cертификаты связывают доменные имена с определенным публичным ключом</p>
+		<p>Cертификаты связывают доменные имена с определенным публичным ключом</p>
 	</section>
 	<section class="slide">
 		<h2>Сертификат</h2>
@@ -354,6 +382,17 @@
 		<img src="pictures/13.png" alt="" class="cover w">
 	</section>
 	<section class="slide">
+		<h2>Сертификат</h2>
+		<div>Version: 3</div>
+		<div>Serial Number: 58:04:6c:41:4b:a3:02:a0:a7:c1:13:a3:07:53:97:90</div>
+		<div>Signature Algorithm: sha256WithRSAEncryption</div>
+		<div><mark>Issuer: C=CN, O=WoSign CA Limited, CN=WoSign CA Free SSL Certificate G2</mark></div>
+    	<div>Not After : May  6 00:50:37 2018 GMT</div>
+    	<div>Subject: CN=webix.com</div>
+    	<div>Public-Key: (2048 bit)</div>
+    	<div><mark>Signature Algorithm: sha256WithRSAEncryption</mark></div>
+	</section>
+	<section class="slide">
 		<h2 class="shout">Certificate Authority (CA)</h2>
 	</section>
 	<section class="slide">
@@ -370,9 +409,6 @@
 		</ol>
 	</section>
 	<section class="slide">
-		<img src="pictures/15.png" alt="" class="cover w">
-	</section>
-	<section class="slide">
 		<img src="pictures/16.png" alt="" class="cover w">
 	</section>
 	<section class="slide">
@@ -385,7 +421,10 @@
 		</figure>
 	</section>
 	<section class="slide">
-		<h2 class="shout">Let's Encript</h2>
+		<img src="pictures/32.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Let's Encrypt</h2>
 	</section>
 	<section class="slide">
 		<h2 class="shout">DigiCert</h2>
@@ -402,33 +441,34 @@
 	<section class="slide">
 		<h2>Вывод</h2>
 		<ol>
-			<li>Шифровать данные</li>
-			<li>Использовать асимметричное щифрование для согласования ключей</li>
-			<li>Использовать симметричное щифрование для передачи данных</li>
-			<li>Уверенность в неизменности сообщения</li>
-			<li><mark>Уверенность в том, с кем вы общаетесь</mark></li>
+			<li>Аутентификация осуществляется с помощью сертификатов</li>
+			<li class="next">Вы доверяете тому, кому доверяет ваш браузер и/или операционная система</li>
+			<li class="next">Не устанавливайте непроверенный софт с чужими сертификатами</li>
 		</ol>
 	</section>
 	<section class="slide">
-		<h2 class="shout">Наш "защищенный HTTP"</h2>
-	</section>
-	<section class="slide">
-		<img src="pictures/4.gif" alt="" class="cover h">
-	</section>
-	<section class="slide">
-		<h2 class="shout">Это и есть HTTPS</h2>
+		<h2 class="shout">Как же выглядит HTTPS соединение?</h2>
 	</section>
 	<section class="slide">
 		<img src="pictures/17.png" alt="" class="cover h">
 	</section>
 	<section class="slide">
-		<h2 class="shout"><a href="https://observatory.mozilla.org">observatory. mozilla. org</a></h2>
-	</section>
-	<section class="slide">
-		<img src="pictures/18.png" alt="" class="cover w">
-	</section>
-	<section class="slide">
 		<h2 class="shout">Надежна ли данная схема?</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Нет</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/4.gif" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<h2>Проблемы</h2>
+		<ol>
+			<li>Проблемы реализации: POODLE, HEARTBLEED etc</li>
+			<li class="next">Ненадежные ciphersuite: RC4, MD5 etc</li>
+			<li class="next">Деградация на старые протоколы</li>
+			<li class="next">Выпуск сертификатов без проверки принадлежности домена</li>
+		</ol>
 	</section>
 	<section class="slide">
 		<h2 class="shout">Перенаправление на HTTP</h2>
@@ -458,22 +498,26 @@
 		<img src="pictures/19.png" alt="" class="cover w">
 	</section>
 	<section class="slide">
-		<h2 class="shout">Надежна ли данная схема?</h2>
-	</section>
-	<section class="slide">
 		<h2 class="shout">А стоит ли доверять CA?</h2>
 	</section>
 	<section class="slide">
-		<h2 class="shout">WoSign и StartCom</h2>
+		<h2 class="shout">StartCom</h2>
 	</section>
 	<section class="slide">
-		<h2 class="shout">CRL и OCSP протоколы</h2>
+		<h2>Протоколы</h2>
+		<ol>
+			<li>Certificate revocation list (CRL)</li>
+			<li>Online Certificate Status Protocol (OCSP)</li>
+		</ol>
 	</section>
 	<section class="slide">
-		<h2 class="shout">Но...</h2>
+		<img src="pictures/35.png" alt="" class="cover w">
 	</section>
 	<section class="slide">
-		<img src="pictures/9.png" alt="" class="cover w">
+		<img src="pictures/34.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout" style="font-size: 2.5em;">DNS-based Authentication of Named Entities (DANE)</h2>
 	</section>
 	<section class="slide">
 		<h2 class="shout">HTTP Public Key Pinning (HPKP)</h2>
