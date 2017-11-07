@@ -11,6 +11,19 @@
 			padding-left: 50px;
 		}
 
+		.warn {
+		    background-color: #c00 !important;
+    		color: #fff;
+		}
+
+		.slide table.short td:first-child {
+		    padding-left: 60px;
+		}
+
+		.slide table.short td:last-child {
+		    padding-right: 60px;
+		}
+
 		#free {
 			position: absolute;
 			top: 50%;
@@ -42,10 +55,14 @@
 	<section class="slide">
 		<h2>Вопросы на сегодня:</h2>
 		<ol>
-			<li>Нужно ли знать алгоритмы?</li>
-			<li class="next">Как работает React под капотом?</li>
-			<li class="next">Почему функциональный подход работает?</li>
+			<li>Для чего фронтенд программисту нужно знать структуры данных и алгоритмы?</li>
 		</ol>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Disclaimer</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/11.jpg" alt="" class="cover h">
 	</section>
 	<section class="slide">
 		<img src="pictures/1.jpg" alt="" class="cover h">
@@ -81,6 +98,21 @@
 			</blockquote>
 			<figcaption>Wikipedia</figcaption>
 		</figure>
+		<figure class="next">
+			<blockquote>
+				<p>Алгори́тм — набор инструкций, описывающих порядок действий исполнителя для достижения некоторого результата.</p>
+			</blockquote>
+			<figcaption>Wikipedia</figcaption>
+		</figure>
+	</section>
+	<section class="slide">
+		<h2 class="shout" style="font-size: 4em;">Мгновенный доступ к данным</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/7.png" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<img src="pictures/8.png" alt="" class="cover h">
 	</section>
 	<section class="slide">
 		<h2 class="shout" style="font-size: 3em;">[1,3,6,4,8,7,13,14,10]</h2>
@@ -101,9 +133,6 @@
 		<img src="pictures/5.png" alt="" class="cover h">
 	</section>
 	<section class="slide">
-		<img src="pictures/6.png" alt="" class="cover h">
-	</section>
-	<section class="slide">
 		<figure>
 			<blockquote>
 				<p>Структуры данных помогают решать правильно и эффективно поставленные задачи, путем наилучшего представления информации под использующиеся алгоритмы.</p>
@@ -115,11 +144,1190 @@
 		<h2 class="shout">Дерево</h2>
 	</section>
 	<section class="slide">
+		<img src="pictures/6.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<table>
+			<tbody>
+			<tr>
+				<th scope="col">Операция</th>
+				<th>Сложность</th>
+			</tr>
+			<tr>
+				<td scope="row">Добавление элемента</td>
+				<td>О(1)</td>
+			</tr>
+			<tr>
+				<td scope="row">Удаление элемента</td>
+				<td>О(1)</td>
+			</tr>
+			<tr>
+				<td scope="row">Поиск</td>
+				<td>О(n)</td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
+	<section class="slide">
+		<img src="pictures/8.gif" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<h2 class="shout" style="font-size: 4em;">Самобалансирующиеся</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Красно-черное дерево</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/13.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2>Красно-черное дерево:</h2>
+		<ol>
+			<li>Двоичное дерево поиска</li>
+			<li>Все листья (NIL) — чёрные</li>
+			<li>Оба потомка каждого красного узла — чёрные</li>
+			<li>Всякий простой путь от данного узла до любого листового узла, являющегося его потомком, содержит одинаковое число чёрных узлов</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<img src="pictures/9.jpg" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<table>
+			<tbody>
+			<tr>
+				<th scope="col">Операция</th>
+				<th>Сложность</th>
+			</tr>
+			<tr>
+				<td scope="row">Добавление элемента</td>
+				<td>О(log n)</td>
+			</tr>
+			<tr>
+				<td scope="row">Удаление элемента</td>
+				<td>О(log n)</td>
+			</tr>
+			<tr>
+				<td scope="row">Поиск</td>
+				<td>О(log n)</td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
+	<section class="slide">
+		<h2>Типы деревьев:</h2>
+		<ol>
+			<li>Красно-чёрное дерево</li>
+			<li class="next">Куча</li>
+			<li class="next">Префиксное дерево</li>
+			<li class="next">B-дерево</li>
+			<li class="next">и другие</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2 class="shout">DOM дерево</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/9.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<table class="short">
+			<tbody>
+			<tr>
+				<th scope="row" style="padding-left: 62px; padding-right: 47px;">Операция</th>
+				<th>Метод</th>
+				<th>Сложность</th>
+			</tr>
+			<tr>
+				<td scope="row">Добавление</td>
+				<td scope="row">insertBefore, appendChild, append, prepend, after, before</td>
+				<td>O(1)</td>
+			</tr>
+			<tr>
+				<td scope="row">Удаление</td>
+				<td scope="row">removeChild, remove, replaceWith</td>
+				<td>O(1)</td>
+			</tr>
+			<tr>
+				<td scope="row">Поиск</td>
+				<td scope="row">querySelector, querySelectorAll, getElementById, getElementsByClassName</td>
+				<td>O(1)/O(n)</td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
+	<section class="slide">
+		<h2>Поиск по DOM дереву:</h2>
+		<ol>
+			<li>Поиск в ширину</li>
+			<li>Поиск в глубину</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>Поиск в ширину:</h2>
+		<img src="pictures/3.gif" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<h2>Поиск в глубину:</h2>
+		<img src="pictures/4.gif" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<h2 class="shout">getElementById</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/7.gif" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Изменения DOM</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/6.gif" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout" style="font-size: 3.5em;">React/Preact/Inferno</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Virtual DOM</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/10.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Поиск отличий</h2>
+	</section>
+	<section class="slide">
+		<h2>Шаги сравнения деревъев:</h2>
+		<ol>
+			<li>Сравнение типа вершины</li>
+			<li class="next">Проход по детям этой вершины</li>
+			<li class="next">Обновление атрибутов (props)</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>Шаги сравнения типа вершины:</h2>
+		<ol>
+			<li>Это компонент или нет?</li>
+			<li class="next">Нет: сраниваем тип</li>
+			<li class="next">Заменяем новым или обновляем атрибуты</li>
+			<li class="next">Да: Вызываем render для получения под-дерева</li>
+			<li class="next">Заново дапускаем алгоритм сравнения</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<img src="pictures/11.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2>Шаги сравнения детей:</h2>
+		<ol>
+			<li>Проход по каждому из детей</li>
+			<li class="next">Поиск соответствия каждого ребенка в словаре или массиве</li>
+			<li class="next">Сравнение ребенка/добавление нового</li>
+			<li class="next">Удаление оставшихся детей</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<img src="pictures/12.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<table>
+			<tbody>
+			<tr>
+				<th scope="col">Старое дерево</th>
+				<th>Новое дерево</th>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li&gt;Первый&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li&gt;Второй&lt;/li&gt;</td>
+				<td>&lt;li&gt;Третий&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li&gt;Третий&lt;/li&gt;</td>
+				<td>&nbsp;</td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
+	<section class="slide">
+		<table>
+			<tbody>
+			<tr>
+				<th scope="col">Старое дерево</th>
+				<th>Новое дерево</th>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li&gt;Первый&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row"><mark class="warn">&lt;li&gt;Второй&lt;/li&gt;</mark></td>
+				<td><mark>&lt;li&gt;Третий&lt;/li&gt;</mark></td>
+			</tr>
+			<tr>
+				<td scope="row"><mark>&lt;li&gt;Третий&lt;/li&gt;</mark></td>
+				<td>&nbsp;</td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
+	<section class="slide">
+		<table>
+			<tbody>
+			<tr>
+				<th scope="col">Старое дерево</th>
+				<th>Новое дерево</th>
+				<th>Результат</th>
+			</tr>
+			<tr>
+				<td scope="row"><mark>&lt;li&gt;Первый&lt;/li&gt;</mark></td>
+				<td><mark>&lt;li&gt;Первый&lt;/li&gt;</mark></td>
+				<td><mark class="next">&lt;li&gt;Первый&lt;/li&gt;</mark></td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li&gt;Второй&lt;/li&gt;</td>
+				<td>&lt;li&gt;Третий&lt;/li&gt;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li&gt;Третий&lt;/li&gt;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
+	<section class="slide">
+		<table>
+			<tbody>
+			<tr>
+				<th scope="col">Старое дерево</th>
+				<th>Новое дерево</th>
+				<th>Результат</th>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li&gt;Первый&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row"><mark>&lt;li&gt;Второй&lt;/li&gt;</mark></td>
+				<td><mark class="warn">&lt;li&gt;Третий&lt;/li&gt;</mark></td>
+				<td><mark class="next">&lt;li&gt;Третий&lt;/li&gt;</mark></td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li&gt;Третий&lt;/li&gt;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
+	<section class="slide">
+		<table>
+			<tbody>
+			<tr>
+				<th scope="col">Старое дерево</th>
+				<th>Новое дерево</th>
+				<th>Результат</th>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li&gt;Первый&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li&gt;Второй&lt;/li&gt;</td>
+				<td>&lt;li&gt;Третий&lt;/li&gt;</td>
+				<td>&lt;li&gt;Третий&lt;/li&gt;</mark></td>
+			</tr>
+			<tr>
+				<td scope="row"><mark>&lt;li&gt;Третий&lt;/li&gt;</mark></td>
+				<td><mark class="warn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+				<td><mark class="next" style="text-decoration: line-through;">&lt;li&gt;Третий&lt;/li&gt;</mark></td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
+	<section class="slide">
+		<table>
+			<tbody>
+			<tr>
+				<th scope="col">Старое дерево</th>
+				<th>Новое дерево</th>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+				<td>&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				<td>&nbsp;</td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
+	<section class="slide">
+		<table>
+			<tbody>
+			<tr>
+				<th scope="col">Старое дерево</th>
+				<th>Новое дерево</th>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="<mark>key1</mark>"&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li key="<mark>key1</mark>"&gt;Первый&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+				<td>&lt;li key="<mark>key3</mark>"&gt;Третий&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="<mark>key3</mark>"&gt;Третий&lt;/li&gt;</td>
+				<td>&nbsp;</td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
+	<section class="slide">
+		<table>
+			<tbody>
+			<tr>
+				<th scope="col">Старое дерево</th>
+				<th>Новое дерево</th>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="<mark>key1</mark>"&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li key="<mark>key1</mark>"&gt;Первый&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="<mark class="warn">key2</mark>"&gt;Второй&lt;/li&gt;</td>
+				<td>&lt;li key="<mark>key3</mark>"&gt;Третий&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="<mark>key3</mark>"&gt;Третий&lt;/li&gt;</td>
+				<td>&nbsp;</td>
+			</tr>
+			</tbody>
+		</table>
+		<div class="next">
+			<h2>Хэш-таблица</h2>
+			<table>
+				<tbody>
+				<tr>
+					<th scope="col">Ключ</th>
+					<th>Компонент</th>
+				</tr>
+				<tr>
+					<td scope="row">key1</td>
+					<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				</tr>
+				<tr>
+					<td scope="row">key2</td>
+					<td>&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+				</tr>
+				<tr>
+					<td scope="row">key3</td>
+					<td>&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section class="slide" style="font-size: 0.9em;">
+		<table class="short">
+			<tbody>
+			<tr>
+				<th scope="col">Старое дерево</th>
+				<th>Новое дерево</th>
+				<th>Результат</th>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+				<td>&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				<td scope="row">&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				<td>&nbsp;</td>
+				<td scope="row">&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+			</tr>
+			</tbody>
+		</table>
+		<div>
+			<h2>Хэш-таблица</h2>
+			<table>
+				<tbody>
+				<tr>
+					<th scope="col">Ключ</th>
+					<th>Компонент</th>
+				</tr>
+				<tr>
+					<td scope="row">key1</td>
+					<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				</tr>
+				<tr>
+					<td scope="row">key2</td>
+					<td>&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+				</tr>
+				<tr>
+					<td scope="row">key3</td>
+					<td>&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section class="slide" style="font-size: 0.9em;">
+		<table class="short">
+			<tbody>
+			<tr>
+				<th scope="col">Старое дерево</th>
+				<th>Новое дерево</th>
+				<th>Результат</th>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li key="<mark>key1</mark>"&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+				<td>&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				<td scope="row">&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				<td>&nbsp;</td>
+				<td scope="row">&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+			</tr>
+			</tbody>
+		</table>
+		<div>
+			<h2>Хэш-таблица</h2>
+			<table>
+				<tbody>
+				<tr>
+					<th scope="col">Ключ</th>
+					<th>Компонент</th>
+				</tr>
+				<tr>
+					<td scope="row"><mark>key1</mark></td>
+					<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				</tr>
+				<tr>
+					<td scope="row">key2</td>
+					<td>&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+				</tr>
+				<tr>
+					<td scope="row">key3</td>
+					<td>&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section class="slide" style="font-size: 0.9em;">
+		<table class="short">
+			<tbody>
+			<tr>
+				<th scope="col">Старое дерево</th>
+				<th>Новое дерево</th>
+				<th>Результат</th>
+			</tr>
+			<tr>
+				<td scope="row"><mark>&lt;li key="key1"&gt;Первый&lt;/li&gt;</mark></td>
+				<td>&lt;li key="<mark>key1</mark>"&gt;Первый&lt;/li&gt;</td>
+				<td><mark>&lt;li key="key1"&gt;Первый&lt;/li&gt;</mark></td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+				<td>&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				<td scope="row">&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				<td>&nbsp;</td>
+				<td scope="row">&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+			</tr>
+			</tbody>
+		</table>
+		<div>
+			<h2>Хэш-таблица</h2>
+			<table>
+				<tbody>
+				<tr>
+					<th scope="col">Ключ</th>
+					<th>Компонент</th>
+				</tr>
+				<tr>
+					<td scope="row"><mark>key1</mark></td>
+					<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				</tr>
+				<tr>
+					<td scope="row">key2</td>
+					<td>&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+				</tr>
+				<tr>
+					<td scope="row">key3</td>
+					<td>&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section class="slide" style="font-size: 0.9em;">
+		<table class="short">
+			<tbody>
+			<tr>
+				<th scope="col">Старое дерево</th>
+				<th>Новое дерево</th>
+				<th>Результат</th>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+				<td>&lt;li key="<mark>key3</mark>"&gt;Третий&lt;/li&gt;</td>
+				<td scope="row">&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				<td>&nbsp;</td>
+				<td scope="row">&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+			</tr>
+			</tbody>
+		</table>
+		<div>
+			<h2>Хэш-таблица</h2>
+			<table>
+				<tbody>
+				<tr>
+					<th scope="col">Ключ</th>
+					<th>Компонент</th>
+				</tr>
+				<tr>
+					<td scope="row">key1</td>
+					<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				</tr>
+				<tr>
+					<td scope="row">key2</td>
+					<td>&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+				</tr>
+				<tr>
+					<td scope="row"><mark>key3</mark></td>
+					<td>&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section class="slide" style="font-size: 0.9em;">
+		<table class="short">
+			<tbody>
+			<tr>
+				<th scope="col">Старое дерево</th>
+				<th>Новое дерево</th>
+				<th>Результат</th>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+				<td>&lt;li key="<mark>key3</mark>"&gt;Третий&lt;/li&gt;</td>
+				<td scope="row"><mark>&lt;li key="key3"&gt;Третий&lt;/li&gt;</mark></td>
+			</tr>
+			<tr>
+				<td scope="row"><mark>&lt;li key="key3"&gt;Третий&lt;/li&gt;</mark></td>
+				<td>&nbsp;</td>
+				<td scope="row">&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+			</tr>
+			</tbody>
+		</table>
+		<div>
+			<h2>Хэш-таблица</h2>
+			<table>
+				<tbody>
+				<tr>
+					<th scope="col">Ключ</th>
+					<th>Компонент</th>
+				</tr>
+				<tr>
+					<td scope="row">key1</td>
+					<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				</tr>
+				<tr>
+					<td scope="row">key2</td>
+					<td>&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+				</tr>
+				<tr>
+					<td scope="row"><mark>key3</mark></td>
+					<td>&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section class="slide" style="font-size: 0.9em;">
+		<table class="short">
+			<tbody>
+			<tr>
+				<th scope="col">Старое дерево</th>
+				<th>Новое дерево</th>
+				<th>Результат</th>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+				<td>&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				<td scope="row">&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				<td>&nbsp;</td>
+				<td scope="row"><mark>&lt;li key="key2"&gt;Второй&lt;/li&gt;</mark></td>
+			</tr>
+			</tbody>
+		</table>
+		<div>
+			<h2>Хэш-таблица</h2>
+			<table>
+				<tbody>
+				<tr>
+					<th scope="col">Ключ</th>
+					<th>Компонент</th>
+				</tr>
+				<tr>
+					<td scope="row">key1</td>
+					<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				</tr>
+				<tr>
+					<td scope="row">key2</td>
+					<td>&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+				</tr>
+				<tr>
+					<td scope="row">key3</td>
+					<td>&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section class="slide" style="font-size: 0.9em;">
+		<table class="short">
+			<tbody>
+			<tr>
+				<th scope="col">Старое дерево</th>
+				<th>Новое дерево</th>
+				<th>Результат</th>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+				<td>&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				<td scope="row">&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+			</tr>
+			<tr>
+				<td scope="row">&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				<td>&nbsp;</td>
+				<td scope="row"><mark style="text-decoration: line-through;">&lt;li key="key2"&gt;Второй&lt;/li&gt;</mark></td>
+			</tr>
+			</tbody>
+		</table>
+		<div>
+			<h2>Хэш-таблица</h2>
+			<table>
+				<tbody>
+				<tr>
+					<th scope="col">Ключ</th>
+					<th>Компонент</th>
+				</tr>
+				<tr>
+					<td scope="row">key1</td>
+					<td>&lt;li key="key1"&gt;Первый&lt;/li&gt;</td>
+				</tr>
+				<tr style="text-decoration: line-through;">
+					<td scope="row">key2</td>
+					<td>&lt;li key="key2"&gt;Второй&lt;/li&gt;</td>
+				</tr>
+				<tr>
+					<td scope="row">key3</td>
+					<td>&lt;li key="key3"&gt;Третий&lt;/li&gt;</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section class="slide">
+		<h2 class="shout">lit-html</h2>
+	</section>
+	<section class="slide">
+		<h2>lit-html</h2>
+		<pre>
+		    <code>const render = () => html`</code>
+			<code>  &lt;ul&gt;</code>
+			<code>    ${repeat(items, <mark>i => i.key</mark>, (i, index) => html`</code>
+			<code>      &lt;li&gt;${index}: ${i.name}&lt;/li&gt;`)}</code>
+			<code>  &lt;/ul&gt;</code>
+			<code>`;</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Где ещё используются деревья:</h2>
+		<ol>
+			<li>Специфические доменные области</li>
+			<li class="next">AST (abstract syntax tree)</li>
+			<li class="next">Файловая структура</li>
+			<li class="next">Неизменяемые данные</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Неизменяемые данные</h2>
+	</section>
+	<section class="slide">
+		<pre>
+			<code>var arr = ["a", "b", "c", "z", "f", "k"];</code>
+			<code>function render(items) {</code>
+			<code>   return arr</code>
+			<code>      .map(item => `&lt;div&gt;${ item }&lt;/div&gt;`)</code>
+			<code>      .join(", ");</code>
+			<code>}</code>
+			<code>nav.innerHTML = render(arr.sort());</code>
+			<code>div.innerHTML = render(arr);</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<pre>
+			<code>var arr = ["a", "b", "c", "z", "f", "k"];</code>
+			<code>function render(items) {</code>
+			<code>   return arr</code>
+			<code>      .map(item => `&lt;div&gt;${ item }&lt;/div&gt;`)</code>
+			<code>      .join(", ");</code>
+			<code>}</code>
+			<code>nav.innerHTML = render(<mark>arr.sort()</mark>);</code>
+			<code>div.innerHTML = render(arr);</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<pre>
+			<code>var arr = ["a", "b", "c", "z", "f", "k"];</code>
+			<code>function render(items) {</code>
+			<code>   return arr</code>
+			<code>      .map(item => `&lt;div&gt;${ item }&lt;/div&gt;`)</code>
+			<code>      .join(", ");</code>
+			<code>}</code>
+			<code>nav.innerHTML = render(arr.<mark>slice()</mark>.sort());</code>
+			<code>div.innerHTML = render(arr);</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Redux store</h2>
+	</section>
+	<section class="slide">
+		<pre>
+		    <code>{...state, first : {</code>
+		    <code>	...state.first,</code>
+		    <code>	second : {</code>
+		    <code>		...state.first.second,</code>
+		    <code>		[action.someId] : {</code>
+		    <code>			...state.first.second[action.someId],</code>
+		    <code>			fourth : action.someValue</code>
+		    <code>		}</code>
+		    <code>	}</code>
+		    <code>}}</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<pre>
+		    <code>{<mark>...state</mark>, first : {</code>
+		    <code>	<mark>...state.first</mark>,</code>
+		    <code>	second : {</code>
+		    <code>		<mark>...state.first.second</mark>,</code>
+		    <code>		[action.someId] : {</code>
+		    <code>			<mark>...state.first.second[action.someId]</mark>,</code>
+		    <code>			fourth : action.someValue</code>
+		    <code>		}</code>
+		    <code>	}</code>
+		    <code>}}</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<pre>
+		    <code>[</code>
+		    <code>    ...array.slice(0, action.index),</code>
+		    <code>    action.item,</code>
+		    <code>    ...array.slice(action.index)</code>
+		    <code>]</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<pre>
+		    <code>[</code>
+		    <code>    <mark>...array.slice(0, action.index)</mark>,</code>
+		    <code>    action.item,</code>
+		    <code>    <mark>...array.slice(action.index)</mark></code>
+		    <code>]</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<table>
+			<tbody>
+			<tr>
+				<th scope="col">Операция</th>
+				<th>Сложность</th>
+			</tr>
+			<tr>
+				<td scope="row">Добавление элемента</td>
+				<td>О(n)</td>
+			</tr>
+			<tr>
+				<td scope="row">Удаление элемента</td>
+				<td>О(n)</td>
+			</tr>
+			<tr>
+				<td scope="row">Поиск</td>
+				<td>О(1)/О(n)</td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Эффективна ли неизменяемость?</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Крис Окасаки</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout" style="font-size: 4em;">Чисто функциональные структуры данных</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Деревья</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/18.png" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Map/List</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Префиксное дерево (Trie tree)</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/14.png" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<img src="pictures/1.svg" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<table>
+			<tbody>
+			<tr>
+				<th scope="col">Операция</th>
+				<th>Сложность</th>
+			</tr>
+			<tr>
+				<td scope="row">Добавление элемента</td>
+				<td>О(|Key|)</td>
+			</tr>
+			<tr>
+				<td scope="row">Удаление элемента</td>
+				<td>О(|Key|)</td>
+			</tr>
+			<tr>
+				<td scope="row">Поиск</td>
+				<td>О(|Key|)</td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Hash Array Mapped Trie (HAMT)</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Immutability в JS</h2>
+	</section>
+	<section class="slide">
+		<h2>Immutability в JS</h2>
+		<ol>
+			<li>ImmutableJS</li>
+			<li>Seamless-immutable</li>
+			<li>Mori.js</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2 class="shout">ImmutableJS</h2>
+	</section>
+	<section class="slide">
+		<h2>List в ImmutableJS</h2>
+		<pre>
+		    <code>const originalList = List([ 0 ]);</code>
+			<code class="comment">// List [ 0 ]</code>
+			<code>const newList = originalList.set(1, 1);</code>
+			<code class="comment">// List [ 0, 1 ]</code>
+			<code>const newList2 = originalList.set(0, 'overwritten');</code>
+			<code class="comment">// List [ "overwritten" ]</code>
+			<code>originalList.get(0);</code>
+			<code class="comment">// "overwritten"</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<img src="pictures/15.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2>List в ImmutableJS</h2>
+		<ol>
+			<li>До 32 элементов - обычный массив</li>
+			<li class="next">Свыше 32 элементов - массив массивов до 32 элементов</li>
+			<li class="next">Свыше 32*32 элементов - массив массивов массивов до 32 элементов</li>
+			<li class="next">Прямая ссылка на последний массив</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<img src="pictures/16.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2>Map в ImmutableJS</h2>
+		<pre>
+		    <code>const originalMap = Map({ a: 1 });</code>
+			<code class="comment">// Map { a: 1 }</code>
+			<code>const newMap = originalMap.set("b", 1);</code>
+			<code class="comment">// Map { a: 1, b: 1 }</code>
+			<code>const newMap2 = originalMap.set(a, 'overwritten');</code>
+			<code class="comment">// Map { a: 'overwritten' }</code>
+			<code>originalMap.get(a, 'overwritten');</code>
+			<code class="comment">// 'overwritten'</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<img src="pictures/17.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2>Map в ImmutableJS</h2>
+		<ol>
+			<li>До 8 элементов - обычный массив [[ключ, значение], ...]</li>
+			<li class="next">Свыше 8 (до 32) элементов - Bitmap хэш таблица</li>
+			<li class="next">Свыше 32 элементов - хэш массив из Bitmap хэш таблиц</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2 class="shout">HAMT в ImmutableJS</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Очередь и стек</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/10.jpg" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">React Fiber</h2>
+	</section>
+	<section class="slide">
+		<h2>Перестроение DOM в React Fiber</h2>
+		<ol>
+			<li>Построение/сравнение VDOM</li>
+			<li>Применение изменений</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>Приоритеты React Fiber</h2>
+		<ol>
+			<li>Синхронные операции</li>
+			<li>Задачи для следующего такта</li>
+			<li>Анимации</li>
+			<li>Высокоприоритетные</li>
+			<li>Низкоприоритетные</li>
+			<li>Задачи на изменения вне экрана</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<img src="pictures/12.jpg" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2>Структуры данных в React Fiber</h2>
+		<ol>
+			<li>Стек</li>
+			<li>Очередь с приоритетами</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<img src="pictures/19.png" alt="" class="cover h">
+	</section>
+	<section class="slide">
+		<h2>Стек на массиве</h2>
+		<table>
+			<tbody>
+			<tr>
+				<th scope="col">Операция</th>
+				<th>Сложность</th>
+			</tr>
+			<tr>
+				<td scope="row">Добавление элемента</td>
+				<td>О(1)</td>
+			</tr>
+			<tr>
+				<td scope="row">Удаление элемента</td>
+				<td>О(1)</td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
+	<section class="slide">
+		<img src="pictures/20.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2>Очередь на связанном списке</h2>
+		<table>
+			<tbody>
+			<tr>
+				<th scope="col">Операция</th>
+				<th>Сложность</th>
+			</tr>
+			<tr>
+				<td scope="row">Добавление элемента</td>
+				<td>О(1)</td>
+			</tr>
+			<tr>
+				<td scope="row">Удаление элемента</td>
+				<td>О(1)</td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Очередь с приоритетами</h2>
+	</section>
+	<section class="slide">
+		<h2>Очередь с приоритетами</h2>
+		<table>
+			<tbody>
+			<tr>
+				<th scope="col">Операция/Сложность</th>
+				<th>Массив</th>
+				<th>Сорт. массив</th>
+				<th>Связанный список</th>
+			</tr>
+			<tr>
+				<td scope="row">Добавление элемента</td>
+				<td>О(1)</td>
+				<td>О(n)</td>
+				<td>О(n)</td>
+			</tr>
+			<tr>
+				<td scope="row">Получение элемента</td>
+				<td>О(n)</td>
+				<td>О(1)</td>
+				<td>О(1)</td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Куча</h2>
+	</section>
+	<section class="slide">
+		<h2>Кучи</h2>
+		<ol>
+			<li>Двоичная куча</li>
+			<li>Биномиальная куча</li>
+			<li>Фибоначчиева куча</li>
+			<li>Тонкая куча</li>
+			<li>Толстая куча</li>
+			<li>и другие</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>Двоичная куча для максимума</h2>
+		<ol>
+			<li>Значение в любой вершине не меньше, чем значения её потомков</li>
+			<li>На i-ом слое 2^i вершин, кроме последнего.</li>
+			<li>Последний слой заполнен слева направо</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<img src="pictures/21.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Изменения очереди</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/22.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<img src="pictures/23.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<img src="pictures/24.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2>Очередь на двоичной куче</h2>
+		<table>
+			<tbody>
+			<tr>
+				<th scope="col">Операция</th>
+				<th scope="col">Сложность</th>
+			</tr>
+			<tr>
+				<td scope="row">Добавление элемента</td>
+				<td>О(log n)</td>
+			</tr>
+			<tr>
+				<td scope="row">Получение элемента</td>
+				<td>О(log n)</td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Что использует React Fiber?</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Связанный список</h2>
+	</section>
+	<section class="slide">
+		<h2>Выводы</h2>
+		<ol>
+			<li>Интересуйтесь структурами данных и соответствующими им алгоритмами</li>
+			<li class="next">Почаще заглядывайте в код инструментов, которыми вы пользуетесь</li>
+			<li class="next">Не бойтесь неизменяемых структур данных</li>
+			<li class="next">Использование правильной структуры данных, позволяет решить задачу эффективнее</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>Вопросы на сегодня:</h2>
+		<ol>
+			<li>Для чего фронтенд программисту нужно знать структуры данных и алгоритмы?</li>
+		</ol>
+	</section>
+	<section class="slide">
 		<figure>
 			<blockquote>
-				<p>Умные структуры данных и тупой код работают куда лучше, чем наоборот.</p>
+				<p>Для отрисовки форм на любом фреймворке или написания алгоритма валидации данных не нужны знания о структурах данных, но для действительно серьезных и сложных задач эти знания необходимы.</p>
 			</blockquote>
-			<figcaption>E. Raymond</figcaption>
+			<figcaption>Дашукевич Владимир</figcaption>
 		</figure>
 	</section>
 	<section class="slide shout">
