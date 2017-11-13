@@ -11,6 +11,10 @@
 			padding-left: 50px;
 		}
 
+		.super-pad {
+			padding-left: 100px;
+		}
+
 		.warn {
 		    background-color: #c00 !important;
     		color: #fff;
@@ -43,22 +47,21 @@
 		<div style="font-size: 1.4em;">
 			<div>{</div>
 			<div class="pad">Тема: <mark>Будущее JavaScript</mark>,</div>
-			<div class="pad">Спикер: <mark>Владимир Дашукевич</mark>,</div>
-			<div class="pad">Компания: <mark>XBSoftware</mark>,</div>
+			<div class="pad">Спикеры: [</div>
+			<div class="super-pad"><mark>Владимир Дашукевич</mark>,</div>
+			<div class="super-pad"><mark>Евгений Гусев</mark></div>
+			<div class="pad">],</div>
 			<div class="pad">Конференция: <mark>FrontFest</mark></div>
 			<div>}</div>
 		</div>
-	</section>
-	<section class="slide">
-		<img src="pictures/41.png" alt="" class="cover">
 	</section>
 	<section class="slide">
 		<h2>Вопросы на сегодня:</h2>
 		<ol>
 			<li>Будет ли Javascript заменен другим языком?</li>
 			<li>Строгая типизация в JavaScript?</li>
-			<li>Потоки в JavaScript?</li>
-			<li>Что нового ожижается в JavaScript?</li>
+			<li>Что нового ожидается в JavaScript?</li>
+			<li>Чего не хватает в JavaScript?</li>
 		</ol>
 	</section>
 	<section class="slide">
@@ -98,15 +101,6 @@
 	</section>
 
 	<section class="slide">
-		<h2>Составные части:</h2>
-		<ol>
-			<li>Независиный модуль (Module)</li>
-			<li>Память (Memory)</li>
-			<li>Таблица (Table)</li>
-			<li>Экземпляр (Instance)</li>
-		</ol>
-	</section>
-	<section class="slide">
 		<pre>
 			<code>fetch("fun.wasm").then(response =></code>
   			<code>	response.arrayBuffer()</code>
@@ -119,8 +113,100 @@
 			<code>)</code>
 		</pre>
 	</section>
+
+	<section class="slide">
+		<h2>Составные части:</h2>
+		<ol>
+			<li>Независиный модуль (Module)</li>
+			<li>Память (Memory)</li>
+			<li>Таблица (Table)</li>
+			<li>Экземпляр (Instance)</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Для чего можно его использовать:</h2>
+		<ol>
+			<li>Трудоемкие задачи</li>
+			<li>Алгоритмы обработки изображений</li>
+			<li>Алгоритмы обработки видео</li>
+			<li>Алгоритмы криптографии</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Примеры</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://github.com/shamadee/web-dsp">web-dsp</a></h2>
+	</section>
+
 	<section class="slide cover">
-		<img src="pictures/8.png" alt="" class="cover h">
+		<img src="pictures/9.png" alt="" class="cover h">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://github.com/mbasso/asm-dom">asm-dom</a></h2>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/10.png" alt="" class="cover w">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://floooh.github.io/oryol/">Oryol</a></h2>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/11.png" alt="" class="cover w">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://github.com/kripken/ammo.js">Bullet</a></h2>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/12.png" alt="" class="cover w">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://github.com/dmlc/mxnet.js/">Apache MXNet</a></h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://github.com/davidMcneil/the-rusty-web">Rusty</a></h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://github.com/AssemblyScript/assemblyscript">AssemblyScript</a></h2>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>export function add(a: i32, b: f64): i16 {</code>
+  			<code>	return (a + (b as i32)) as i16;</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://github.com/01alchemist/TurboScript">TurboScript</a></h2>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>export class Vector3D {</code>
+			<code>    x:float32;</code>
+			<code>    y:float32;</code>
+			<code>    z:float32;</code>
+			<code>    constructor(x:float32, y:float32, z:float32){</code>
+			<code>        this.x = x;</code>
+			<code>        this.y = y;</code>
+			<code>        this.z = z;</code>
+			<code>    }</code>
+			<code>}</code>
+		</pre>
 	</section>
 
 	<section class="slide">
@@ -130,7 +216,375 @@
 	<section class="slide">
 		<h2 class="shout"><a href="https://github.com/SteveSanderson/Blazor#building-an-app-with-blazor">Blazor</a></h2>
 	</section>
-	
+
+	<section class="slide cover">
+		<img src="pictures/13.png" alt="" class="cover w">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://github.com/sebmarkbage/ocamlrun-wasm">OCaml Run Wasm</a></h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://github.com/vvanders/wasm_lua">Wasm Lua</a></h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">LLVM</h2>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/14.png" alt="" class="cover w">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Будущее WebAssembly</h2>
+	</section>	
+
+	<section class="slide cover">
+		<img src="pictures/8.png" alt="" class="cover h">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://github.com/mbasso/awesome-wasm">Список проектов WebAssembly</a></h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout" style="font-size: 4em;">Будет ли JavaScript заменен другим языком?</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Типизация</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Языки программирования:</h2>
+		<ol>
+			<li>Dart</li>
+			<li>TypeScript</li>
+			<li>Elm</li>
+			<li>PureScript</li>
+			<li>Reason</li>
+			<li>Haxe</li>
+			<li>Nim</li>
+			<li>и другие</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://www.dartlang.org/guides/get-started">Dart</a></h2>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>class Point {</code>
+			<code>	final double x, y;</code>
+			<code>	const Point(this.x, this.y);</code>
+			<code>	bool get isInsideUnitCircle => x * x + y * y &lt;= 1;</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://www.dartlang.org/guides/get-started">TypeScript</a></h2>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>class Person {</code>
+			<code>	private name: string;</code>
+			<code>	private age: number;</code>
+			<code>	constructor(name: string, age: number) {</code>
+			<code>	    this.name = name;</code>
+			<code>	    this.age = age;</code>
+			<code>	}</code>
+			<code>	toString(): string {</code>
+			<code>	    return `${this.name} (${this.age})`;</code>
+			<code>	}</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://haxe.org/">Haxe</a></h2>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/19.png" alt="" class="cover h">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="http://elm-lang.org/">Elm</a></h2>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/16.png" alt="" class="cover h">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="http://www.purescript.org/">PureScript</a></h2>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/17.png" alt="" class="cover h">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://reasonml.github.io/">Reason</a></h2>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/18.png" alt="" class="cover w">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://nim-lang.org">Nim</a></h2>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/20.png" alt="" class="cover h">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Python</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">PEP 484 и PEP 526</h2>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/15.png" alt="" class="cover h">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout" style="font-size: 4em;">Что нового ожидается в JavaScript (2017-2018)?</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Atomics</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">SharedBufferArray</h2>
+	</section>	
+
+	<section class="slide">
+		<h2>Atomics</h2>
+		<ol>
+			<li>add</li>
+			<li>and</li>
+			<li>compareExchange</li>
+			<li>exchange</li>
+			<li>load</li>
+			<li>or</li>
+			<li>store</li>
+			<li>sub</li>
+			<li>xor</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Atomics</h2>
+		<ol>
+			<li>wait</li>
+			<li>wake</li>
+			<li>isLockFree</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>var sab = new SharedArrayBuffer(1024);</code>
+			<code>var int32 = new Int32Array(sab);</code>
+			<code>// первый Worker</code>
+			<code>Atomics.wait(int32, 0, 0);</code>
+			<code>console.log(int32[0]); // 123</code>
+			<code>// второй Worker</code>
+			<code>console.log(int32[0]); // 0;</code>
+			<code>Atomics.store(int32, 0, 123); </code>
+			<code>Atomics.wake(int32, 0, 1);</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://github.com/lars-t-hansen/js-lock-and-condition">JS Lock</a></h2>
+	</section>	
+
+	<section class="slide">
+		<pre>
+			<code>let i32 = new Int32Array(sab)</code>
+			<code>...</code>
+			<code>lock.lock()</code>
+			<code>i32[1] = i32[2] + i32[3];</code>
+			<code>i32[0] += 1</code>
+			<code>lock.unlock()</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://github.com/Microsoft/napajs/tree/master/examples/tutorial/estimate-pi-in-parallel">Napa JS</a></h2>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>var napa = require('napajs');</code>
+			<code>var zone1 = napa.zone.create('zone1', { workers: 4 });</code>
+			<code>zone1.broadcast('console.log("hello world");');</code>
+			<code>zone1.execute((text) => text, </code>
+			<code>    ['hello napa'])</code>
+			<code>    .then((result) => {</code>
+			<code>        console.log(result.value);</code>
+			<code>    });</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout" style="font-size: 4em;">Нужна ли многопоточность в JS?</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Stage 3</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Dynamic Import</h2>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>import(`./section-modules/${link.dataset.entryModule}.js`)</code>
+	        <code>.then(module => {</code>
+	        <code>  module.loadPageInto(main);</code>
+	        <code>})</code>
+	        <code>.catch(err => {</code>
+	        <code>  main.textContent = err.message;</code>
+	        <code>});</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Object Rest/Spread</h2>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code class="comment">// Rest</code>
+			<code>let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };</code>
+			<code>x; // 1</code>
+			<code>y; // 2</code>
+			<code>z; // { a: 3, b: 4 }</code>
+			<code class="comment">// Spread</code>
+			<code>let n = { x, y, ...z };</code>
+			<code>n; // { x: 1, y: 2, a: 3, b: 4 }</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Async Iteration</h2>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>for await (const line of readLines(filePath)) {</code>
+			<code>  console.log(line);</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>async function* readLines(path) {</code>
+			<code>  let file = await fileOpen(path);</code>
+			<code>  try {</code>
+			<code>    while (!file.EOF) {</code>
+			<code>      yield await file.readLine();</code>
+			<code>    }</code>
+			<code>  } finally {</code>
+			<code>    await file.close();</code>
+			<code>  }</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Promise Finally</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout" style="font-size: 4em;">promise.finally(func) promise.then(func, func)</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Private mathods</h2>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/21.png" alt="" class="cover h">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Class field declarations</h2>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/22.png" alt="" class="cover h">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Optional Catch Binding</h2>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/23.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Stage 2</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Decorators</h2>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/24.png" alt="" class="cover h">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Throw Expressions</h2>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>function save(filename = throw new TypeError("Argument required")) {</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>function getEncoder(encoding) {</code>
+			<code>  const encoder = encoding === "utf8" ? new UTF8Encoder() </code>
+			<code>                : encoding === "utf16le" ? new UTF16Encoder(false) </code>
+			<code>                : encoding === "utf16be" ? new UTF16Encoder(true) </code>
+			<code>                : throw new Error("Unsupported encoding");</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">flatMap</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Stage 1</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout" style="font-size: 4em;">Чего не хватает в JavaScript?</h2>
+	</section>
+
 	<section class="slide shout">
 		<div>
 			<h2>Ваши вопросы?</h2>
