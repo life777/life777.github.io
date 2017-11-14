@@ -362,6 +362,14 @@
 	</section>
 
 	<section class="slide">
+		<h2 class="shout">Disclaimer</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">SIMD</h2>
+	</section>
+
+	<section class="slide">
 		<h2 class="shout">Atomics</h2>
 	</section>
 
@@ -578,7 +586,67 @@
 	</section>
 
 	<section class="slide">
+		<pre>
+			<code>[0, 1, 2, 3, 4, 5].flatMap(x => [x, x + 1]);</code>
+			<code class="comment">// [0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6]</code>
+		</pre>
+	</section>
+
+	<section class="slide">
 		<h2 class="shout">Stage 1</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Observable</h2>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>interface Observable {</code>
+			<code>    constructor(subscriber : SubscriberFunction);</code>
+			<code>    subscribe(observer : Observer) : Subscription;</code>
+			<code>    subscribe(onNext : Function,</code>
+			<code>              onError? : Function,</code>
+			<code>              onComplete? : Function) : Subscription;</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Optional Chaining</h2>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code class="comment">// old style</code>
+			<code>var street = user.address && user.address.street;</code>
+			<code class="comment">// new style</code>
+			<code>var street = user.address?.street || "Some street";</code>
+			<code>var input = myForm.querySelector('input[name=foo]')?.value</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">First Class Protocols</h2>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>interface Iterable {</code>
+			<code>    [Symbol.iterator]() : Iterator;</code>
+			<code>}</code>
+			<code>interface Iterator {</code>
+			<code>    next() : IteratorResult;</code>
+			<code>}</code>
+			<code>interface IteratorResult {</code>
+			<code>    value: any;</code>
+			<code>    done: boolean;</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/25.png" alt="" class="cover h">
 	</section>
 
 	<section class="slide">
