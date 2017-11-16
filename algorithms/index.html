@@ -24,6 +24,30 @@
 		    padding-right: 60px;
 		}
 
+		.contacts {
+		    position: absolute;
+		    top: 250px;
+		    margin-left: -20px;
+		}
+
+		.black-slide {
+			background-color: #000;
+		}
+
+		.black-slide::after {
+			content: "";
+			display: none;
+		}
+
+		#face {
+			background-color: #000;
+		}
+
+		#face::after {
+			content: "";
+			display: none;
+		}
+
 		#free {
 			position: absolute;
 			top: 50%;
@@ -40,14 +64,7 @@
 		<p>XBSoftware</p>
 	</header>
 	<section class="slide cover" id="face">
-		<div style="font-size: 1.4em;">
-			<div>{</div>
-			<div class="pad">Тема: <mark>Алгоритмы и структуры данных меняющие современный Frontend</mark>,</div>
-			<div class="pad">Спикер: <mark>Владимир Дашукевич</mark>,</div>
-			<div class="pad">Компания: <mark>XBSoftware</mark>,</div>
-			<div class="pad">Конференция: <mark>FrontFest</mark></div>
-			<div>}</div>
-		</div>
+		<img src="pictures/start.png" alt="" class="cover">	
 	</section>
 	<section class="slide">
 		<img src="pictures/1.png" alt="" class="cover">
@@ -1226,9 +1243,9 @@
 	<section class="slide">
 		<h2 class="shout">Раунд!</h2>
 	</section>
-	<section class="slide shout">
-		<div>
-			<h2>Ваши вопросы?</h2>
+	<section class="slide cover black-slide">
+		<img src="pictures/end.png" alt="" class="cover">
+		<div class="contacts">
 			<div>Facebook: <a href="https://www.facebook.com/dashukevich.vova">dashukevich.vova</a></div>
 			<div>Twitter: <a href="https://twitter.com/life__777">life__777</a></div>
 		</div>
