@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Как победить квантовый компьютер с помощь WebAssembly?</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+	<style type="text/css">
+		.pad {
+			padding-left: 50px;
+		}
+
+		.warn {
+		    background-color: #c00 !important;
+    		color: #fff;
+		}
+
+		.slide table.short td:first-child {
+		    padding-left: 60px;
+		}
+
+		.slide table.short td:last-child {
+		    padding-right: 60px;
+		}
+
+		.contacts {
+		    position: absolute;
+		    top: 250px;
+		    margin-left: -20px;
+		}
+
+		.black-slide {
+			background-color: #000;
+		}
+
+		.black-slide::after {
+			content: "";
+			display: none;
+		}
+
+		#face {
+			background-color: #000;
+		}
+
+		#face::after {
+			content: "";
+			display: none;
+		}
+
+		#free {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			z-index: 5000;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body class="shower list">
+	<header class="caption">
+		<h1>Как победить квантовый компьютер с помощь WebAssembly?</h1>
+		<p>XBSoftware</p>
+	</header>
+	<section class="slide cover" id="face">
+		<div style="color: #fff; font-size: 1.4em;">
+			<div>{</div>
+			<div class="pad">Тема: <mark>Как победить квантовый компьютер с помощь WebAssembly?</mark>,</div>
+			<div class="pad">Спикер: <mark>Владимир Дашукевич</mark>,</div>
+			<div class="pad">Компания: <mark>XBSoftware</mark>,</div>
+			<div class="pad">Конференция: <mark>HolyJS</mark></div>
+			<div>}</div>
+		</div>
+	</section>
+	<section class="slide">
+		<img src="pictures/1.png" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Вопросы на сегодня:</h2>
+		<ol>
+			<li>Насколько надежны современные криптографические алгоритмы, используемые в браузерах?</li>
+			<li>Что такое квантовый компьютер и почему он нам интересен?</li>
+			<li>Как решить проблему шифрования данных в браузере?</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<img src="pictures/2.png" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<img src="pictures/3.png" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<img src="pictures/5.png" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<img src="pictures/4.png" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<img src="pictures/6.png" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Алгоритм шифрования RSA</h2>
+		<ol>
+			<li>Выбираем два простых числа: p = 5, q = 13</li>
+			<li class="next">Вычисляем модуль: n = p * q = 65</li>
+			<li class="next">Вычисляем функцию Эйлера: F = (p - 1) * (q - 1) = 48</li>
+		</ol>
+		<div class="next">
+			<h2>Алгоритм взлома RSA шифра</h2>
+			<ol>
+				<li class="next">Вычисляем простые множители: 65</li>
+				<li class="next">Используем алгоритм решета числового поля</li>
+			</ol>
+		</div>
+	</section>
+	<section class="slide">
+		<img src="pictures/2.svg" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">ОЧЕНЬ ДОЛГО</h2>
+	</section>
+	<section class="slide">
+		<img src="pictures/1.jpg" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<img src="pictures/7.png" alt="" class="cover w">
+	</section>
+	<section class="slide">
+		<h2 class="shout">RSA-2048</h2>
+	</section>
+	<section class="slide">
+		<h2>Выводы</h2>
+		<ol>
+			<li class="next">Алгоритмы асиметричного шифрования используются во многих сферах нашей жизни</li>
+			<li class="next">Самый распространенный алгоритм асимитричного шифрования - это RSA</li>
+			<li class="next">Надежность RSA основана на том, что существующие алгоритмы для классических копьютеров могут его взломать только за экспоненциальное время</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>Питер Шор</h2>
+		<img src="pictures/2.jpg" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2 class="shout">Алгоритм Шора</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Новый тип компьютера</h2>
+		<ol>
+			<li class="next">"Биты" обладают свойством суперпозиции</li>
+			<li class="next">Устройства меняющие суперпозиции у "битов" по определенному закону</li>
+			<li class="next">"Биты" должны быть связаны друг с другом (запутаны)</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Суперпозиция</h2>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/8.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/9.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2>Бит и кубит</h2>
+		<ul>
+			<li>2 бита: 00, 01, 10, 11</li>
+			<li>2 кубита: a|00> + b|01> + c|10> + d|11></li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Гейты (Gate)</h2>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/5.jpg" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/10.jpg" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/15.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/11.jpg" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Квантовая запутанность</h2>
+	</section>
+
+	<section class="slide black">
+		<img src="pictures/3.jpg" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Квантовый компьютер</h2>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/4.jpg" alt="" class="cover h">
+	</section>
+
+	<section class="slide">
+		<h2>Алгоритм Шора</h2>
+		<ul>
+			<li>Состоит из классической и квантовой части</li>
+			<li class="next">Сложность O(log<span style="vertical-align: super;">3</span> M)</li>
+			<li class="next">Количество кубит O(log M)</li>
+			<li class="next">Проверен на 7 кубитном компьютере в 2001</li>
+			<li class="next">Его модификации способны также решать задачи дискретного логарифмирования</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/6.jpg" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2>Современный квантовый компьютер</h2>
+		<ul>
+			<li class="next">5-кубитный компьютер от IBM доступен всем</li>
+			<li class="next">16-кубитный компьютер доступен для корпораций</li>
+			<li class="next">Построен 50-кубитный квантовый компьютер</li>
+			<li class="next">Но он все ещё нестабилен</li>
+		</ul>
+	</section>
+
+	<section class="slide black">
+		<img src="pictures/7.jpg" alt="" class="cover w">
+	</section>
+
+	<section class="slide">
+		<h2>Постквантовая криптография</h2>
+		<ul>
+			<li>Криптография, основанная на хэш-функциях</li>
+			<li>Криптография, основанная на кодах исправления ошибок</li>
+			<li>Криптография, основанная на решётках</li>
+			<li>Криптография, основанная на многомерных квадратичных системах</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">США</h2>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/11.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/10.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">PQCrypto</h2>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/14.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2>Постквантовая криптография</h2>
+		<ul>
+			<li><a href="https://www.microsoft.com/en-us/research/project/lattice-cryptography-library/">Lattice Cryptography Library</a></li>
+			<li><a href="https://www.microsoft.com/en-us/research/project/sidh-library/">SIDH Library</a></li>
+			<li><a href="https://github.com/Microsoft/PQCrypto-PatchforOpenSSH">Quantum algorithm for OpenSSH</a></li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/13.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/8.jpg" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/12.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Россия</h2>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/2.gif" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2>Выводы:</h2>
+		<ol>
+			<li class="next">Существуют алгоритмы для квантового компьютера, способные за малое время узнать приватные ключи алгоритмов RSA, DSA и ECDHE</li>
+			<li class="next">Современные квантовые компьютеры не имеют достаточно мощностей для реального взлома RSA</li>
+			<li class="next">Весь современный мир постепенно начинает переходить на постквантовую криптографию</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/12.jpg" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/16.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://github.com/Microsoft/PQCrypto-SIDH">SIDH</a></h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Диффи Хеллман</h2>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/17.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2>Схема обмена ключей:</h2>
+		<ol>
+			<li class="next">Генерация приватного и публичного ключей на клиенте (EphemeralKeyGeneration_A)</li>
+			<li class="next">Генерация приватного и публичного ключей на сервере (EphemeralKeyGeneration_B)</li>
+			<li class="next">Обмен публичными ключами</li>
+			<li class="next">Генерация разделяемого эфимерного ключа (EphemeralSecretAgreement_A, EphemeralSecretAgreement_B)</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/18.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Клиент</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">WebAssembly</h2>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/21.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/19.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/20.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2>Проблемы компиляции в WebAssembly</h2>
+		<ol>
+			<li class="next">С - язык со строгой статической типизацией</li>
+			<li class="next">Указание публичных методов нашего модуля</li>
+			<li class="next">Обмен публичными ключами</li>
+			<li class="next">Генерация разделяемого эфимерного ключа (EphemeralSecretAgreement_A, EphemeralSecretAgreement_B)</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Раунд!</h2>
+	</section>
+
+	<section class="slide cover black-slide">
+		<div class="contacts">
+			<div>Facebook: <a href="https://www.facebook.com/dashukevich.vova">dashukevich.vova</a></div>
+			<div>Twitter: <a href="https://twitter.com/life__777">life__777</a></div>
+		</div>
+	</section>
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>
