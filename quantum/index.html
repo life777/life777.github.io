@@ -121,13 +121,16 @@
 		<h2 class="shout">ОЧЕНЬ ДОЛГО</h2>
 	</section>
 	<section class="slide">
+		<h2 class="shout">RSA-2048</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">ECDHE</h2>
+	</section>
+	<section class="slide">
 		<img src="pictures/1.jpg" alt="" class="cover w">
 	</section>
 	<section class="slide">
 		<img src="pictures/7.png" alt="" class="cover w">
-	</section>
-	<section class="slide">
-		<h2 class="shout">RSA-2048</h2>
 	</section>
 	<section class="slide">
 		<h2>Выводы</h2>
@@ -350,7 +353,30 @@
 	</section>
 
 	<section class="slide">
+		<h2>Что такое WebAssembly</h2>
+		<ol>
+			<li>Это низкоуровневый байт-код, предназначенный для исполнения в браузере.</li>
+			<li class="next">Представлен в бинарном виде</li>
+			<li class="next">Имеет свою собственную виртуальную машину</li>
+			<li class="next">Имеет строгую статическую типизацию</li>
+			<li class="next">Не имеет сборщика мусора и доступа к нативным браузерным API</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/22.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
 		<img src="pictures/21.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">LLVM</h2>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/3.gif" alt="" class="cover w">
 	</section>
 
 	<section class="slide">
@@ -362,12 +388,227 @@
 	</section>
 
 	<section class="slide">
+		<h2>Как скомпилировать код для WebAssembly</h2>
+		<ol>
+			<li>Скачать Emscripten</li>
+			<li>Скачать SIDH</li>
+			<li>Написать адаптер</li>
+			<li>emcc -o sidh.js sidh.c -O3 -s WASM=1</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Failed!</h2>
+	</section>
+
+	<section class="slide">
 		<h2>Проблемы компиляции в WebAssembly</h2>
 		<ol>
 			<li class="next">С - язык со строгой статической типизацией</li>
+			<li class="next">Сборщик мусора и управление памятью</li>
 			<li class="next">Указание публичных методов нашего модуля</li>
-			<li class="next">Обмен публичными ключами</li>
-			<li class="next">Генерация разделяемого эфимерного ключа (EphemeralSecretAgreement_A, EphemeralSecretAgreement_B)</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Типы данных</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout"><a href="https://webassembly.github.io/spec/index.html">WebAssembly Spec</a></h2>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/23.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/24.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout" style="font-size: 4em;">WebAssembly.Memory</h2>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/25.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>let m = new WebAssembly.Memory({initial:10, maximum:100});</code>
+			<code>var i32 = new Uint32Array(instance.exports.mem.buffer);</code>
+			<code>for (var i = 0; i &lt; 10; i++) {</code>
+			<code>  i32[i] = i;</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/26.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/27.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2>Проблемы компиляции в WebAssembly</h2>
+		<ol>
+			<li style="text-decoration: line-through;">С - язык со строгой статической типизацией</li>
+			<li>Сборщик мусора и управление памятью</li>
+			<li>Указание публичных методов нашего модуля</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Сборщик мусора</h2>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>let a = [];</code>
+			<code>let b = [1,2,3,4];</code>
+			<code>let c = [{}, true, 3, "hello"];</code>
+			<code>let d = { key1: 1, key2: c};</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/4.gif" alt="" class="cover h">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/27.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>int main() {</code>
+			<code>	int *ptr_one;</code>
+			<code>	ptr_one = (int *)<mark>malloc</mark>(sizeof(int));</code>
+			<code>	<mark>free(ptr_one);</mark></code>
+			<code>	return 0;</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Способы управления памятью в WebAssembly</h2>
+		<ol>
+			<li>WebAssembly.Memory.prototype.grow()</li>
+			<li><a href="https://github.com/guybedford/wasm-stdlib-hack/blob/master/src/malloc/malloc.c">Реализации heap на С скомпелированные в WASM</a></li>
+			<li>Emscripten: _free и _malloc</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/28.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<h2>Проблемы компиляции в WebAssembly</h2>
+		<ol>
+			<li style="text-decoration: line-through;">С - язык со строгой статической типизацией</li>
+			<li style="text-decoration: line-through;">Сборщик мусора и управление памятью</li>
+			<li>Указание публичных методов нашего модуля</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Вызов WebAssembly из JS</h2>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/29.png" alt="" class="cover w">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/30.png" alt="" class="cover w">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/31.png" alt="" class="cover w">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout" style="font-size: 4em;">WebAssembly.Table</h2>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});</code>
+			<code class="comment">// импорт таблицы в WebAssembly модуль</code>
+			<code>console.log(tbl.length); <span class="comment">// "2"</span></code>
+			<code>console.log(tbl.get(0)()); <span class="comment">// результат вызова 1 функции</span></code>
+			<code>console.log(tbl.get(1)()); <span class="comment">// результат вызова 2 функции</span></code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/32.png" alt="" class="cover w">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/33.png" alt="" class="cover w">
+	</section>
+
+	<section class="slide">
+		<h2>Экспорт функций из C</h2>
+		<ol>
+			<li>Перечислить все в EXPORTED_FUNCTIONS параметре (cwrap, ccall, _secret)</li>
+			<li>Использовать EMSCRIPTEN_KEEPALIVE дерективы (rust: #[no_mangle])</li>
+			<li>Использовать конструкцию extern "C"</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Проблемы компиляции в WebAssembly</h2>
+		<ol>
+			<li style="text-decoration: line-through;">С - язык со строгой статической типизацией</li>
+			<li style="text-decoration: line-through;">Сборщик мусора и управление памятью</li>
+			<li style="text-decoration: line-through;">Указание публичных методов нашего модуля</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Все шаги:</h2>
+		<ol>
+			<li class="next">Скачать Emscripten, SIDH, Python, CMake</li>
+			<li class="next">Написать простой адаптер на С</li>
+			<li class="next">Скомпилировать с максимальной оптимизацией</li>
+			<li class="next">Написать JS код для получения ключей</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/13.jpg" alt="" class="cover w">
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Failed!</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Сервер</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Запуск SIDH на сервере:</h2>
+		<ol>
+			<li>Написать сервер на С</li>
+			<li class="next">Использовать <a href="https://www.npmjs.com/package/webassembly">WebAssembly npm пакет</a></li>
+			<li class="next">Внедрить как C Addon</li>
+			<li class="next">Использовать N-API (Stability: 1 - Experimental)</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Выводы:</h2>
+		<ol>
+			<li class="next">WebAssembly очень сырой, мало инструментов, сложно дебажить, но если прижмет, то можно использовать</li>
+			<li class="next">Скомпилировать любой алгоритм на C/C++/Rust в WebAssemly не сложно</li>
+			<li class="next">Квантовые компьютеры на подходе, стоит задуматься о нашем будущем</li>
 		</ol>
 	</section>
 
