@@ -80,9 +80,23 @@
 		<h2>Вопросы на сегодня:</h2>
 		<ol>
 			<li>Насколько надежны современные криптографические алгоритмы, используемые в браузерах?</li>
-			<li>Что такое квантовый компьютер и почему он нам интересен?</li>
-			<li>Как решить проблему шифрования данных в браузере?</li>
+			<li>Как эту ситуацию может изменить квантовый компьютер?</li>
+			<li>Как мы можем повлиять на это?</li>
 		</ol>
+	</section>
+	<section class="slide">
+		<h2>Криптография обеспечивает:</h2>
+		<ol>
+			<li>Конфиденциальность</li>
+			<li>Целостность информации</li>
+			<li>Аутентифика́ция</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<img src="pictures/1.jpeg" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<img src="pictures/34.png" alt="" class="cover">
 	</section>
 	<section class="slide">
 		<img src="pictures/2.png" alt="" class="cover">
@@ -91,7 +105,26 @@
 		<img src="pictures/3.png" alt="" class="cover">
 	</section>
 	<section class="slide">
-		<img src="pictures/5.png" alt="" class="cover">
+		<img src="pictures/35.png" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<img src="pictures/36.png" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<img src="pictures/37.png" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<img src="pictures/38.png" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<img src="pictures/39.png" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Типы шифрования:</h2>
+		<ol>
+			<li>Асимметричное</li>
+			<li>Симметричное</li>
+		</ol>
 	</section>
 	<section class="slide">
 		<img src="pictures/4.png" alt="" class="cover">
@@ -99,17 +132,20 @@
 	<section class="slide">
 		<img src="pictures/6.png" alt="" class="cover">
 	</section>
-	<section class="slide">
+	<section class="slide" style="padding-top: 35px;">
 		<h2>Алгоритм шифрования RSA</h2>
 		<ol>
 			<li>Выбираем два простых числа: p = 5, q = 13</li>
 			<li class="next">Вычисляем модуль: n = p * q = 65</li>
-			<li class="next">Вычисляем функцию Эйлера: F = (p - 1) * (q - 1) = 48</li>
+			<li class="next">Вычисляем функцию Эйлера: F(n) = (p - 1) * (q - 1) = 48</li>
+			<li class="next">Выбираем простое число е &lt; F(n)</li>
+			<li class="next">Вычисляем <mark>d = e<span style="vertical-align: super; font-size: 20px;">-1</span> mod F(n)</mark></li>
+			<li class="next">{e, n} - публичный ключ, {d, n} - приватный ключ</li>
 		</ol>
 		<div class="next">
 			<h2>Алгоритм взлома RSA шифра</h2>
 			<ol>
-				<li class="next">Вычисляем простые множители: 65</li>
+				<li class="next">Вычисляем простые множители: 65 для получения F(n)</li>
 				<li class="next">Используем алгоритм решета числового поля</li>
 			</ol>
 		</div>
@@ -135,9 +171,9 @@
 	<section class="slide">
 		<h2>Выводы</h2>
 		<ol>
-			<li class="next">Алгоритмы асиметричного шифрования используются во многих сферах нашей жизни</li>
-			<li class="next">Самый распространенный алгоритм асимитричного шифрования - это RSA</li>
-			<li class="next">Надежность RSA основана на том, что существующие алгоритмы для классических копьютеров могут его взломать только за экспоненциальное время</li>
+			<li>Алгоритмы асимметричного шифрования играют важнейшую роль в шифровании данных</li>
+			<li class="next">Единственный способ генерации общего симметричного ключа по протоколу TLS 1.2 - это RSA или DH</li>
+			<li class="next">Надежность RSA и DH основана на том, что существующие алгоритмы для классических компьютеров могут их взломать только за экспоненциальное время</li>
 		</ol>
 	</section>
 	<section class="slide">
@@ -145,16 +181,26 @@
 		<img src="pictures/2.jpg" alt="" class="cover">
 	</section>
 	<section class="slide">
-		<h2 class="shout">Алгоритм Шора</h2>
+		<h2 class="shout"><a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%A8%D0%BE%D1%80%D0%B0">Алгоритм Шора</a></h2>
 	</section>
 
 	<section class="slide">
-		<h2>Новый тип компьютера</h2>
-		<ol>
-			<li class="next">"Биты" обладают свойством суперпозиции</li>
-			<li class="next">Устройства меняющие суперпозиции у "битов" по определенному закону</li>
-			<li class="next">"Биты" должны быть связаны друг с другом (запутаны)</li>
-		</ol>
+		<h2>Алгоритм Шора</h2>
+		<ul>
+			<li>Состоит из классической и квантовой части</li>
+			<li class="next">Сложность O(log<span style="vertical-align: super;">3</span> M) (у классического компьютера O(2<span style="vertical-align: super;">P(M)</span>))</li>
+			<li class="next">Количество кубит O(log M)</li>
+			<li class="next">Проверен на 7 кубитном компьютере в 2001</li>
+			<li class="next">Его модификации способны также решать задачи дискретного логарифмирования</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Квантовый компьютер</h2>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/4.jpg" alt="" class="cover h">
 	</section>
 
 	<section class="slide">
@@ -166,7 +212,11 @@
 	</section>
 
 	<section class="slide">
-		<img src="pictures/9.png" alt="" class="cover">
+		<h2 class="shout" style="font-size: 5em;">1/&radic;2 |0> + 1/&radic;2 |1></h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout" style="font-size: 5em;"><mark>1/&radic;2</mark>|0> + <mark>1/&radic;2</mark>|1></h2>
 	</section>
 
 	<section class="slide">
@@ -182,10 +232,6 @@
 	</section>
 
 	<section class="slide">
-		<img src="pictures/5.jpg" alt="" class="cover">
-	</section>
-
-	<section class="slide">
 		<img src="pictures/10.jpg" alt="" class="cover">
 	</section>
 
@@ -198,48 +244,22 @@
 	</section>
 
 	<section class="slide">
-		<h2 class="shout">Квантовая запутанность</h2>
+		<h2>Современный квантовый компьютер</h2>
+		<ul>
+			<li class="next">5-кубитный компьютер от IBM доступен всем</li>
+			<li class="next">20-кубитный компьютер доступен как сервис</li>
+			<li class="next">Построен 50-кубитный квантовый компьютер</li>
+			<li class="next">Но он все ещё нестабилен</li>
+			<li class="next">Он имеет узкую специфику</li>
+		</ul>
 	</section>
 
 	<section class="slide black">
-		<img src="pictures/3.jpg" alt="" class="cover">
-	</section>
-
-	<section class="slide">
-		<h2 class="shout">Квантовый компьютер</h2>
-	</section>
-
-	<section class="slide">
-		<img src="pictures/4.jpg" alt="" class="cover h">
-	</section>
-
-	<section class="slide">
-		<h2>Алгоритм Шора</h2>
-		<ul>
-			<li>Состоит из классической и квантовой части</li>
-			<li class="next">Сложность O(log<span style="vertical-align: super;">3</span> M)</li>
-			<li class="next">Количество кубит O(log M)</li>
-			<li class="next">Проверен на 7 кубитном компьютере в 2001</li>
-			<li class="next">Его модификации способны также решать задачи дискретного логарифмирования</li>
-		</ul>
+		<img src="pictures/40.png" alt="" class="cover">
 	</section>
 
 	<section class="slide">
 		<img src="pictures/6.jpg" alt="" class="cover">
-	</section>
-
-	<section class="slide">
-		<h2>Современный квантовый компьютер</h2>
-		<ul>
-			<li class="next">5-кубитный компьютер от IBM доступен всем</li>
-			<li class="next">16-кубитный компьютер доступен для корпораций</li>
-			<li class="next">Построен 50-кубитный квантовый компьютер</li>
-			<li class="next">Но он все ещё нестабилен</li>
-		</ul>
-	</section>
-
-	<section class="slide black">
-		<img src="pictures/7.jpg" alt="" class="cover w">
 	</section>
 
 	<section class="slide">
@@ -325,7 +345,7 @@
 		<h2>Выводы:</h2>
 		<ol>
 			<li class="next">Существуют алгоритмы для квантового компьютера, способные за малое время узнать приватные ключи алгоритмов RSA, DSA и ECDHE</li>
-			<li class="next">Современные квантовые компьютеры не имеют достаточно мощностей для реального взлома RSA</li>
+			<li class="next">Современные квантовые компьютеры не имеют достаточно мощностей для реального взлома RSA, DSA и ECDHE</li>
 			<li class="next">Весь современный мир постепенно начинает переходить на постквантовую криптографию</li>
 		</ol>
 	</section>
@@ -365,10 +385,6 @@
 	</section>
 
 	<section class="slide">
-		<h2 class="shout">Клиент</h2>
-	</section>
-
-	<section class="slide">
 		<h2 class="shout">WebAssembly</h2>
 	</section>
 
@@ -400,7 +416,15 @@
 	</section>
 
 	<section class="slide">
-		<img src="pictures/19.png" alt="" class="cover">
+		<h2 class="shout" style="font-size: 4em;">C/C++ -> IR -> WASM</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout" style="font-size: 4em;">C/C++ -> <mark>IR -> WASM</mark></h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout" style="font-size: 4em;">C/C++ -> asm.js -> WASM</h2>
 	</section>
 
 	<section class="slide">
@@ -408,13 +432,79 @@
 	</section>
 
 	<section class="slide">
+		<h2 class="shout" style="font-size: 4em;">Binaryen</h2>
+	</section>
+
+	<section class="slide">
+		<h2>WebAssembly материалы:</h2>
+		<ol>
+			<li><a href="https://www.youtube.com/watch?v=6Y3W94_8scw">WebAssembly Demystified</a></li>
+			<li><a href="https://www.youtube.com/watch?v=DKHuEkmsx3M">WebAssembly In Action</a></li>
+			<li><a href="https://www.youtube.com/watch?v=6v4E6oksar0">Compiling for the Web with WebAssembly (Google I/O '17)</a></li>
+			<li><a href="https://www.youtube.com/watch?v=bac0dGQbUto">Practical WebAssembly</a></li>
+		</ol>
+	</section>
+
+	<section class="slide">
 		<h2>Как скомпилировать код для WebAssembly</h2>
 		<ol>
 			<li>Скачать Emscripten</li>
-			<li>Скачать SIDH</li>
-			<li>Написать адаптер</li>
-			<li>emcc -o sidh.js sidh.c -O3 -s WASM=1</li>
+			<li class="next">Скачать SIDH</li>
+			<li class="next">Написать адаптер</li>
+			<li class="next">emcc -o sidh.js sidh.c -O3 -s WASM=1</li>
+			<li class="next">Получили fun.wasm</li>
 		</ol>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>fetch("fun.wasm").then(response =></code>
+  			<code>	response.arrayBuffer()</code>
+			<code>).then(bytes =></code>
+			<code>	WebAssembly.instantiate(bytes, importObject)</code>
+			<code>).then(instance =></code>
+			<code>	instance.exports.exported_func();</code>
+			<code>)</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code><mark>fetch("fun.wasm").then(response =></mark></code>
+  			<code>	response.arrayBuffer()</code>
+			<code>).then(bytes =></code>
+			<code>	WebAssembly.instantiate(bytes, importObject)</code>
+			<code>).then(instance =></code>
+			<code>	instance.exports.exported_func();</code>
+			<code>)</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>fetch("fun.wasm").then(response =></code>
+  			<code>	response.arrayBuffer()</code>
+			<code>).then(bytes =></code>
+			<code>	<mark>WebAssembly.instantiate(bytes, importObject)</mark></code>
+			<code>).then(instance =></code>
+			<code>	instance.exports.exported_func();</code>
+			<code>)</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>fetch("fun.wasm").then(response =></code>
+  			<code>	response.arrayBuffer()</code>
+			<code>).then(bytes =></code>
+			<code>	WebAssembly.instantiate(bytes, importObject)</code>
+			<code>).then(instance =></code>
+			<code>	<mark>instance.exports.exported_func();</mark></code>
+			<code>)</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<img src="pictures/15.jpg" alt="" class="cover">
 	</section>
 
 	<section class="slide">
@@ -462,10 +552,6 @@
 			<code>  i32[i] = i;</code>
 			<code>}</code>
 		</pre>
-	</section>
-
-	<section class="slide">
-		<img src="pictures/26.png" alt="" class="cover">
 	</section>
 
 	<section class="slide">
@@ -531,7 +617,7 @@
 		<ol>
 			<li style="text-decoration: line-through;">С - язык со строгой статической типизацией</li>
 			<li style="text-decoration: line-through;">Сборщик мусора и управление памятью</li>
-			<li>Указание публичных методов нашего модуля</li>
+			<li>Указание публичных методов нашего модуля (main функция)</li>
 		</ol>
 	</section>
 
@@ -552,13 +638,26 @@
 	</section>
 
 	<section class="slide">
+		<pre>
+			<code>fetch("fun.wasm").then(response =></code>
+  			<code>	response.arrayBuffer()</code>
+			<code>).then(bytes =></code>
+			<code>	WebAssembly.instantiate(bytes, importObject)</code>
+			<code>).then(instance =></code>
+			<code>	<mark>instance.exports.exported_func();</mark></code>
+			<code>)</code>
+		</pre>
+	</section>
+
+	<section class="slide">
 		<h2 class="shout" style="font-size: 4em;">WebAssembly.Table</h2>
 	</section>
 
 	<section class="slide">
 		<pre>
-			<code>var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});</code>
-			<code class="comment">// импорт таблицы в WebAssembly модуль</code>
+			<code>var tbl = new WebAssembly.Table({</code>
+			<code>		initial:2, element:"anyfunc"</code>
+			<code>});</code>
 			<code>console.log(tbl.length); <span class="comment">// "2"</span></code>
 			<code>console.log(tbl.get(0)()); <span class="comment">// результат вызова 1 функции</span></code>
 			<code>console.log(tbl.get(1)()); <span class="comment">// результат вызова 2 функции</span></code>
@@ -566,11 +665,29 @@
 	</section>
 
 	<section class="slide">
-		<img src="pictures/32.png" alt="" class="cover w">
+		<pre>
+			<code>var tbl = new WebAssembly.Table({</code>
+			<code>		<mark>initial:2, element:"anyfunc"</mark></code>
+			<code>});</code>
+			<code>console.log(tbl.length); <span class="comment">// "2"</span></code>
+			<code>console.log(tbl.get(0)()); <span class="comment">// результат вызова 1 функции</span></code>
+			<code>console.log(tbl.get(1)()); <span class="comment">// результат вызова 2 функции</span></code>
+		</pre>
 	</section>
 
 	<section class="slide">
-		<img src="pictures/33.png" alt="" class="cover w">
+		<pre>
+			<code>var tbl = new WebAssembly.Table({</code>
+			<code>		initial:2, element:"anyfunc"</code>
+			<code>});</code>
+			<code>console.log(tbl.length); <span class="comment">// "2"</span></code>
+			<code>console.log(<mark>tbl.get(0)()</mark>); <span class="comment">// результат вызова 1 функции</span></code>
+			<code>console.log(tbl.get(1)()); <span class="comment">// результат вызова 2 функции</span></code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/32.png" alt="" class="cover w">
 	</section>
 
 	<section class="slide">
@@ -652,7 +769,7 @@
 		<ol>
 			<li class="next">WebAssembly очень сырой, мало инструментов, сложно дебажить, но если прижмет, то можно использовать</li>
 			<li class="next">Скомпилировать любой алгоритм на C/C++/Rust в WebAssemly не сложно</li>
-			<li class="next">Квантовые компьютеры на подходе, стоит задуматься о нашем будущем</li>
+			<li class="next">Будущее WebAssembly выглядит заманчиво: сборщик мусора, многопоточность, LLVM, доступ к DOM и так далее.</li>
 		</ol>
 	</section>
 
@@ -660,7 +777,8 @@
 		<h2 class="shout">Раунд!</h2>
 	</section>
 
-	<section class="slide cover black-slide">
+	<section class="slide cover">
+		<h2>Ваши вопросы:</h2>
 		<div class="contacts">
 			<div>Facebook: <a href="https://www.facebook.com/dashukevich.vova">dashukevich.vova</a></div>
 			<div>Twitter: <a href="https://twitter.com/life__777">life__777</a></div>
