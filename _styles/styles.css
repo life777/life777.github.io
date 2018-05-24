@@ -1,0 +1,66 @@
+html, body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.presentation-card {
+    overflow: hidden;
+    border: 2px solid #000;
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-size: 12px;
+    height: 300px;
+    width: 300px;
+    line-height: 100%;
+    opacity: 1;
+    position: relative;
+    vertical-align: top;
+    white-space: nowrap;
+    box-shadow: 1px 2px 12px 2px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition-duration: 200ms;
+    transition-property: box-shadow;
+    transition-timing-function: linear;
+}
+
+.presentation-card:hover {
+    box-shadow: 7px 5px 12px 2px rgba(0,0,0,0.5);
+}
+
+.presentation-card__link {
+    height: 100%;
+    width: 100%;
+}
+
+.presentation-card__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.presentation-card__header {
+    overflow: hidden;
+    height: 35px;
+    width: 100%;
+    background: beige;
+    border-radius: 15px 15px 0 0;
+}
+
+.presentation-card__image {
+    width: 100%;
+    height: calc(100% - 35px - 30px);
+    position: relative;
+    bottom: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.presentation-card__video-list {
+    padding: 8px;
+    box-sizing: border-box;
+    background: beige;
+    font-size: 14px;
+    text-align: center;
+}

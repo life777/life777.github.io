@@ -4,9 +4,14 @@
         this.defImg = "/algorithms/pictures/1.png";
     };
 
-    Card.prototype.videoToLink = function () {
-        if (this.options.video) {
-            return "<a class='presentation-card__video-link' href='" + this.options.video + "'>Video can be found here</a>";
+    Card.prototype.videoToLink = function (video, index) {
+        return "<a class='presentation-card__video-link' href='" + video + "'>Video " + (index + 1) + "</a>";
+    };
+
+    Card.prototype.videosToLink = function () {
+        if (this.options.videos) {
+            var videos = this.options.videos;
+            return "<div class='presentation-card__video-list'>" + videos.map(this.videoToLink).join(" | ") + "</div>";
         }
 
         return "";
@@ -15,10 +20,12 @@
     Card.prototype.toHTML = function () {
         return "<div class='presentation-card'>" +
                     "<a class='presentation-card__link' href='" + this.options.link + "'>" +
-                        "<h3 class='presentation-card__title'>" + this.options.title + "</h3>" +
-                        "<img class='presentation-card__image' src='" + (this.options.img || this.defImg) + "' />" +
+                        "<div class='presentation-card__header'>" +
+                            "<h3 class='presentation-card__title'>" + this.options.title + "</h3>" +
+                        "</div>" +
+                        "<div class='presentation-card__image' style='background-image: url(" + (this.options.img || this.defImg) + ");' ></div>" +
                     "</a>" +
-                    this.videoToLink() +
+                    this.videosToLink() +
                 "</div>";
     };
 
