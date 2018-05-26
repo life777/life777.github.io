@@ -2,7 +2,7 @@
     var presentations = [{
         link: "/algorithms",
         img: "/algorithms/pictures/25.png",
-        title: "Algorithms and data structures that change frontend",
+        title: "Algorithms and data structures",
         videos: ["https://www.youtube.com/watch?v=nocJsLFPjNk"]
     }, {
         link: "/quantum",
@@ -16,6 +16,13 @@
         videos: [
             "https://www.youtube.com/watch?v=IOBorSRbGYs",
             "https://www.youtube.com/watch?v=VufUKONzZdM"
+        ]
+    }, {
+        link: "/testing",
+        img: "/testing/pictures/8.jpg",
+        title: "Unit tests in JS",
+        videos: [
+            "https://www.youtube.com/watch?v=9qSZeVSa7ts"
         ]
     }];
 

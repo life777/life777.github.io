@@ -50,6 +50,7 @@ html, body {
 
 .presentation-card__header {
     overflow: hidden;
+    text-align: center;
     height: 35px;
     width: 100%;
     background: beige;
