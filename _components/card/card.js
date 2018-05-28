@@ -23,10 +23,10 @@
     Card.prototype.toHTML = function () {
         return "<div class='presentation-card presentations-document__list-item'>" +
                     "<a target='_blank' class='presentation-card__link' href='" + this.options.link + "'>" +
+                        "<div class='presentation-card__image' style='background-image: url(" + (this.options.img || this.defImg) + ");' ></div>" +
                         "<div class='presentation-card__header'>" +
                             "<h3 class='presentation-card__title'>" + this.options.title + "</h3>" +
                         "</div>" +
-                        "<div class='presentation-card__image' style='background-image: url(" + (this.options.img || this.defImg) + ");' ></div>" +
                     "</a>" +
                     this.videosToLink() +
                 "</div>";

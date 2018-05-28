@@ -33,7 +33,7 @@
         ]
     }, {
         link: "/https",
-        img: "/https/pictures/9.png",
+        img: "/https/pictures/4.gif",
         title: "HTTP vs HTTPS",
         videos: [
             "https://www.youtube.com/watch?v=IOBorSRbGYs"
