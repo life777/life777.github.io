@@ -28,6 +28,7 @@ html, body {
     vertical-align: top;
     white-space: nowrap;
     cursor: pointer;
+    box-shadow:  0 0 5px 0 #ccc;
     transition-duration: 200ms;
     transition-property: box-shadow;
     transition-timing-function: linear;

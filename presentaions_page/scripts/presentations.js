@@ -1,7 +1,7 @@
 (function (w) {
     var presentations = [{
         link: "/algorithms",
-        img: "/algorithms/pictures/25.png",
+        img: "/presentaions_page/images/algorithms.png",
         title: "Algorithms and data structures",
         videos: ["https://www.youtube.com/watch?v=nocJsLFPjNk"]
     }, {
