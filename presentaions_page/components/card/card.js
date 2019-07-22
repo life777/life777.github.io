@@ -12,7 +12,8 @@
         if (this.options.videos) {
             var videos = this.options.videos;
             var addIndex = videos.length > 1;
-            return "<div class='presentation-card__video-list'>" + videos.map(function (video, index) {
+            var modifier = videos.length === 0 ? "presentation-card__video-list--empty" : "";
+            return "<div class='presentation-card__video-list " + modifier + "'>" + videos.map(function (video, index) {
                 return this.videoToLink(video, addIndex ? "Video " + (index + 1) : "Video");
             }.bind(this)).join(" | ") + "</div>";
         }

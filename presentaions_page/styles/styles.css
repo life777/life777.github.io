@@ -51,7 +51,7 @@ html, body {
     box-sizing: border-box;
     margin: 0;
     font-family: Noto Sans;
-    font-size: 20px;
+    font-size: 1.4rem;
     line-height: 32px;
     color: #424242;
 }
@@ -60,7 +60,6 @@ html, body {
     overflow: hidden;
     text-align: left;
     width: 100%;
-    font-size: 16px;
     color: #111;
     text-decoration: none;
 }
@@ -74,16 +73,19 @@ html, body {
 }
 
 .presentation-card__video-list {
-    padding: 8px;
+    border-top: 1px solid #5f6368;
+    padding: 9px;
     box-sizing: border-box;
     text-align: left;
     font-family: Roboto Mono;
 }
 
+.presentation-card__video-list--empty {
+    border-top: none;
+}
+
 .presentation-card__video-link {
-    text-decoration: none;
-    font-size: 15px;
+    font-size: 1.2rem;
     font-weight: 400;
     font-style: normal;
-    color: #5f6368;
 }

@@ -14,8 +14,8 @@
         img: "/tls/pictures/4.jpg",
         title: "TLS/SSL",
         videos: [
-            "https://www.youtube.com/watch?v=IOBorSRbGYs",
-            "https://www.youtube.com/watch?v=VufUKONzZdM"
+            "https://www.youtube.com/watch?v=VufUKONzZdM",
+            "https://www.youtube.com/watch?v=IOBorSRbGYs"
         ]
     }, {
         link: "/ts",
