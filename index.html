@@ -1,37 +1,21 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Presentations</title>
-	<style type="text/css">
-		a {
-			color: #F00;
-		}
-		
-		.item { 
-			padding: 10px;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="presentaions_page/styles/styles.css">
+    <title>My presentations</title>
 </head>
 <body>
-	<ol>
-		<li class="item"><a href="/http/index.html">SPDY/HTTP2.0</a></li>
-		<li class="item"><a href="/speech/index.html">Speech API</a></li>
-		<li class="item"><a href="/promises/index.html">Promises</a></li>
-		<li class="item"><a href="/CSP/index.html">CSP</a></li>
-		<li class="item"><a href="/wsd/index.html">Translators to Javascript</a></li>
-		<li class="item"><a href="/es6/index.html">ES2015</a></li>
-		<li class="item"><a href="/future/index.html">JavaScript - past, present and future</a></li>
-		<li class="item"><a href="/amp/index.html">AMP</a></li>
-		<li class="item"><a href="/security/index.html">Security</a></li>
-		<li class="item"><a href="/future2/index.html">Future</a></li>
-		<li class="item"><a href="/webComponents/index.html">Web components</a></li>
-		<li class="item"><a href="/rust/index.html">Rust language</a></li>
-		<li class="item"><a href="/wasm/index.html">Web assembly</a></li>
-		<li class="item"><a href="/https/index.html">TLS and HTTPS</a></li>
-		<li class="item"><a href="/testing/index.html">Testing</a></li>
-		<li class="item"><a href="/tls/index.html">SSL/TLS</a></li>
-		<li class="item"><a href="/algorithms/index.html">Algorithms and Data Structures</a></li>
-		<li class="item"><a href="/future3/index.html">Future of JavaScript 2017</a></li>
-		<li class="item"><a href="/quantum/index.html">WebAssembly against Quantum Computer</a></li>
-	</ol>
+    <div class="presentations-document">
+        <h1 class="presentations-document__title">My presentations</h1>
+        <div rel="presentations_list" class="presentations-document__list"></div>
+    </div>
 </body>
+<script src="presentaions_page/components/card/card.js"></script>
+<script src="presentaions_page/scripts/presentations.js"></script>
+<script src="presentaions_page/scripts/linksToShow.js"></script>
 </html>
