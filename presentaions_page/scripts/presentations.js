@@ -19,7 +19,7 @@
         ]
     }, {
         link: "/ts",
-        img: "/ts/pictures/3.gif",
+        img: "/presentaions_page/images/ts.jpg",
         title: "Fight bugs in JavaScript",
         videos: [
             "https://www.youtube.com/watch?v=_B6N_7tF6MA"
@@ -33,7 +33,7 @@
         ]
     }, {
         link: "/https",
-        img: "/https/pictures/4.gif",
+        img: "/presentaions_page/images/https.jpg",
         title: "HTTP vs HTTPS",
         videos: [
             "https://www.youtube.com/watch?v=IOBorSRbGYs"
@@ -90,7 +90,7 @@
         ]
     }, {
         link: "/promises",
-        img: "/promises/pictures/4.gif",
+        img: "/presentaions_page/images/promises.jpg",
         title: "Promises in JavaScript",
         videos: [
             "https://www.youtube.com/watch?v=M1N6WlJEEMs"
