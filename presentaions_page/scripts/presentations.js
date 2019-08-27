@@ -6,12 +6,12 @@
         videos: ["https://www.youtube.com/watch?v=nocJsLFPjNk"]
     }, {
         link: "/quantum",
-        img: "/quantum/pictures/4.jpg",
+        img: "/presentaions_page/images/quantum.jpg",
         title: "WASM vs Quantum computer",
         videos: ["https://www.youtube.com/watch?v=4_lVq1-lr8g"]
     }, {
         link: "/tls",
-        img: "/tls/pictures/4.jpg",
+        img: "/presentaions_page/images/tls.jpg",
         title: "TLS/SSL",
         videos: [
             "https://www.youtube.com/watch?v=VufUKONzZdM",
@@ -26,7 +26,7 @@
         ]
     }, {
         link: "/testing",
-        img: "/testing/pictures/8.jpg",
+        img: "/presentaions_page/images/testing.jpg",
         title: "Unit tests in JS",
         videos: [
             "https://www.youtube.com/watch?v=9qSZeVSa7ts"
@@ -40,35 +40,35 @@
         ]
     }, {
         link: "/CSP",
-        img: "/CSP/pictures/48.png",
+        img: "/presentaions_page/images/csp.png",
         title: "Content Security Policy",
         videos: [
             "https://www.youtube.com/watch?v=5T6OnChCO78"
         ]
     }, {
         link: "/rust",
-        img: "/rust/pictures/1.png",
+        img: "/presentaions_page/images/rust.png",
         title: "Rust language",
         videos: [
             "https://www.youtube.com/watch?v=2gIivSjhYOc"
         ]
     }, {
         link: "/webComponents",
-        img: "/webComponents/pictures/1.png",
+        img: "/presentaions_page/images/webComponents.png",
         title: "Web components",
         videos: [
             "https://www.youtube.com/watch?v=sH04-Ypak_s"
         ]
     }, {
         link: "/future2",
-        img: "/future2/pictures/2.jpg",
+        img: "/presentaions_page/images/future.jpg",
         title: "Future of Javascript",
         videos: [
             "https://www.youtube.com/watch?v=_OcnHy64xM0"
         ]
     }, {
         link: "/security",
-        img: "/security/pictures/47.jpg",
+        img: "/presentaions_page/images/security.jpg",
         title: "Threats in frontend",
         videos: [
             "https://www.youtube.com/watch?v=HYVXxeSjPK8",
@@ -76,14 +76,14 @@
         ]
     }, {
         link: "/amp",
-        img: "/amp/pictures/1.jpeg",
+        img: "/presentaions_page/images/amp.jpg",
         title: "AMP pages",
         videos: [
             "https://www.youtube.com/watch?v=yamUsRCBqyk"
         ]
     }, {
         link: "/wsd",
-        img: "/wsd/pictures/11.jpg",
+        img: "/presentaions_page/images/wsd.jpg",
         title: "Transpilers to JavaScript",
         videos: [
             "https://youtu.be/UPtDcAbg6EI?t=6h51m50s"
@@ -97,21 +97,21 @@
         ]
     }, {
         link: "/speech",
-        img: "/speech/pictures/speech7.jpg",
+        img: "/presentaions_page/images/speech.jpg",
         title: "Speech recognition",
         videos: [
             "https://www.youtube.com/watch?v=9FXTj4jt2T4"
         ]
     }, {
         link: "/http",
-        img: "/http/pictures/20.png",
+        img: "/presentaions_page/images/http.png",
         title: "HTTP2",
         videos: [
             "https://www.youtube.com/watch?v=iZI-Pt6ntu0"
         ]
     }, {
         link: "/vsRuby",
-        img: "/vsRuby/pictures/16.jpg",
+        img: "/presentaions_page/images/ruby.jpg",
         title: "NodeJS vs Ruby",
         videos: [
             "https://www.youtube.com/watch?v=HDpIc8QCJTw",
@@ -119,12 +119,12 @@
         ]
     }, {
         link: "/es6",
-        img: "/es6/pictures/2.jpg",
+        img: "/presentaions_page/images/es6.jpg",
         title: "ES 2015",
         videos: []
     }, {
         link: "/wasm",
-        img: "/wasm/pictures/1.png",
+        img: "/presentaions_page/images/wasm.png",
         title: "WebAssembly",
         videos: []
     }];

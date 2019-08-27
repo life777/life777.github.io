@@ -67,7 +67,7 @@ html, body {
 .presentation-card__image {
     width: 100%;
     height: calc(100% - 50px - 30px);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
