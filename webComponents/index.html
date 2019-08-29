@@ -3,16 +3,31 @@
 <head>
 	<title>Компонентный подход</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="stylesheet" href="styles/screen.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
 	<style type="text/css">
 		.pad {
 			padding-left: 50px;
 		}
+
+		.contacts {
+		    position: absolute;
+		    top: 250px;
+		    margin-left: -20px;
+		}
+
+		#face {
+			background-color: #000;
+		}
+
+		#face::after {
+			content: "";
+			display: none;
+		}
 	</style>	
 </head>
-<body class="list">
+<body class="shower list">
 	<header class="caption">
 		<h1>Компонентный подход</h1>
 		<p>Владимир Дашукевич</p>
@@ -27,30 +42,20 @@
 			<div>}</div>
 		</div>
 	</section>
-	<section class="slide shout">
-		<div>
-			<h2>Что такое рай для Frontend программиста?</h2>
-		</div>
+	<section class="slide">
+		<h2 class="shout">Что такое рай для Frontend программиста?</h2>
 	</section>
-	<section class="slide cover w">
-		<div>
-			<img src="pictures/2.jpg">
-		</div>
+	<section class="slide">
+		<img class="cover w" src="pictures/2.jpg">
 	</section>
-	<section class="slide cover h">
-		<div>
-			<img src="pictures/3.jpg">
-		</div>
+	<section class="slide">
+		<img class="cover h" src="pictures/3.jpg">
 	</section>
-	<section class="slide cover h">
-		<div>
-			<img src="pictures/4.jpg">
-		</div>
+	<section class="slide">
+		<img class="cover h" src="pictures/4.jpg">
 	</section>
-	<section class="slide shout">
-		<div>
-			<h2>Компонент</h2>
-		</div>
+	<section class="slide">
+		<h2 class="shout">Компонент</h2>
 	</section>
 	<section class="slide">
 		<div>
@@ -64,30 +69,33 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout">
-		<div>
-			<h2>SOLID</h2>
-		</div>
+	<section class="slide">
+		<h2 class="shout">SOLID</h2>
 	</section>
-	<section class="slide cover w">
-		<div>
-			<img src="pictures/1.jpg">
-		</div>
+	<section class="slide">
+		<img class="cover w" src="pictures/1.jpg">
 	</section>
-	<section class="slide shout">
-		<div>
-			<h2>Что такое компонентный подход?</h2>
-		</div>
+	<section class="slide">
+		<h2 class="shout">Что такое компонентный подход?</h2>
 	</section>
-	<section class="slide cover h">
-		<div>
-			<img src="pictures/5.jpg">
-		</div>
+	<section class="slide">
+		<img class="cover h" src="pictures/5.jpg">
 	</section>
-	<section class="slide cover w">
-		<div>
-			<img src="pictures/1.png">
-		</div>
+	<section class="slide">
+		<img class="cover w" src="pictures/1.png">
+	</section>
+	<section class="slide">
+		<h2>Компонент:</h2>
+		<ol>
+			<li><mark class="important">Независимый модуль исходного кода программы</mark></li>
+			<li><mark class="important">Предназначенный для повторного использования</mark></li>
+			<li>Выполняет одну функцию</li>
+			<li>Содержит минимальный функционал</li>
+			<li>Хорошо тестируем</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<img class="cover h" src="pictures/2.png">
 	</section>
 	<section class="slide">
 		<div>
@@ -101,31 +109,14 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide cover h">
+	<section class="slide">
 		<div>
-			<img src="pictures/2.png">
+			<img class="cover h" src="pictures/2.png">
 		</div>
 	</section>
 	<section class="slide">
 		<div>
-			<h2>Компонент:</h2>
-			<ol>
-				<li><mark class="important">Независимый модуль исходного кода программы</mark></li>
-				<li><mark class="important">Предназначенный для повторного использования</mark></li>
-				<li>Выполняет одну функцию</li>
-				<li>Содержит минимальный функционал</li>
-				<li>Хорошо тестируем</li>
-			</ol>
-		</div>
-	</section>
-	<section class="slide cover h">
-		<div>
-			<img src="pictures/2.png">
-		</div>
-	</section>
-	<section class="slide cover h">
-		<div>
-			<img src="pictures/3.png">
+			<img class="cover h" src="pictures/3.png">
 		</div>
 	</section>
 	<section class="slide">
@@ -140,9 +131,9 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide cover h">
+	<section class="slide">
 		<div>
-			<img src="pictures/4.png">
+			<img class="cover h" src="pictures/4.png">
 		</div>
 	</section>
 	<section class="slide">
@@ -157,25 +148,25 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide cover h">
+	<section class="slide">
 		<div>
-			<img src="pictures/5.png">
+			<img class="cover h" src="pictures/5.png">
 		</div>
 	</section>
-	<section class="slide cover h">
+	<section class="slide">
 		<div>
-			<img src="pictures/6.png">
+			<img class="cover h" src="pictures/6.png">
 		</div>
 	</section>
 
-	<section class="slide cover h">
+	<section class="slide">
 		<div>
-			<img src="pictures/2.png">
+			<img class="cover h" src="pictures/2.png">
 		</div>
 	</section>
-	<section class="slide cover h">
+	<section class="slide">
 		<div>
-			<img src="pictures/7.png">
+			<img class="cover h" src="pictures/7.png">
 		</div>
 	</section>
 	<section class="slide">
@@ -190,79 +181,79 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide cover h">
+	<section class="slide">
 		<div>
-			<img src="pictures/8.png">
+			<img class="cover h" src="pictures/8.png">
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>И ещё 100000 примеров</h2>
+			<h2 class="shout">И ещё 100000 примеров</h2>
 		</div>
 	</section>
-	<section class="slide cover w">
+	<section class="slide">
 		<div>
-			<img src="pictures/file.gif">
+			<img class="cover w" src="pictures/file.gif">
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Что нам делать?</h2>
+			<h2 class="shout">Что нам делать?</h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Knockout</h2>
+			<h2 class="shout">Knockout</h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>React</h2>
+			<h2 class="shout">React</h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Webix</h2>
+			<h2 class="shout">Webix</h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Angular</h2>
+			<h2 class="shout">Angular</h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Angular 2</h2>
+			<h2 class="shout">Angular 2</h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Кто чем пользуется?</h2>
+			<h2 class="shout">Кто чем пользуется?</h2>
 		</div>
 	</section>
-	<section class="slide cover w">
+	<section class="slide">
 		<div>
-			<img src="pictures/1.gif">
+			<img class="cover w" src="pictures/1.gif">
 		</div>
 	</section>
-	<section class="slide cover h">
+	<section class="slide">
 		<div>
-			<img src="pictures/save1.jpg">
+			<img class="cover h" src="pictures/save1.jpg">
 		</div>
 	</section>
-	<section class="slide cover h">
+	<section class="slide">
 		<div>
-			<img src="pictures/save2.png">
+			<img class="cover h" src="pictures/save2.png">
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Web Components</h2>
+			<h2 class="shout">Web Components</h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Что нам нужно?</h2>
+			<h2 class="shout">Что нам нужно?</h2>
 		</div>
 	</section>
 	<section class="slide">
@@ -275,9 +266,9 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2><a href="http://w3c.github.io/webcomponents/spec/custom/">CustomElements<a></h2>
+			<h2 class="shout"><a href="http://w3c.github.io/webcomponents/spec/custom/">CustomElements<a></h2>
 		</div>
 	</section>
 	<section class="slide">
@@ -311,14 +302,14 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Общение с внешним миром через CustomEvent</h2>
+			<h2 class="shout">Общение с внешним миром через CustomEvent</h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Demo</h2>
+			<h2 class="shout">Demo</h2>
 		</div>
 	</section>
 	<section class="slide">
@@ -331,9 +322,9 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2><a href="http://w3c.github.io/webcomponents/spec/shadow/">Shadow DOM<a></h2>
+			<h2 class="shout"><a href="http://w3c.github.io/webcomponents/spec/shadow/">Shadow DOM<a></h2>
 		</div>
 	</section>
 	<section class="slide">
@@ -346,9 +337,9 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Кто видел Shadow DOM?</h2>
+			<h2 class="shout">Кто видел Shadow DOM?</h2>
 		</div>
 	</section>
 	<section class="slide">
@@ -361,19 +352,19 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Как его использовать</h2>
+			<h2 class="shout">Как его использовать</h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Demo</h2>
+			<h2 class="shout">Demo</h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Light vs Shadow DOM?</h2>
+			<h2 class="shout">Light vs Shadow DOM?</h2>
 		</div>
 	</section>
 	<section class="slide">
@@ -411,21 +402,21 @@
 		</div>
 	</section>
 	</section>
-		<section class="slide shout">
+		<section class="slide">
 		<div>
-			<h2>Style</h2>
+			<h2 class="shout">Style</h2>
 		</div>
 	</section>
 	</section>
-		<section class="slide shout">
+		<section class="slide">
 		<div>
-			<h2>:host</h2>
+			<h2 class="shout">:host</h2>
 		</div>
 	</section>
 	</section>
-		<section class="slide shout">
+		<section class="slide">
 		<div>
-			<h2>:host-context(selector)</h2>
+			<h2 class="shout">:host-context(selector)</h2>
 		</div>
 	</section>
 	<section class="slide">
@@ -437,9 +428,9 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>::slotted(selector)</h2>
+			<h2 class="shout">::slotted(selector)</h2>
 		</div>
 	</section>
 	<section class="slide">
@@ -451,14 +442,14 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Внешние стили</h2>
+			<h2 class="shout">Внешние стили</h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>beer-img</h2>
+			<h2 class="shout">beer-img</h2>
 		</div>
 	</section>
 	<section class="slide">
@@ -488,14 +479,14 @@
 			</pre>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2><a href="https://rawgit.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b/raw/fancy-tabs-demo.html">Demo</a></h2>
+			<h2 class="shout"><a href="https://rawgit.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b/raw/fancy-tabs-demo.html">Demo</a></h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Все прекрасно?</h2>
+			<h2 class="shout">Все прекрасно?</h2>
 		</div>
 	</section>
 	<section class="slide">
@@ -516,9 +507,9 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Demo</h2>
+			<h2 class="shout">Demo</h2>
 		</div>
 	</section>
 	<section class="slide">
@@ -532,14 +523,14 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide cover w">
+	<section class="slide">
 		<div>
-			<img src="pictures/9.png">
+			<img class="cover w" src="pictures/9.png">
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2><a href="http://webcomponents.org/">polyfill</a></h2>
+			<h2 class="shout"><a href="http://webcomponents.org/">polyfill</a></h2>
 		</div>
 	</section>
 	<section class="slide">
@@ -552,14 +543,14 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Polymer</h2>
+			<h2 class="shout">Polymer</h2>
 		</div>
 	</section>
-	<section class="slide cover w">
+	<section class="slide">
 		<div>
-			<img src="pictures/1.gif">
+			<img class="cover w" src="pictures/1.gif">
 		</div>
 	</section>
 	<section class="slide">
@@ -574,9 +565,9 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Demo</h2>
+			<h2 class="shout">Demo</h2>
 		</div>
 	</section>
 		<section class="slide">
@@ -589,24 +580,28 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>One more thing</h2>
+			<h2 class="shout">One more thing</h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Думайте о будущем)</h2>
+			<h2 class="shout">Думайте о будущем)</h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Questions</h2>
+			<h2 class="shout">Questions</h2>
 		</div>
 	</section>
+	<section class="slide cover black-slide">
+		<div class="contacts">
+			<div>Facebook: <a href="https://www.facebook.com/dashukevich.vova">dashukevich.vova</a></div>
+			<div>Twitter: <a href="https://twitter.com/life__777">life__777</a></div>
+		</div>
+	</section>
+	<div class="progress"></div>
 </body>
-<script src="js/shower.min.js"></script>
-<script type="text/javascript">
-
-</script>
+<script src="shower/shower.min.js"></script>
 </html>
