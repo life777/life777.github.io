@@ -3,9 +3,9 @@
 <head>
 	<title>Как хакнуть фронтенд</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="stylesheet" href="styles/screen.css">	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">	
 	<style type="text/css">
 		.pad {
 			padding-left: 50px;
@@ -19,14 +19,23 @@
 			z-index: 5000;
 			cursor: pointer;
 		}
+
+		.black-slide {
+			background-color: #000;
+		}
+
+		.black-slide::after {
+			content: "";
+			display: none;
+		}
 	</style>
 </head>
-<body class="list">
+<body class="shower list">
 	<header class="caption">
 		<h1>Как хакнуть фронтенд</h1>
 		<p>Владимир Дашукевич</p>
 	</header>
-	<section class="slide cover" id="face">
+	<section class="slide cover black-slide" id="face">
 		<div style="color: #fff; font-size: 1.4em;">
 			<div>{</div>
 			<div class="pad">Тема: <mark>Как хакнуть фронтенд</mark>,</div>
@@ -36,9 +45,9 @@
 			<div>}</div>
 		</div>
 	</section>
-	<section class="slide cover w">
+	<section class="slide">
 		<div>
-			<img src="pictures/41.png">
+			<img class="cover w" src="pictures/41.png">
 		</div>
 	</section>
 	<section class="slide">
@@ -59,15 +68,15 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout">
-		<h2>Запуск "злого" кода</h2>
+	<section class="slide">
+		<h2 class="shout">Запуск "злого" кода</h2>
 	</section>
-	<section class="slide shout">
-		<h2>XSS (Cross Site Scripting)</h2>
+	<section class="slide">
+		<h2 class="shout">XSS (Cross Site Scripting)</h2>
 	</section>
-	<section style="background-color: white;" class="slide cover w"><div>
+	<section style="background-color: white;" class="slide"><div>
 		<div>
-			<img src="pictures/1.png">
+			<img class="cover w" src="pictures/1.png">
 		</div>
 	</section>
 	<section class="slide">
@@ -79,83 +88,83 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout">
-		<h2>Хранимые</h2>
+	<section class="slide">
+		<h2 class="shout">Хранимые</h2>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/2.gif">
+			<img class="cover w" src="pictures/2.gif">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/47.jpg">
-		</div>
-	</section>
-
-	<section class="slide cover w"><div>
-		<div>
-			<img src="pictures/45.png">
+			<img class="cover h" src="pictures/47.jpg">
 		</div>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/45.jpg">
+			<img class="cover w" src="pictures/45.png">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/46.png">
+			<img class="cover h" src="pictures/45.jpg">
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Ораженные XSS атаки</h2>
-	</section>
-
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/17.gif">
+			<img class="cover w" src="pictures/46.png">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
+		<h2 class="shout">Ораженные XSS атаки</h2>
+	</section>
+
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/47.jpg">
+			<img class="cover w" src="pictures/17.gif">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/45.png">
+			<img class="cover w" src="pictures/47.jpg">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/46.png">
+			<img class="cover w" src="pictures/45.png">
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Как это может быть опасно?</h2>
-	</section>
-
-	<section class="slide shout"><div>
-		<h2>Пускай пользователь выполнит такой же запрос</h2>
-	</section>
-
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/2.png">
+			<img class="cover w" src="pictures/46.png">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
+		<h2 class="shout">Как это может быть опасно?</h2>
+	</section>
+
+	<section class="slide"><div>
+		<h2 class="shout">Пускай пользователь выполнит такой же запрос</h2>
+	</section>
+
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/46.png">
+			<img class="cover w" src="pictures/2.png">
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<div>
+			<img class="cover w" src="pictures/46.png">
 		</div>
 	</section>
 
@@ -164,8 +173,8 @@
 		<h2 class="next" style="line-height: 1.2em; margin-top: 100px;">https://you.site?param1=some_value&<br><mark>id=152</mark></h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Почему это плохо?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Почему это плохо?</h2>
 	</section>
 
 	<section class="slide">
@@ -180,8 +189,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Как пользователь может запустить "злой" скрипт</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Как пользователь может запустить "злой" скрипт</h2>
 	</section>
 
 	<section class="slide"><div>
@@ -224,8 +233,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Слишком просто)</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Слишком просто)</h2>
 	</section>
 
 	<section class="slide"><div>
@@ -254,8 +263,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Можно что-нибудь посложнее)</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Можно что-нибудь посложнее)</h2>
 	</section>
 
 	<section class="slide"><div>
@@ -271,16 +280,16 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Помочь сайту в UX))</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Помочь сайту в UX))</h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="https://github.com/tlrobinson/evil.css/">evil.css</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="https://github.com/tlrobinson/evil.css/">evil.css</a></h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Можно ли украсть что-нибудь?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Можно ли украсть что-нибудь?</h2>
 	</section>
 
 	<section class="slide"><div>
@@ -314,14 +323,12 @@
 			</pre>
 		</div>
 	</section>
-	<section class="slide shout">
-		<div>
-			<h2><a href='http://eaea.sirdarckcat.net/cssar/v2/'>example</a></h2>
-		</div>
+	<section class="slide">
+		<h2 class="shout"><a href='http://eaea.sirdarckcat.net/cssar/v2/'>example</a></h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Или ещё хуже?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Или ещё хуже?</h2>
 	</section>
 
 	<section class="slide"><div>
@@ -337,12 +344,12 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Keylogger с помощью картнки?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Keylogger с помощью картнки?</h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>&lt;set&gt; в &lt;svg&gt;</h2>
+	<section class="slide"><div>
+		<h2 class="shout">&lt;set&gt; в &lt;svg&gt;</h2>
 	</section>
 
 	<section class="slide"><div>
@@ -391,12 +398,12 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="https://html5sec.org/keylogger/">example</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="https://html5sec.org/keylogger/">example</a></h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Вы напуганы?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Вы напуганы?</h2>
 	</section>
 
 	<section class="slide">
@@ -411,8 +418,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Как защититься?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Как защититься?</h2>
 	</section>
 
 	<section class="slide"><div>
@@ -445,8 +452,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Проверяйте и очищайте входные данные</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Проверяйте и очищайте входные данные</h2>
 	</section>
 	<section class="slide"><div>
 		<div>
@@ -472,8 +479,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Заголовки</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Заголовки</h2>
 	</section>
 
 	<section class="slide">
@@ -487,8 +494,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Content Security Policy</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Content Security Policy</h2>
 	</section>
 	<section class="slide">
 		<div>
@@ -594,8 +601,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Как это работает?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Как это работает?</h2>
 	</section>
 
 	<section class="slide"><div>
@@ -650,9 +657,9 @@
 		</div>
 	</section>
 
-	<section class="slide cover h">
+	<section class="slide">
 		<div>
-			<img src="pictures/5.jpg">
+			<img class="cover h" src="pictures/5.jpg">
 		</div>
 	</section>
 
@@ -728,18 +735,18 @@
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/5.png">
+			<img class="cover w" src="pictures/5.png">
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Есть что-то лучше CSP?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Есть что-то лучше CSP?</h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Content Security Policy v2</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Content Security Policy v2</h2>
 	</section>
 
 	<section class="slide">
@@ -823,74 +830,74 @@
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/6.png">
+			<img class="cover w" src="pictures/6.png">
 		</div>
 	</section>
 
-	<section class="slide shout">
-		<h2>В безопасности ли мы?</h2>
+	<section class="slide">
+		<h2 class="shout">В безопасности ли мы?</h2>
 	</section>
-	<section style="background-color: white;" class="slide cover w"><div>
+	<section style="background-color: white;" class="slide"><div>
 		<div>
-			<img src="pictures/1.png">
+			<img class="cover w" src="pictures/1.png">
 		</div>
 	</section>
 
-	<section class="slide shout">
-		<h2>Интернет</h2>
+	<section class="slide">
+		<h2 class="shout">Интернет</h2>
 	</section>
 
-	<section class="slide cover w">
+	<section class="slide">
 		<div>
-			<img src="pictures/1.gif">
+			<img class="cover w" src="pictures/1.gif">
 		</div>
 	</section>
 
-	<section class="slide shout">
-		<h2>Man in the Middle</h2>
+	<section class="slide">
+		<h2 class="shout">Man in the Middle</h2>
 	</section>
 
-	<section class="slide cover w">
+	<section class="slide">
 		<div>
-			<img src="pictures/4.gif">
+			<img class="cover w" src="pictures/4.gif">
 		</div>
 	</section>
 
-	<section class="slide cover w">
+	<section class="slide">
 		<div>
-			<img src="pictures/3.gif">
+			<img class="cover w" src="pictures/3.gif">
 		</div>
 	</section>
 
-	<section class="slide shout">
-		<h2>HTTP vs HTTPS</h2>
+	<section class="slide">
+		<h2 class="shout">HTTP vs HTTPS</h2>
 	</section>
 
-	<section class="slide shout">
-		<h2>Нужно ли везде использовать HTTPS?</h2>
+	<section class="slide">
+		<h2 class="shout">Нужно ли везде использовать HTTPS?</h2>
 	</section>
 
-	<section class="slide shout">
-		<h2>Кому нужен ваш JQuery?</h2>
+	<section class="slide">
+		<h2 class="shout">Кому нужен ваш JQuery?</h2>
 	</section>
 
-	<section class="slide cover w">
+	<section class="slide">
 		<div>
-			<img src="pictures/47.jpg">
+			<img class="cover w" src="pictures/47.jpg">
 		</div>
 	</section>
 
-	<section class="slide cover w">
+	<section class="slide">
 		<div>
-			<img src="pictures/7.png">
+			<img class="cover w" src="pictures/7.png">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/46.png">
+			<img class="cover w" src="pictures/46.png">
 		</div>
 	</section>
 
@@ -905,28 +912,28 @@
 		</div>
 	</section>
 
-	<section class="slide shout" data-show="true">
-		<img id="free" style="display: none;" src="pictures/99.jpg">
+	<section class="slide" data-show="true">
+		<img class="shout" id="free" style="display: none;" src="pictures/99.jpg">
 		<h2>Дать пользователю хакнуть себя</h2>
 	</section>
 
-	<section class="slide shout">
-		<h2>Поздравляем, вас хакнули)</h2>
+	<section class="slide">
+		<h2 class="shout">Поздравляем, вас хакнули)</h2>
 	</section>
 
-	<section class="slide shout">
-		<h2>CSRF (Cross-site request forgery)</h2>
+	<section class="slide">
+		<h2 class="shout">CSRF (Cross-site request forgery)</h2>
 	</section>
 
-	<section class="slide cover w">
+	<section class="slide">
 		<div>
-			<img src="pictures/csrf.png">
+			<img class="cover w" src="pictures/csrf.png">
 		</div>
 	</section>
 
-	<section class="slide cover w">
+	<section class="slide">
 		<div>
-			<img src="pictures/99.jpg">
+			<img class="cover w" src="pictures/99.jpg">
 		</div>
 	</section>
 
@@ -1000,19 +1007,19 @@
 		</div>
 	</section>	
 
-	<section class="slide cover w">
+	<section class="slide">
 		<div>
-			<img src="pictures/54.png">
+			<img class="cover w" src="pictures/54.png">
 		</div>
 	</section>
 
-	<section class="slide shout">
-		<h2>JSON</h2>
+	<section class="slide">
+		<h2 class="shout">JSON</h2>
 	</section>
 
-	<section class="slide cover w">
+	<section class="slide">
 		<div>
-			<img src="pictures/53.png">
+			<img class="cover w" src="pictures/53.png">
 		</div>
 	</section>
 
@@ -1031,9 +1038,9 @@
 		</div>
 	</section>
 
-	<section class="slide cover w">
+	<section class="slide">
 		<div>
-			<img src="pictures/50.png">
+			<img class="cover w" src="pictures/50.png">
 		</div>
 	</section>
 
@@ -1062,35 +1069,35 @@
 		</div>
 	</section>
 
-	<section class="slide shout">
-		<h2>Clickjacking</h2>
+	<section class="slide">
+		<h2 class="shout">Clickjacking</h2>
 	</section>
 
-	<section class="slide cover h">
+	<section class="slide">
 		<div>
-			<img src="pictures/49.png">
+			<img class="cover h" src="pictures/49.png">
 		</div>
 	</section>
 
-	<section class="slide shout">
-		<h2>Поздравляем, вас хакнули)</h2>
+	<section class="slide">
+		<h2 class="shout">Поздравляем, вас хакнули)</h2>
 	</section>
 	
-	<section class="slide cover w">
+	<section class="slide">
 		<div>
-			<img src="pictures/8.png">
+			<img class="cover w" src="pictures/8.png">
 		</div>
 	</section>
 
-	<section class="slide cover h">
+	<section class="slide">
 		<div>
-			<img src="pictures/44.png">
+			<img class="cover h" src="pictures/44.png">
 		</div>
 	</section>
 
-	<section class="slide cover h">
+	<section class="slide">
 		<div>
-			<img src="pictures/49.png">
+			<img class="cover h" src="pictures/49.png">
 		</div>
 	</section>
 
@@ -1127,24 +1134,25 @@
 		</div>
 	</section>
 
-	<section class="slide shout">
-		<h2>And one more thing...</h2>
+	<section class="slide">
+		<h2 class="shout">And one more thing...</h2>
 	</section>
-	<section class="slide shout">
-		<h2>Доверие клиентов беcценно</h2>
+	<section class="slide">
+		<h2 class="shout">Доверие клиентов беcценно</h2>
 	</section>
-	<section class="slide shout">
-		<h2>Думайте о безопасности в первую очередь</h2>
+	<section class="slide">
+		<h2 class="shout">Думайте о безопасности в первую очередь</h2>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Вопросы</h2>
+			<h2 class="shout">Вопросы</h2>
 			<div>Facebook: <a href="https://www.facebook.com/dashukevich.vova">dashukevich.vova</a></div>
 			<div>Twitter: <a href="https://twitter.com/life__777">life__777</a></div>
 		</div>
 	</section>
+	<div class="progress"></div>
 </body>
-<script src="js/shower.min.js"></script>
+<script src="shower/shower.min.js"></script>
 <script type="text/javascript">
 	var go = shower.go;
 	shower.go = function () {
