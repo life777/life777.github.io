@@ -3,76 +3,103 @@
 <head>
 	<title>Promises</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="stylesheet" href="styles/screen.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">	
 	<style type="text/css">
+		.pad {
+			padding-left: 50px;
+		}
 
-	</style>	
+		#free {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			z-index: 5000;
+			cursor: pointer;
+		}
+
+		.black-slide {
+			background-color: #000;
+		}
+
+		.black-slide::after {
+			content: "";
+			display: none;
+		}
+
+		.squ {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: relative;
+		}
+	</style>
 </head>
-<body class="list">
+<body class="shower list">
 	<header class="caption">
 		<h1>Promises</h1>
 		<p>Vladimir Dashukevich</p>
 	</header>
-	<section class="slide cover" id="face"><div>
+	<section class="slide" id="face"><div>
 		<h2>Борьба с асинхронностью</h2>
 		<p>Vladimir Dashukevich</p>
-		<img src="pictures/speech1.jpg" alt="">
+		<img class="cover" src="pictures/speech1.jpg" alt="">
 	</section>
-	<section class="slide shout"><div>
-		<h2>...и я программист!</h2>
+	<section class="slide"><div>
+		<h2 class="shout">...и я программист!</h2>
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/4.jpg" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/4.jpg" alt="">
 	</section>
-	<section class="slide shout"><div>
-		<h2>Цель</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Цель</h2>
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/1.gif" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/1.gif" alt="">
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/1.png" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/1.png" alt="">
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/1.jpeg" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/1.jpeg" alt="">
 	</section>
-	<section class="slide shout"><div>
-		<h2>Асинхронность</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Асинхронность</h2>
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/2.gif" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/2.gif" alt="">
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/9.png" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/9.png" alt="">
 	</section>
-	<section class="slide shout"><div>
-		<h2>Cамое большое расточительство?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Cамое большое расточительство?</h2>
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/3.gif" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/3.gif" alt="">
 	</section>
-	<section class="slide shout"><div>
-		<h2>Что-то напоминает?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Что-то напоминает?</h2>
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/4.gif" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/4.gif" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/5.gif" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/5.gif" alt="">
 	</section>
-	<section class="slide shout"><div>
-		<h2>I/O - медленно</h2>
+	<section class="slide"><div>
+		<h2 class="shout">I/O - медленно</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Способы</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Способы</h2>
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/6.gif" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/6.gif" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/7.gif" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/7.gif" alt="">
 	</section>
 	<section class="slide cons">
 		<div>
@@ -87,8 +114,8 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Новый процесс</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Новый процесс</h2>
 	</section>
 	<section class="slide cons">
 		<div>
@@ -104,8 +131,8 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Потоки</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Потоки</h2>
 	</section>
 	<section class="slide cons">
 		<div>
@@ -120,142 +147,142 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Eventloop</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Eventloop</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Событийный цикл</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Событийный цикл</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Один поток = один стэк = одна функция</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Один поток = один стэк = одна функция</h2>
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/9.gif" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/9.gif" alt="">
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/1.svg" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/1.svg" alt="">
 	</section>
-	<section class="slide shout"><div>
-		<h2>Heap (Куча)</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Heap (Куча)</h2>
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/1.jpg" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/1.jpg" alt="">
 	</section>
-	<section class="slide shout"><div>
-		<h2>Stack</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Stack</h2>
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/2.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/2.png" alt="">
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/1.png" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/1.png" alt="">
 	</section>
-	<section class="slide shout"><div>
-		<h2>Queue</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Queue</h2>
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/1.svg" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/1.svg" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/3.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/3.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/4.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/4.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/5.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/5.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/6.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/6.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/7.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/7.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/8.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/8.png" alt="">
 	</section>
-	<section class="slide shout"><div>
-		<h2>Пример №2</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Пример №2</h2>
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/3.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/3.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/4.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/4.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/5.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/5.png" alt="">
 	</section>
-	<section class="slide shout"><div>
-		<h2>Неожиданный клик</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Неожиданный клик</h2>
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/8.gif" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/8.gif" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/10.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/10.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/11.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/11.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/12.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/12.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/13.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/13.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/14.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/14.png" alt="">
 	</section>
-	<section class="slide shout"><div>
-		<h2>setTimeout(f, 1)</h2>
+	<section class="slide"><div>
+		<h2 class="shout">setTimeout(f, 1)</h2>
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/15.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/15.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/16.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/16.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/17.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/17.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/18.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/18.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/19.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/19.png" alt="">
 	</section>
-	<section class="slide shout"><div>
-		<h2>Мудрость №1</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Мудрость №1</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Короткие функции</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Короткие функции</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Мудрость №2</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Мудрость №2</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>setTimeout(f, 1)</h2>
+	<section class="slide"><div>
+		<h2 class="shout">setTimeout(f, 1)</h2>
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/10.gif" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/10.gif" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/12.gif" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/12.gif" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/13.gif" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/13.gif" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/20.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/20.png" alt="">
 	</section>
-	<section class="slide shout"><div>
-		<h2>Promise</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Promise</h2>
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/21.png" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/21.png" alt="">
 	</section>
-	<section class="slide shout"><div>
+	<section class="slide"><div>
 		<h3>Promise - объект, определяющий текущее состояние некой операции</h3>
 	</section>
 	<section class="slide cons">
@@ -303,8 +330,8 @@
 			</pre>
 		</div>
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/22.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/22.png" alt="">
 	</section>
 	<section class="slide cons">
 		<div>
@@ -345,20 +372,20 @@
 			</pre>
 		</div>
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/41.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/41.png" alt="">
 	</section>
-	<section class="slide shout"><div>
-		<h2>Мудрость №3</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Мудрость №3</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Всегда возвращай promise</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Всегда возвращай promise</h2>
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/23.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/23.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/24.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/24.png" alt="">
 	</section>
 	<section class="slide cons">
 		<div>
@@ -371,32 +398,32 @@
 			</pre>
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Cache</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Cache</h2>
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/25.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/25.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/14.gif" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/14.gif" alt="">
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/26.png" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/26.png" alt="">
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/27.png" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/27.png" alt="">
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/28.png" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/28.png" alt="">
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/29.png" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/29.png" alt="">
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/30.png" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/30.png" alt="">
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/31.png" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/31.png" alt="">
 	</section>
 	<section class="slide cons">
 		<div>
@@ -406,35 +433,35 @@
 			</pre>
 		</div>
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/11.gif" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/11.gif" alt="">
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/15.gif" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/15.gif" alt="">
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/16.gif" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/16.gif" alt="">
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/32.png" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/32.png" alt="">
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/33.png" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/33.png" alt="">
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/34.png" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/34.png" alt="">
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/35.png" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/35.png" alt="">
 	</section>
-	<section class="slide cover h"><div>
-		<img src="pictures/36.png" alt="">
+	<section class="slide"><div>
+		<img class="cover h" src="pictures/36.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/11.gif" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/11.gif" alt="">
 	</section>
-	<section class="slide shout"><div>
-		<h2>Где взять promise?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Где взять promise?</h2>
 	</section>
 	<section class="slide cons">
 		<div>
@@ -447,14 +474,14 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/37.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/37.png" alt="">
 	</section>
-	<section class="slide shout"><div>
-		<h2>Back to the future</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Back to the future</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>ES6 и генераторы</h2>
+	<section class="slide"><div>
+		<h2 class="shout">ES6 и генераторы</h2>
 	</section>
 	<section class="slide cons">
 		<div>
@@ -477,11 +504,11 @@
 			</pre>
 		</div>
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/38.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/38.png" alt="">
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/39.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/39.png" alt="">
 	</section>
 	<section class="slide cons">
 		<div>
@@ -497,12 +524,13 @@
 			</pre>
 		</div>
 	</section>
-	<section class="slide cover w"><div>
-		<img src="pictures/40.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/40.png" alt="">
 	</section>
-	<section class="slide shout"><div>
-		<h2>Вопросы?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Вопросы?</h2>
 	</section>
+	<div class="progress"></div>
 </body>
-<script src="js/shower.min.js"></script>
+<script src="shower/shower.min.js"></script>
 </html>
