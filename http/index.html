@@ -3,374 +3,401 @@
 <head>
 	<title>HTTP и его товарищи</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="stylesheet" href="styles/screen.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">	
 	<style type="text/css">
+		.pad {
+			padding-left: 50px;
+		}
 
-	</style>	
+		#free {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			z-index: 5000;
+			cursor: pointer;
+		}
+
+		.black-slide {
+			background-color: #000;
+		}
+
+		.black-slide::after {
+			content: "";
+			display: none;
+		}
+
+		.squ {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: relative;
+		}
+	</style>
 </head>
-<body class="list">
+<body class="shower list">
 	<header class="caption">
 		<h1>HTTP и SPDY</h1>
 		<p>Владимир Дашукевич</p>
 	</header>
-	<section class="slide cover" id="face"><div>
+	<section class="slide" id="face"><div>
 		<h2>HTTP и все остальное</h2>
 		<p>Владимир Дашукевич</p>
-		<img src="pictures/speech1.jpg" alt="">
+		<img class="cover" src="pictures/speech1.jpg" alt="">
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/2.jpg">
+			<img class="cover h" src="pictures/2.jpg">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Я не программист(((</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Я не программист(((</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>С чего все начиналось?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">С чего все начиналось?</h2>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/10.gif">
+			<img class="cover w" src="pictures/10.gif">
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/9.gif">
+			<img class="cover w" src="pictures/9.gif">
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/11.jpg">
+			<img class="cover w" src="pictures/11.jpg">
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/12.jpg">
+			<img class="cover w" src="pictures/12.jpg">
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/13.jpg">
+			<img class="cover w" src="pictures/13.jpg">
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/14.jpg">
+			<img class="cover w" src="pictures/14.jpg">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/15.jpg">
+			<img class="cover h" src="pictures/15.jpg">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/11.gif">
+			<img class="cover h" src="pictures/11.gif">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/16.jpg">
+			<img class="cover h" src="pictures/16.jpg">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>4front #1</h2>
+	<section class="slide"><div>
+		<h2 class="shout">4front #1</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>4front #2</h2>
+	<section class="slide"><div>
+		<h2 class="shout">4front #2</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>4front #3</h2>
+	<section class="slide"><div>
+		<h2 class="shout">4front #3</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Протоколы</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Протоколы</h2>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/OSI.jpg">
+			<img class="cover h" src="pictures/OSI.jpg">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/3.jpg">
+			<img class="cover h" src="pictures/3.jpg">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/4.jpg">
+			<img class="cover h" src="pictures/4.jpg">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/5.jpg">
+			<img class="cover h" src="pictures/5.jpg">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>А где HTTP</h2>
+	<section class="slide"><div>
+		<h2 class="shout">А где HTTP</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Тим Бернерс-Ли</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Тим Бернерс-Ли</h2>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/Tim_Berners-Lee.jpg">
+			<img class="cover h" src="pictures/Tim_Berners-Lee.jpg">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/6.gif">
+			<img class="cover h" src="pictures/6.gif">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>1991 год</h2>
+	<section class="slide"><div>
+		<h2 class="shout">1991 год</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>HTTP/0.9</h2>
+	<section class="slide"><div>
+		<h2 class="shout">HTTP/0.9</h2>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/http2.gif">
+			<img class="cover h" src="pictures/http2.gif">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>HTTP/1.0 (1996)</h2>
+	<section class="slide"><div>
+		<h2 class="shout">HTTP/1.0 (1996)</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>HTTP/1.1 (1999)</h2>
+	<section class="slide"><div>
+		<h2 class="shout">HTTP/1.1 (1999)</h2>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/2.png">
+			<img class="cover h" src="pictures/2.png">
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/7.jpg">
+			<img class="cover w" src="pictures/7.jpg">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/8.jpg">
+			<img class="cover h" src="pictures/8.jpg">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/30.png">
+			<img class="cover h" src="pictures/30.png">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>50kb на страницу</h2>
+	<section class="slide"><div>
+		<h2 class="shout">50kb на страницу</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>IE5</h2>
+	<section class="slide"><div>
+		<h2 class="shout">IE5</h2>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/1.png">
+			<img class="cover w" src="pictures/1.png">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>2014/2015</h2>
+	<section class="slide"><div>
+		<h2 class="shout">2014/2015</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>А что изменилось?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">А что изменилось?</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>861,4 млн количество сайтов (2014)</h2>
+	<section class="slide"><div>
+		<h2 class="shout">861,4 млн количество сайтов (2014)</h2>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/9.jpg">
+			<img class="cover h" src="pictures/9.jpg">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>более 1Mb</h2>
+	<section class="slide"><div>
+		<h2 class="shout">более 1Mb</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>IE11</h2>
+	<section class="slide"><div>
+		<h2 class="shout">IE11</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>HTTP/1.1 (1999)</h2>
+	<section class="slide"><div>
+		<h2 class="shout">HTTP/1.1 (1999)</h2>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/7.gif">
+			<img class="cover h" src="pictures/7.gif">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Зачем что-то новое?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Зачем что-то новое?</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Оптоволокно и LTE</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Оптоволокно и LTE</h2>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/3.png">
+			<img class="cover h" src="pictures/3.png">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/5.png">
+			<img class="cover h" src="pictures/5.png">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>SPDY (Google)</h2>
+	<section class="slide"><div>
+		<h2 class="shout">SPDY (Google)</h2>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/http2.gif">
+			<img class="cover h" src="pictures/http2.gif">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Методы HTTP/1.1</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Методы HTTP/1.1</h2>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/17.jpg">
+			<img class="cover h" src="pictures/17.jpg">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Заголовки</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Заголовки</h2>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/18.jpg">
+			<img class="cover w" src="pictures/18.jpg">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Доставка пакетов</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Доставка пакетов</h2>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/19.jpg">
+			<img class="cover h" src="pictures/19.jpg">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/7.png">
+			<img class="cover h" src="pictures/7.png">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Отличия</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Отличия</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>100101110100 10011100101 1100010101</h2>
+	<section class="slide"><div>
+		<h2 class="shout">100101110100 10011100101 1100010101</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Медленный старт</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Медленный старт</h2>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/15.png">
+			<img class="cover w" src="pictures/15.png">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Статика</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Статика</h2>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/6.png">
+			<img class="cover h" src="pictures/6.png">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/8.png">
+			<img class="cover h" src="pictures/8.png">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/9.png">
+			<img class="cover h" src="pictures/9.png">
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/14.png">
+			<img class="cover w" src="pictures/14.png">
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/12.png">
+			<img class="cover w" src="pictures/12.png">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/13.png">
+			<img class="cover h" src="pictures/13.png">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Comet request на вкладках</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Comet request на вкладках</h2>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/34.png">
+			<img class="cover w" src="pictures/34.png">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/30.png">
+			<img class="cover h" src="pictures/30.png">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>5 час дебага</h2>
+	<section class="slide"><div>
+		<h2 class="shout">5 час дебага</h2>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/13.gif">
+			<img class="cover h" src="pictures/13.gif">
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/14.png">
+			<img class="cover w" src="pictures/14.png">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/14.gif">
+			<img class="cover h" src="pictures/14.gif">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Head of Line Blocking</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Head of Line Blocking</h2>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/31.png">
+			<img class="cover h" src="pictures/31.png">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Мультиплекси -рование</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Мультиплекси -рование</h2>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/10.png">
+			<img class="cover h" src="pictures/10.png">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/11.png">
+			<img class="cover h" src="pictures/11.png">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/12.gif">
+			<img class="cover h" src="pictures/12.gif">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Объединение ресурсов</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Объединение ресурсов</h2>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/16.png">
+			<img class="cover h" src="pictures/16.png">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Все в одну строку</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Все в одну строку</h2>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/17.png">
+			<img class="cover h" src="pictures/17.png">
 		</div>
 	</section>
 	<section class="slide">
@@ -384,30 +411,30 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/18.png">
+			<img class="cover w" src="pictures/18.png">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Приоритет (http/2)</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Приоритет (http/2)</h2>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/19.png">
+			<img class="cover w" src="pictures/19.png">
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/33.png">
+			<img class="cover w" src="pictures/33.png">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Server push (http/2)</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Server push (http/2)</h2>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/20.png">
+			<img class="cover w" src="pictures/20.png">
 		</div>
 	</section>
 	<section class="slide">
@@ -420,99 +447,95 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/15.gif">
+			<img class="cover h" src="pictures/15.gif">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Заголовки</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Заголовки</h2>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/8.gif">
+			<img class="cover w" src="pictures/8.gif">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/21.png">
+			<img class="cover h" src="pictures/21.png">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Поддержка</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Поддержка</h2>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/22.png">
+			<img class="cover w" src="pictures/22.png">
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/23.png">
+			<img class="cover w" src="pictures/23.png">
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/24.png">
+			<img class="cover w" src="pictures/24.png">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>HTTP/2 - тоже самое)</h2>
+	<section class="slide"><div>
+		<h2 class="shout">HTTP/2 - тоже самое)</h2>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/25.png">
+			<img class="cover w" src="pictures/25.png">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2><a href='https://github.com/http2/http2-spec/wiki/Implementations'>HTTP/2 сервер</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href='https://github.com/http2/http2-spec/wiki/Implementations'>HTTP/2 сервер</a></h2>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/32.png">
+			<img class="cover w" src="pictures/32.png">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Реальный мир</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Реальный мир</h2>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/26.png">
+			<img class="cover w" src="pictures/26.png">
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/27.png">
+			<img class="cover w" src="pictures/27.png">
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/28.png">
+			<img class="cover w" src="pictures/28.png">
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/29.png">
+			<img class="cover w" src="pictures/29.png">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/20.jpg">
+			<img class="cover h" src="pictures/20.jpg">
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
+		<h2 class="shout">Вопросы</h2>
+	</section>
+	<section class="slide"><div>
 		<div>
-			<h2>Вопросы</h2>
+			<img class="cover h" src="pictures/16.gif">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
-		<div>
-			<img src="pictures/16.gif">
-		</div>
-	</section>
+	<div class="progress"></div>
 </body>
-<script src="js/shower.min.js"></script>
-<script type="text/javascript">
-
-</script>
+<script src="shower/shower.min.js"></script>
 </html>
