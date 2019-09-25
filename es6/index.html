@@ -3,27 +3,53 @@
 <head>
 	<title>ES2015</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="stylesheet" href="styles/screen.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">	
 	<style type="text/css">
+		.pad {
+			padding-left: 50px;
+		}
 
-	</style>	
+		#free {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			z-index: 5000;
+			cursor: pointer;
+		}
+
+		.black-slide {
+			background-color: #000;
+		}
+
+		.black-slide::after {
+			content: "";
+			display: none;
+		}
+
+		.squ {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: relative;
+		}
+	</style>
 </head>
-<body class="list">
+<body class="shower list">
 	<header class="caption">
 		<h1>ES2015</h1>
 		<p>Владимир Дашукевич</p>
 	</header>
-	<section class="slide cover" id="face"><div>
+	<section class="slide" id="face"><div>
 		<h2>ES2015 или куда идет Javascript</h2>
 		<p>Владимир Дашукевич</p>
-		<img src="pictures/speech1.jpg" alt="">
+		<img class="cover" src="pictures/speech1.jpg" alt="">
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2><a href="https://github.com/life777/ES2015-exaples">Examples</a></h2>
+			<h2 class="shout"><a href="https://github.com/life777/ES2015-exaples">Examples</a></h2>
 		</div>
 	</section>
 	<section class="slide">
@@ -37,39 +63,39 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>ES2015 is the best practice</h2>
+			<h2 class="shout">ES2015 is the best practice</h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Are you ready for pain)</h2>
+			<h2 class="shout">Are you ready for pain)</h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>3</h2>
+			<h2 class="shout">3</h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>2</h2>
+			<h2 class="shout">2</h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>1</h2>
+			<h2 class="shout">1</h2>
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/1.gif">
+			<img class="cover h" src="pictures/1.gif">
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>JS everywhere</h2>
+			<h2 class="shout">JS everywhere</h2>
 		</div>
 	</section>
 	<section class="slide"><div>
@@ -79,24 +105,24 @@
 			</pre>
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/1.jpg">
+			<img class="cover h" src="pictures/1.jpg">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/2.jpg">
+			<img class="cover h" src="pictures/2.jpg">
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Blocks</h2>
+			<h2 class="shout">Blocks</h2>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2 style="font-size: 100px;">ES5.1: Scope === function</h2>
+			<h2 class="shout" style="font-size: 100px;">ES5.1: Scope === function</h2>
 		</div>
 	</section>
 	<section class="slide"><div>
@@ -112,9 +138,9 @@
 			</pre>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2 style="font-size: 100px;">ES6: Scope === {} or () (t)</h2>
+			<h2 class="shout" style="font-size: 100px;">ES6: Scope === {} or () (t)</h2>
 		</div>
 	</section>
 	<section class="slide"><div>
@@ -143,9 +169,9 @@
 			</pre>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Loops and arguments (t)</h2>
+			<h2 class="shout">Loops and arguments (t)</h2>
 		</div>
 	</section>
 	<section class="slide"><div>
@@ -170,9 +196,9 @@
 			</pre>
 		</div>
 	</section>
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Hoisting</h2>
+			<h2 class="shout">Hoisting</h2>
 		</div>
 	</section>
 	<section class="slide"><div>
@@ -188,7 +214,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -200,7 +225,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -212,7 +236,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -224,7 +247,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -236,7 +258,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -251,7 +272,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -263,7 +283,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -275,13 +294,11 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Second declaration (t)</h2>
+			<h2 class="shout">Second declaration (t)</h2>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -293,13 +310,11 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Const (t)</h2>
+			<h2 class="shout">Const (t)</h2>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -308,7 +323,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -317,25 +331,21 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2 style="font-size: 100px;">Blocks: const === let</h2>
+			<h2 class="shout" style="font-size: 100px;">Blocks: const === let</h2>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Let или var?</h2>
+			<h2 class="shout">Let или var?</h2>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Function or =></h2>
+			<h2 class="shout">Function or =></h2>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -351,7 +361,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -362,7 +371,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -378,13 +386,11 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>=></h2>
+			<h2 class="shout">=></h2>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -400,13 +406,11 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Где она полезна?</h2>
+			<h2 class="shout">Где она полезна?</h2>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -430,13 +434,11 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Везде где вы используете this)))</h2>
+			<h2 class="shout">Везде где вы используете this)))</h2>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<h2>Test</h2>
@@ -447,25 +449,21 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/2.gif">
+			<img class="cover h" src="pictures/2.gif">
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Rest parameters</h2>
+			<h2 class="shout">Rest parameters</h2>
 		</div>
 	</section>	
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Rest !== arguments</h2>
+			<h2 class="shout">Rest !== arguments</h2>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -477,7 +475,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -487,13 +484,11 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Default Parameter Values</h2>
+			<h2 class="shout">Default Parameter Values</h2>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -505,7 +500,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide">
 		<div>
 			<h2>Когда это сработает:</h2>
@@ -517,7 +511,6 @@
 			</ol>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -527,7 +520,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide">
 		<div>
 			<h2>Когда это сработает:</h2>
@@ -537,7 +529,6 @@
 			</ol>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -548,7 +539,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -559,7 +549,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -570,7 +559,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -581,19 +569,16 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Destruction</h2>
+			<h2 class="shout">Destruction</h2>
 		</div>
 	</section>
-
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/3.gif">
+			<img class="cover h" src="pictures/3.gif">
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<h2>Destruction</h2>
@@ -607,13 +592,11 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>source: target</h2>
+			<h2 class="shout">source: target</h2>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<h2>Arguments</h2>
@@ -624,7 +607,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<h2>Promise</h2>
@@ -635,13 +617,11 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>От создателей destruction</h2>
+			<h2 class="shout">От создателей destruction</h2>
 		</div>
 	</section>
-
 
 	<section class="slide"><div>
 		<div>
@@ -652,13 +632,11 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Templates</h2>
+			<h2 class="shout">Templates</h2>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -667,7 +645,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -677,7 +654,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -686,7 +662,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -695,7 +670,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -704,13 +678,11 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Symbol</h2>
+			<h2 class="shout">Symbol</h2>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -721,7 +693,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -731,43 +702,36 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Class</h2>
+			<h2 class="shout">Class</h2>
 		</div>
 	</section>
-
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/3.jpg">
+			<img class="cover h" src="pictures/3.jpg">
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Ruby</h2>
+			<h2 class="shout">Ruby</h2>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Class === function</h2>
+			<h2 class="shout">Class === function</h2>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>For Java people</h2>
+			<h2 class="shout">For Java people</h2>
 		</div>
 	</section>
-
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/4.gif">
+			<img class="cover h" src="pictures/4.gif">
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -779,7 +743,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -789,7 +752,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -799,13 +761,11 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>static</h2>
+			<h2 class="shout">static</h2>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -815,13 +775,11 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>static нормального человека</h2>
+			<h2 class="shout">static нормального человека</h2>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -831,13 +789,11 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>static в JS</h2>
+			<h2 class="shout">static в JS</h2>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -847,19 +803,16 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/5.gif">
+			<img class="cover h" src="pictures/5.gif">
 		</div>
 	</section>
-
 	<section class="slide">
 		<div>
 			<h2>Classes (t)</h2>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -869,25 +822,21 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/file.gif">
+			<img class="cover h" src="pictures/file.gif">
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Modules</h2>
+			<h2 class="shout">Modules</h2>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Old story with new words</h2>
+			<h2 class="shout">Old story with new words</h2>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -900,7 +849,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide"><div>
 		<div>
 			<pre>
@@ -909,7 +857,6 @@
 			</pre>
 		</div>
 	</section>
-
 	<section class="slide">
 		<div>
 			<h2>Положитльые моменты</h2>
@@ -920,7 +867,6 @@
 			</ol>
 		</div>
 	</section>
-
 	<section class="slide">
 		<div>
 			<h2>Как подгружать модули</h2>
@@ -930,13 +876,11 @@
 			</ol>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Collections</h2>
+			<h2 class="shout">Collections</h2>
 		</div>
 	</section>
-
 	<section class="slide">
 		<div>
 			<h2>Стуктуры данных</h2>
@@ -947,7 +891,6 @@
 			</ol>
 		</div>
 	</section>
-
 	<section class="slide">
 		<div>
 			<h2>Своя стуктура данных</h2>
@@ -962,13 +905,11 @@
 			</ol>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Promise</h2>
+			<h2 class="shout">Promise</h2>
 		</div>
 	</section>
-
 	<section class="slide">
 		<div>
 			<h2>Promise</h2>
@@ -982,7 +923,6 @@
 			</ol>
 		</div>
 	</section>	
-
 	<section class="slide">
 		<div>
 			<h2>Promise</h2>
@@ -996,7 +936,6 @@
 			</ol>
 		</div>
 	</section>	
-
 	<section class="slide">
 		<div>
 			<h2>Promise</h2>
@@ -1010,19 +949,16 @@
 			</ol>
 		</div>
 	</section>
-
 	<section class="slide">
 		<div>
 			<h2>Promise (t)</h2>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Generators</h2>
+			<h2 class="shout">Generators</h2>
 		</div>
 	</section>
-
 	<section class="slide cons">
 		<div>
 			<pre>
@@ -1058,29 +994,24 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide cover w"><div>
-		<img src="pictures/40.png" alt="">
+	<section class="slide"><div>
+		<img class="cover w" src="pictures/40.png" alt="">
 	</section>
-
 	<section class="slide">
 		<div>
 			<h2>Generators (t)</h2>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Meta programming</h2>
+			<h2 class="shout">Meta programming</h2>
 		</div>
 	</section>
-
 	<section class="slide">
 		<div>
 			<h2>Proxy (t)</h2>
 		</div>
 	</section>
-
 	<section class="slide">
 		<div>
 			<h2>Proxy</h2>
@@ -1098,7 +1029,6 @@
 			</ol>
 		</div>
 	</section>
-
 	<section class="slide">
 		<div>
 			<h2>Зачем это нужно))</h2>
@@ -1109,7 +1039,6 @@
 			</ol>
 		</div>
 	</section>
-
 	<section class="slide">
 		<div>
 			<h2>Мелочь</h2>
@@ -1123,21 +1052,17 @@
 			</ol>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2><a href="https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20%26%20beyond">You don't know JS</a></h2>
+			<h2 class="shout"><a href="https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20%26%20beyond">You don't know JS</a></h2>
 		</div>
 	</section>
-
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Questions</h2>
+			<h2 class="shout">Questions</h2>
 		</div>
 	</section>
+	<div class="progress"></div>
 </body>
-<script src="js/shower.min.js"></script>
-<script type="text/javascript">
-
-</script>
+<script src="shower/shower.min.js"></script>
 </html>
