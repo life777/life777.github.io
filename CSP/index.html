@@ -3,21 +3,30 @@
 <head>
 	<title>XSS Wars. The Force Awakens</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="stylesheet" href="styles/screen.css">	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">	
 	<style type="text/css">
 		.pad {
 			padding-left: 50px;
 		}
+
+		.black-slide {
+			background-color: #000;
+		}
+
+		.black-slide::after {
+			content: "";
+			display: none;
+		}
 	</style>
 </head>
-<body class="list">
+<body class="shower list">
 	<header class="caption">
 		<h1>XSS Wars. The Force Awakens</h1>
 		<p>Dashukevich Vladimir</p>
 	</header>
-	<section class="slide cover" id="face"><div>
+	<section class="slide cover black-slide" id="face"><div>
 		<div style="color: #fff; font-size: 1.5em;">
 			<div>{</div>
 			<div class="pad">Theme: <mark>XSS Wars. The Force Awakens</mark>,</div>
@@ -27,31 +36,30 @@
 			<div class="pad">Conference: <mark>Frontend Union Conf</mark></div>
 			<div>}</div>
 		</div>
-		<img src="pictures/53.png" alt="">
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/22.jpg">
+			<img class="cover h" src="pictures/22.jpg">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/42.png">
+			<img class="cover h" src="pictures/42.png">
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/4front.png">
+			<img class="cover w" src="pictures/4front.png">
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/41.png">
+			<img class="cover w" src="pictures/41.png">
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/webix.jpg">
+			<img class="cover h" src="pictures/webix.jpg">
 		</div>
 	</section>
 	<section class="slide">
@@ -66,32 +74,32 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>What does XSS mean?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">What does XSS mean?</h2>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Cross Site Scripting</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Cross Site Scripting</h2>
 	</section>
 	<section class="slide"><div>
 		<h2 style="margin-top: 60px;">XSS attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted web sites</h2>
 		<div style="float:right; font-size: 40px;">The Open Web Application Security Project</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/50.jpg">
+			<img class="cover h" src="pictures/50.jpg">
 		</div>
 	</section>
 	<section class="slide"><div>
 		<h2 style="margin-top: 80px;">XSS attack is, when someone runs its sh**ty code inside our perfect Web Apps</h2>
 		<div style="float:right; font-size: 35px;">Vladimir Dashukevich</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/1.jpg">
+			<img class="cover h" src="pictures/1.jpg">
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>How does it look like?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">How does it look like?</h2>
 	</section>
 	<section class="slide"> 
 		<div>
@@ -99,104 +107,104 @@
 			<h2 class="next" style="text-align: center; font-size: 3.5em; margin-top: 150px;">Reflected</h2>
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Stored XSS attacks</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Stored XSS attacks</h2>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/47.jpg">
+			<img class="cover h" src="pictures/47.jpg">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/45.png">
+			<img class="cover w" src="pictures/45.png">
 		</div>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/45.jpg">
+			<img class="cover h" src="pictures/45.jpg">
 		</div>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/49.jpg">
+			<img class="cover h" src="pictures/49.jpg">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/46.png">
+			<img class="cover w" src="pictures/46.png">
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Reflected XSS attacks</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Reflected XSS attacks</h2>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/17.gif">
+			<img class="cover w" src="pictures/17.gif">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/47.jpg">
+			<img class="cover w" src="pictures/47.jpg">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/45.png">
+			<img class="cover w" src="pictures/45.png">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/30.jpg">
+			<img class="cover w" src="pictures/30.jpg">
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>How can it be dangerous?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">How can it be dangerous?</h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Just make a user send the same request</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Just make a user send the same request</h2>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/48.png">
+			<img class="cover w" src="pictures/48.png">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/46.png">
+			<img class="cover w" src="pictures/46.png">
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>POST or GET</h2>
+	<section class="slide"><div>
+		<h2 class="shout">POST or GET</h2>
 	</section>
 
 	<section class="slide"><div>
 		<h2 style="line-height: 1.2em; margin-top: 100px;">https://you.site?param1=some_value&<br><mark>run=&lt;script&gt;alert(1)&lt;/script&gt;</mark></h2>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/45.png">
+			<img class="cover w" src="pictures/45.png">
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>How can it be dangerous?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">How can it be dangerous?</h2>
 	</section>
 
 	<section class="slide">
@@ -211,8 +219,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>How to make a user run a script</h2>
+	<section class="slide"><div>
+		<h2 class="shout">How to make a user run a script</h2>
 	</section>
 
 	<section class="slide"><div>
@@ -255,8 +263,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Done! Simple)))</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Done! Simple)))</h2>
 	</section>
 
 	<section class="slide"><div>
@@ -285,8 +293,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Why always me?))</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Why always me?))</h2>
 	</section>
 
 	<section class="slide"><div>
@@ -302,16 +310,16 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>His CSS to help you with UX))</h2>
+	<section class="slide"><div>
+		<h2 class="shout">His CSS to help you with UX))</h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="https://github.com/tlrobinson/evil.css/">evil.css</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="https://github.com/tlrobinson/evil.css/">evil.css</a></h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Can I steel something?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Can I steel something?</h2>
 	</section>
 
 	<section class="slide"><div>
@@ -333,14 +341,14 @@
 			</pre>
 		</div>
 	</section>
-	<section class="slide shout">
-		<div>
+	<section class="slide">
+		<div class="shout">
 			<h2><a href='http://eaea.sirdarckcat.net/cssar/v2/'>example</a></h2>
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Or even worse?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Or even worse?</h2>
 	</section>
 
 	<section class="slide"><div>
@@ -356,12 +364,12 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Keylogger with image</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Keylogger with image</h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>&lt;set&gt; in &lt;svg&gt;</h2>
+	<section class="slide"><div>
+		<h2 class="shout">&lt;set&gt; in &lt;svg&gt;</h2>
 	</section>
 
 	<section class="slide"><div>
@@ -410,21 +418,21 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="https://html5sec.org/keylogger/">example</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="https://html5sec.org/keylogger/">example</a></h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Scary?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Scary?</h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>What is a browser?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">What is a browser?</h2>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/5.jpg">
+			<img class="cover h" src="pictures/5.jpg">
 		</div>
 	</section>
 	<section class="slide">
@@ -451,31 +459,31 @@
 		</div>
 	</section>
 	
-	<section class="slide shout">
-		<h2>Why are they good?</h2>
+	<section class="slide">
+		<h2 class="shout">Why are they good?</h2>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/51.jpg">
+			<img class="cover h" src="pictures/51.jpg">
 		</div>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/2.gif">
+			<img class="cover h" src="pictures/2.gif">
 		</div>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/2.jpg">
+			<img class="cover h" src="pictures/2.jpg">
 		</div>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/http2.gif">
+			<img class="cover h" src="pictures/http2.gif">
 		</div>
 	</section>
 
@@ -491,12 +499,12 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>How can you protect yourself?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">How can you protect yourself?</h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Avoid adding HTML as a string</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Avoid adding HTML as a string</h2>
 	</section>
 	<section class="slide"><div>
 		<div>
@@ -528,8 +536,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Escaping everything</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Escaping everything</h2>
 	</section>
 	<section class="slide"><div>
 		<div>
@@ -555,8 +563,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Some HTTP headers</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Some HTTP headers</h2>
 	</section>
 
 	<section class="slide">
@@ -580,8 +588,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>What about iframes?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">What about iframes?</h2>
 	</section>
 
 	<section class="slide">
@@ -594,14 +602,14 @@
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/52.png">
+			<img class="cover w" src="pictures/52.png">
 		</div>
 	</section>
 	
-	<section class="slide shout"><div>
-		<h2>Content Security Policy</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Content Security Policy</h2>
 	</section>
 	<section class="slide">
 		<div>
@@ -613,8 +621,8 @@
 			</ol>
 		</div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>HTTP header again</h2>
+	<section class="slide"><div>
+		<h2 class="shout">HTTP header again</h2>
 	</section>
 	<section class="slide">
 		<div>
@@ -720,8 +728,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>How it works?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">How it works?</h2>
 	</section>
 
 	<section class="slide"><div>
@@ -848,24 +856,24 @@
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/38.png">
+			<img class="cover w" src="pictures/38.png">
 		</div>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/17.jpg">
+			<img class="cover h" src="pictures/17.jpg">
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Can something be better?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Can something be better?</h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Content Security Policy v2</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Content Security Policy v2</h2>
 	</section>
 
 	<section class="slide">
@@ -960,9 +968,9 @@
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/39.png">
+			<img class="cover w" src="pictures/39.png">
 		</div>
 	</section>
 
@@ -978,8 +986,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout">
-		<div>
+	<section class="slide">
+		<div class="shout">
 			<h2>How to catch XSS</h2>
 		</div>
 	</section>
@@ -995,33 +1003,33 @@
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/54.png">
+			<img class="cover w" src="pictures/54.png">
 		</div>
 	</section>
 
-	<section class="slide shout">
-		<div>
+	<section class="slide">
+		<div class="shout">
 			<h2>And one more thing...</h2>
 		</div>
 	</section>
 
-	<section class="slide shout">
-		<div>
+	<section class="slide">
+		<div class="shout">
 			<h2>The trust of your customers is priceless</h2>
 		</div>
 	</section>
 
-	<section class="slide shout">
-		<div>
+	<section class="slide">
+		<div class="shout">
 			<h2>I want to give you my private date</h2>
 		</div>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/52.jpg">
+			<img class="cover h" src="pictures/52.jpg">
 		</div>
 	</section>
 
@@ -1038,21 +1046,19 @@
 		</div>
 	</section>
 
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Questions</h2>
+			<h2 class="shout">Questions</h2>
 			<div>Facebook: <a href="https://www.facebook.com/dashukevich.vova">dashukevich.vova</a></div>
 			<div>Twitter: <a href="https://twitter.com/life__777">life__777</a></div>
 		</div>
 	</section>
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/16.gif">
+			<img class="cover h" src="pictures/16.gif">
 		</div>
 	</section>
+	<div class="progress"></div>
 </body>
-<script src="js/shower.min.js"></script>
-<script type="text/javascript">
-
-</script>
+<script src="shower/shower.min.js"></script>
 </html>
