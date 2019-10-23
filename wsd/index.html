@@ -3,22 +3,30 @@
 <head>
 	<title>Пишем клиент без JavaScript</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="stylesheet" href="styles/screen.css">	
-</head>
-<style type="text/css">
-	.pad {
-		padding-left: 50px;
-	}
-</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">	
+	<style type="text/css">
+		.pad {
+			padding-left: 50px;
+		}
 
-<body class="list">
+		.black-slide {
+			background-color: #000;
+		}
+
+		.black-slide::after {
+			content: "";
+			display: none;
+		}
+	</style>
+</head>
+<body class="list shower">
 	<header class="caption">
 		<h1>Пишем клиент без JavaScript</h1>
 		<p>Dashukevich Vladimir</p>
 	</header>
-	<section class="slide cover" id="face"><div>
+	<section class="black-slide slide cover" id="face"><div>
 		<div style="color: #fff; font-size: 1.5em;">
 			<div>{</div>
 			<div class="pad">Тема: <mark>Пишем клиент без JavaScript</mark>,</div>
@@ -30,70 +38,70 @@
 		<img src="pictures/1.svg" style="width: 200px;" alt="" class="place t r">
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/2.svg">
+			<img class="cover w" src="pictures/2.svg">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/4front.png">
+			<img class="cover w" src="pictures/4front.png">
 		</div>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/2.png">
+			<img class="cover h" src="pictures/2.png">
 		</div>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/2.jpg">
+			<img class="cover h" src="pictures/2.jpg">
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>JavaScript плох</h2>
+	<section class="slide"><div>
+		<h2 class="shout">JavaScript плох</h2>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/5.jpg">
+			<img class="cover h" src="pictures/5.jpg">
 		</div>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/1.jpg">
+			<img class="cover h" src="pictures/1.jpg">
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Май 1995</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Май 1995</h2>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/1.png">
+			<img class="cover h" src="pictures/1.png">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/13.jpg">
+			<img class="cover w" src="pictures/13.jpg">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/3.png">
+			<img class="cover w" src="pictures/3.png">
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>JavaScript</h2>
+	<section class="slide"><div>
+		<h2 class="shout">JavaScript</h2>
 	</section>
 
 	<section class="slide">
@@ -107,12 +115,12 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Слишком гибкий</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Слишком гибкий</h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Как вы создаете объекты?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Как вы создаете объекты?</h2>
 	</section>
 
 	<section class="slide"><div>
@@ -179,8 +187,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Как вы наследуете классы в JS?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Как вы наследуете классы в JS?</h2>
 	</section>
 
 	<section class="slide"><div>
@@ -227,13 +235,13 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Композиция лучше наследования</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Композиция лучше наследования</h2>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/7.jpg">
+			<img class="cover w" src="pictures/7.jpg">
 		</div>
 	</section>
 
@@ -248,9 +256,9 @@
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/6.jpg">
+			<img class="cover w" src="pictures/6.jpg">
 		</div>
 	</section>
 
@@ -294,9 +302,9 @@
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/15.jpg">
+			<img class="cover w" src="pictures/15.jpg">
 		</div>
 	</section>
 
@@ -336,27 +344,27 @@
 		</div>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/9.jpg">
+			<img class="cover h" src="pictures/9.jpg">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/16.jpg">
+			<img class="cover w" src="pictures/16.jpg">
 		</div>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/17.jpg">
+			<img class="cover h" src="pictures/17.jpg">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/file.gif">
+			<img class="cover w" src="pictures/file.gif">
 		</div>
 	</section>
 
@@ -374,8 +382,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="http://www.ecma-international.org/ecma-262/6.0/">ECMAScript 2015</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="http://www.ecma-international.org/ecma-262/6.0/">ECMAScript 2015</a></h2>
 	</section>
 
 	<section class="slide">
@@ -451,8 +459,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="http://coffeescript.org/">CoffeeScript</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="http://coffeescript.org/">CoffeeScript</a></h2>
 	</section>
 
 	<section class="slide">
@@ -466,15 +474,15 @@
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/19.jpg">
+			<img class="cover w" src="pictures/19.jpg">
 		</div>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/20.jpg">
+			<img class="cover h" src="pictures/20.jpg">
 		</div>
 	</section>
 
@@ -544,8 +552,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="http://www.dartlang.org/">Dart</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="http://www.dartlang.org/">Dart</a></h2>
 	</section>
 
 	<section class="slide">
@@ -589,8 +597,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="http://www.typescriptlang.org/">TypeScript</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="http://www.typescriptlang.org/">TypeScript</a></h2>
 	</section>
 
 	<section class="slide">
@@ -622,36 +630,36 @@
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/15.5.png">
+			<img class="cover w" src="pictures/15.5.png">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/16.png">
+			<img class="cover w" src="pictures/16.png">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/17.png">
+			<img class="cover w" src="pictures/17.png">
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="http://definitelytyped.org/">DefinitelyTyped</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="http://definitelytyped.org/">DefinitelyTyped</a></h2>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/20.png">
+			<img class="cover h" src="pictures/20.png">
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="http://flowtype.org/">Flow</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="http://flowtype.org/">Flow</a></h2>
 	</section>
 
 	<section class="slide">
@@ -666,9 +674,9 @@
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/18.png">
+			<img class="cover w" src="pictures/18.png">
 		</div>
 	</section>
 
@@ -684,19 +692,19 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>JavaScript не Java, C, C++</h2>
+	<section class="slide"><div>
+		<h2 class="shout">JavaScript не Java, C, C++</h2>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/10.jpg">
+			<img class="cover h" src="pictures/10.jpg">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/22.png">
+			<img class="cover w" src="pictures/22.png">
 		</div>
 	</section>
 
@@ -711,8 +719,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Как можно это сделать?</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Как можно это сделать?</h2>
 	</section>
 
 	<section class="slide">
@@ -738,12 +746,12 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Перевести C в JS</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Перевести C в JS</h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="http://llvm.org/">Low Level Virtual Machine</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="http://llvm.org/">Low Level Virtual Machine</a></h2>
 	</section>
 
 	<section class="slide">
@@ -757,15 +765,15 @@
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/23.png">
+			<img class="cover w" src="pictures/23.png">
 		</div>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/24.png">
+			<img class="cover h" src="pictures/24.png">
 		</div>
 	</section>
 
@@ -780,8 +788,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="http://bulletphysics.org/">Bullet</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="http://bulletphysics.org/">Bullet</a></h2>
 	</section>
 
 	<section class="slide">
@@ -796,18 +804,18 @@
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/11.jpg">
+			<img class="cover w" src="pictures/11.jpg">
 		</div>
 	</section>
 	
-	<section class="slide shout"><div>
-		<h2><a href="https://github.com/kripken/ammo.js/">ammo.js</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="https://github.com/kripken/ammo.js/">ammo.js</a></h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="http://kripken.github.io/ammo.js/examples/new/ammo.html" target="_blank">Demo</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="http://kripken.github.io/ammo.js/examples/new/ammo.html" target="_blank">Demo</a></h2>
 	</section>
 
 	<section class="slide">
@@ -822,12 +830,12 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js">Компиляторы в JS</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js">Компиляторы в JS</a></h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="http://leaningtech.com/cheerp/" target="_blank">Cheerp</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="http://leaningtech.com/cheerp/" target="_blank">Cheerp</a></h2>
 	</section>
 
 		<section class="slide"><div>
@@ -842,8 +850,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="https://repl.it" target="_blank">repl.it</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="https://repl.it" target="_blank">repl.it</a></h2>
 	</section>
 
 	<section class="slide">
@@ -856,13 +864,13 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Медленный</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Медленный</h2>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/12.jpg">
+			<img class="cover w" src="pictures/12.jpg">
 		</div>
 	</section>
 
@@ -877,8 +885,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Непредсказуемый</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Непредсказуемый</h2>
 	</section>
 
 	<section class="slide"><div>
@@ -909,8 +917,8 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="https://www.chromium.org/nativeclient/pnacl">NaCl и PNaCl</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="https://www.chromium.org/nativeclient/pnacl">NaCl и PNaCl</a></h2>
 	</section>
 
 	<section class="slide">
@@ -924,14 +932,14 @@
 		</div>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/40.png">
+			<img class="cover h" src="pictures/40.png">
 		</div>
 	</section>
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/41.png">
+			<img class="cover w" src="pictures/41.png">
 		</div>
 	</section>
 
@@ -947,18 +955,18 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="https://gonativeclient.appspot.com/demo/bullet" target="_blank">Demo</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="https://gonativeclient.appspot.com/demo/bullet" target="_blank">Demo</a></h2>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/38.png">
+			<img class="cover h" src="pictures/38.png">
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="http://asmjs.org/">asmjs</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="http://asmjs.org/">asmjs</a></h2>
 	</section>
 
 	<section class="slide">
@@ -975,9 +983,9 @@
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/30.png">
+			<img class="cover w" src="pictures/30.png">
 		</div>
 	</section>
 
@@ -1041,9 +1049,9 @@
 		</div>
 	</section>
 
-	<section class="slide cover h"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/31.png">
+			<img class="cover h" src="pictures/31.png">
 		</div>
 	</section>
 
@@ -1082,9 +1090,9 @@
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/33.png">
+			<img class="cover w" src="pictures/33.png">
 		</div>
 	</section>
 
@@ -1103,12 +1111,12 @@
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="http://beta.unity3d.com/jonas/AngryBots/" target="_blank">Demo</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="http://beta.unity3d.com/jonas/AngryBots/" target="_blank">Demo</a></h2>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2><a href="https://github.com/WebAssembly">WebAssembly</a></h2>
+	<section class="slide"><div>
+		<h2 class="shout"><a href="https://github.com/WebAssembly">WebAssembly</a></h2>
 	</section>
 
 	<section class="slide">
@@ -1122,66 +1130,64 @@
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/34.png">
+			<img class="cover w" src="pictures/34.png">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/35.png">
+			<img class="cover w" src="pictures/35.png">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/1.gif">
+			<img class="cover w" src="pictures/1.gif">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/39.png">
+			<img class="cover w" src="pictures/39.png">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/36.png">
+			<img class="cover w" src="pictures/36.png">
 		</div>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/37.png">
+			<img class="cover w" src="pictures/37.png">
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>One more thing...</h2>
+	<section class="slide"><div>
+		<h2 class="shout">One more thing...</h2>
 	</section>
 
-	<section class="slide cover w"><div>
+	<section class="slide"><div>
 		<div>
-			<img src="pictures/18.jpg">
+			<img class="cover w" src="pictures/18.jpg">
 		</div>
 	</section>
 
-	<section class="slide shout"><div>
-		<h2>Каждый инструмент решает свою задачу</h2>
+	<section class="slide"><div>
+		<h2 class="shout">Каждый инструмент решает свою задачу</h2>
 	</section>
 
-	<section class="slide shout">
+	<section class="slide">
 		<div>
-			<h2>Вопросы?</h2>
+			<h2 class="shout">Вопросы?</h2>
 			<div>Facebook: <a href="https://www.facebook.com/dashukevich.vova">dashukevich.vova</a></div>
 			<div>Twitter: <a href="https://twitter.com/life__777">life__777</a></div>
 		</div>
 	</section>
+	<div class="progress"></div>
 </body>
-<script src="js/shower.min.js"></script>
-<script type="text/javascript">
-
-</script>
+<script src="shower/shower.min.js"></script>
 </html>
