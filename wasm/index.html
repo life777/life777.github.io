@@ -1,413 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>WebAssembly</title>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+    <title>WebAssembly</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../shower/themes/ribbon/styles/screen-16x10.css">
+    <style type="text/css">
+        .pad {
+            padding-left: 50px;
+        }
+
+        .contacts {
+            position: absolute;
+            top: 250px;
+            margin-left: -20px;
+        }
+
+        #face {
+            background-color: #000;
+        }
+
+        #face::after {
+            content: "";
+            display: none;
+        }
+    </style>
 </head>
 <body class="shower list">
-	<header class="caption">
-		<h1>WebAssembly</h1>
-		<p>XBSoftware</p>
-	</header>
+    <header class="caption">
+        <h1>WebAssembly</h1>
+        <p>XBSoftware</p>
+    </header>
+    <section class="slide cover" id="face">
+        <div style="color: #fff; font-size: 1.4em;">
+            <div>{</div>
+            <div class="pad">Тема: <mark>WebAssembly</mark>,</div>
+            <div class="pad">Спикер: <mark>Владимир Дашукевич</mark>,</div>
+            <div class="pad">Компания: <mark>XBSoftware</mark></div>
+            <div>}</div>
+        </div>
+    </section>
+    <section class="slide">
+        <h2>Вопросы:</h2>
+        <ol>
+            <li>Что такое WebAssembly?</li>
+            <li class="next">Почему WebAssembly быстрее?</li>
+            <li class="next">Как на нем писать?</li>
+        </ol>
+        <h2 class="next">Скандалы и бредни не-JS программистов:</h2>
+        <ol>
+            <li class="next">Нужно ли мне бросать учить JavaScript?</li>
+            <li class="next">Front End от Ruby программистов: хорошо ли это?</li>
+            <li class="next">Если скомпилировать мой JavaScript в WebAssembly, то он станет быстрее?</li>
+        </ol>
+    </section>
+    <section class="slide">
+        <h2 class="shout">Чем плох JavaScript?</h2>
+    </section>
+    <section class="slide">
+        <h2>Сложный алгоритм:</h2>
+        <pre>
+            <code>var add = function (a, b) {</code>
+            <code>	return a + b;</code>
+            <code>}</code>
+        </pre>
+    </section>
+    <section class="slide">
+        <h2>Сложный алгоритм:</h2>
+        <pre>
+            <code>var add = function (a, b) {</code>
+            <code>	return <mark>a + b</mark>;</code>
+            <code>}</code>
+        </pre>
+    </section>
+    <section class="slide">
+        <h2>Сложный алгоритм:</h2>
+        <pre>
+            <code>var add = function (a, b) {</code>
+            <code>	return <mark>a + b</mark>;<span class="comment">//1 + 2 = 3</span></code>
+            <code>}</code>
+        </pre>
+    </section>
+    <section class="slide">
+        <h2>Сложный алгоритм:</h2>
+        <pre>
+            <code>var add = function (a, b) {</code>
+            <code>	return <mark>a + b</mark>;<span class="comment">//0.1 + 0.2 = 0.30000000000000004</span></code>
+            <code>}</code>
+        </pre>
+    </section>
+    <section class="slide">
+        <h2>Сложный алгоритм:</h2>
+        <pre>
+            <code>var add = function (a, b) {</code>
+            <code>	return <mark>a + b</mark>;<span class="comment">//"a" + "b" = "ab"</span></code>
+            <code>}</code>
+        </pre>
+    </section>
+    <section class="slide">
+        <h2>Сложный алгоритм:</h2>
+        <pre>
+            <code>var add = function (a, b) {</code>
+            <code>	return <mark>a + b</mark>;<span class="comment">//[1] + [2] = "12"</span></code>
+            <code>}</code>
+        </pre>
+    </section>
+    <section class="slide cover">
+        <img src="pictures/1.jpg" alt="" class="cover">	
+    </section>
+    <section class="slide cover">
+        <img src="pictures/2.jpg" alt="" class="cover">	
+    </section>
+    <section class="slide">
+        <h2>Сложный алгоритм:</h2>
+        <pre>
+            <code>var add = function (a, b) {</code>
+            <code>	return <mark>a + b</mark>;<span class="comment">//{} + {} = "[object Object][object Object]"</span></code>
+            <code>}</code>
+        </pre>
+    </section>
+    <section class="slide">
+        <h2 class="shout">JavaScript медленный?</h2>
+    </section>
+    <section class="slide">
+        <h2 class="shout">asmjs</h2>
+    </section>
+    <section class="slide">
+        <h2>Сложный алгоритм на asmjs:</h2>
+        <pre>
+            <code>var add = function (stdlib, foreign, heap) {</code>
+            <code>	"use asm";</code>
+            <code>	function add(x, y) {</code>
+            <code>	    x = x | 0;</code>
+            <code>	    y = y | 0;</code>
+            <code>	    return x + y | 0;</code>
+            <code>	}</code>	
+            <code>	return { add: add };</code>
+            <code>}</code>
+        </pre>
+    </section>
+    <section class="slide">
+        <h2>Сложный алгоритм на asmjs:</h2>
+        <pre>
+            <code>var add = function (stdlib, foreign, <mark>heap</mark>) {</code>
+            <code>	"use asm";</code>
+            <code>	function add(x, y) {</code>
+            <code>	    x = x | 0;</code>
+            <code>	    y = y | 0;</code>
+            <code>	    return x + y | 0;</code>
+            <code>	}</code>	
+            <code>	return { add: add };</code>
+            <code>}</code>
+        </pre>
+    </section>
+    <section class="slide">
+        <h2>Сложный алгоритм на asmjs:</h2>
+        <pre>
+            <code>var add = function (stdlib, foreign, heap) {</code>
+            <code>	"use asm";</code>
+            <code>	function add(x, y) {</code>
+            <code>	    x = <mark>x | 0</mark>;</code>
+            <code>	    y = <mark>y | 0</mark>;</code>
+            <code>	    return <mark>x + y | 0</mark>;</code>
+            <code>	}</code>	
+            <code>	return { add: add };</code>
+            <code>}</code>
+        </pre>
+    </section>
 
-	<section class="slide">
-		<h2>Вопросы:</h2>
-		<ol>
-			<li>Что такое WebAssembly?</li>
-			<li class="next">Почему WebAssembly быстрее?</li>
-			<li class="next">Как на нем писать?</li>
-		</ol>
-		<h2 class="next">Скандалы и бредни не-JS программистов:</h2>
-		<ol>
-			<li class="next">Нужно ли мне бросать учить JavaScript?</li>
-			<li class="next">Front End от Ruby программистов: хорошо ли это?</li>
-			<li class="next">Если скомпилировать мой JavaScript в WebAssembly, то он станет быстрее?</li>
-		</ol>
-	</section>
-	<section class="slide">
-		<h2 class="shout">Чем плох JavaScript?</h2>
-	</section>
-	<section class="slide">
-		<h2>Сложный алгоритм:</h2>
-		<pre>
-			<code>var add = function (a, b) {</code>
-			<code>	return a + b;</code>
-			<code>}</code>
-		</pre>
-	</section>
-	<section class="slide">
-		<h2>Сложный алгоритм:</h2>
-		<pre>
-			<code>var add = function (a, b) {</code>
-			<code>	return <mark>a + b</mark>;</code>
-			<code>}</code>
-		</pre>
-	</section>
-	<section class="slide">
-		<h2>Сложный алгоритм:</h2>
-		<pre>
-			<code>var add = function (a, b) {</code>
-			<code>	return <mark>a + b</mark>;<span class="comment">//1 + 2 = 3</span></code>
-			<code>}</code>
-		</pre>
-	</section>
-	<section class="slide">
-		<h2>Сложный алгоритм:</h2>
-		<pre>
-			<code>var add = function (a, b) {</code>
-			<code>	return <mark>a + b</mark>;<span class="comment">//0.1 + 0.2 = 0.30000000000000004</span></code>
-			<code>}</code>
-		</pre>
-	</section>
-	<section class="slide">
-		<h2>Сложный алгоритм:</h2>
-		<pre>
-			<code>var add = function (a, b) {</code>
-			<code>	return <mark>a + b</mark>;<span class="comment">//"a" + "b" = "ab"</span></code>
-			<code>}</code>
-		</pre>
-	</section>
-	<section class="slide">
-		<h2>Сложный алгоритм:</h2>
-		<pre>
-			<code>var add = function (a, b) {</code>
-			<code>	return <mark>a + b</mark>;<span class="comment">//[1] + [2] = "12"</span></code>
-			<code>}</code>
-		</pre>
-	</section>
-	<section class="slide cover">
-		<img src="pictures/1.jpg" alt="" class="cover">	
-	</section>
-	<section class="slide cover">
-		<img src="pictures/2.jpg" alt="" class="cover">	
-	</section>
-	<section class="slide">
-		<h2>Сложный алгоритм:</h2>
-		<pre>
-			<code>var add = function (a, b) {</code>
-			<code>	return <mark>a + b</mark>;<span class="comment">//{} + {} = "[object Object][object Object]"</span></code>
-			<code>}</code>
-		</pre>
-	</section>
-	<section class="slide">
-		<h2 class="shout">JavaScript медленный?</h2>
-	</section>
-	<section class="slide">
-		<h2 class="shout">asmjs</h2>
-	</section>
-	<section class="slide">
-		<h2>Сложный алгоритм на asmjs:</h2>
-		<pre>
-			<code>var add = function (stdlib, foreign, heap) {</code>
-			<code>	"use asm";</code>
-			<code>	function add(x, y) {</code>
-			<code>	    x = x | 0;</code>
-			<code>	    y = y | 0;</code>
-			<code>	    return x + y | 0;</code>
-			<code>	}</code>	
-			<code>	return { add: add };</code>
-			<code>}</code>
-		</pre>
-	</section>
-	<section class="slide">
-		<h2>Сложный алгоритм на asmjs:</h2>
-		<pre>
-			<code>var add = function (stdlib, foreign, <mark>heap</mark>) {</code>
-			<code>	"use asm";</code>
-			<code>	function add(x, y) {</code>
-			<code>	    x = x | 0;</code>
-			<code>	    y = y | 0;</code>
-			<code>	    return x + y | 0;</code>
-			<code>	}</code>	
-			<code>	return { add: add };</code>
-			<code>}</code>
-		</pre>
-	</section>
-	<section class="slide">
-		<h2>Сложный алгоритм на asmjs:</h2>
-		<pre>
-			<code>var add = function (stdlib, foreign, heap) {</code>
-			<code>	"use asm";</code>
-			<code>	function add(x, y) {</code>
-			<code>	    x = <mark>x | 0</mark>;</code>
-			<code>	    y = <mark>y | 0</mark>;</code>
-			<code>	    return <mark>x + y | 0</mark>;</code>
-			<code>	}</code>	
-			<code>	return { add: add };</code>
-			<code>}</code>
-		</pre>
-	</section>
+    <section class="slide">
+        <h2 class="shout">asmjs в 2 раза медленне C/C++</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">asmjs в 2 раза медленне C/C++</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">WebAssembly</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">WebAssembly</h2>
-	</section>
+    <section class="slide cover">
+        <img src="pictures/1.png" alt="" class="cover">	
+    </section>
 
-	<section class="slide cover">
-		<img src="pictures/1.png" alt="" class="cover">	
-	</section>
+    <section class="slide">
+        <h2>Что такое WebAssembly:</h2>
+        <figure>
+            <blockquote>
+                <p>WebAssembly or wasm is a new portable, size- and load-time-efficient format suitable for compilation to the web.</p>
+            </blockquote>
+            <figcaption>webassembly.org</figcaption>
+        </figure>
+    </section>
+    
+    <section class="slide cover">
+        <img src="pictures/2.png" alt="" class="cover">	
+    </section>
 
-	<section class="slide">
-		<h2>Что такое WebAssembly:</h2>
-		<figure>
-			<blockquote>
-				<p>WebAssembly or wasm is a new portable, size- and load-time-efficient format suitable for compilation to the web.</p>
-			</blockquote>
-			<figcaption>webassembly.org</figcaption>
-		</figure>
-	</section>
-	
-	<section class="slide cover">
-		<img src="pictures/2.png" alt="" class="cover">	
-	</section>
+    <section class="slide cover">
+        <img src="pictures/3.png" alt="" class="cover">
+    </section>
 
-	<section class="slide cover">
-		<img src="pictures/3.png" alt="" class="cover">
-	</section>
+    <section class="slide cover">
+        <img src="pictures/4.png" alt="" class="cover">
+    </section>
 
-	<section class="slide cover">
-		<img src="pictures/4.png" alt="" class="cover">
-	</section>
+    <section class="slide">
+        <h2>Составные части:</h2>
+        <ol>
+            <li>Независиный модуль (Module)</li>
+            <li>Память (Memory)</li>
+            <li>Таблица (Table)</li>
+            <li>Экземпляр (Instance)</li>
+        </ol>
+    </section>
 
-	<section class="slide">
-		<h2>Составные части:</h2>
-		<ol>
-			<li>Независиный модуль (Module)</li>
-			<li>Память (Memory)</li>
-			<li>Таблица (Table)</li>
-			<li>Экземпляр (Instance)</li>
-		</ol>
-	</section>
+    <section class="slide">
+        <h2>Модуль:</h2>
+        <ul>
+            <li>WebAssembly.compile(bytes)</li>
+            <li>new WebAssembly.Module(bufferSource)</li>
+        </ul>
 
-	<section class="slide">
-		<h2>Модуль:</h2>
-		<ul>
-			<li>WebAssembly.compile(bytes)</li>
-			<li>new WebAssembly.Module(bufferSource)</li>
-		</ul>
+        <h2>Методы:</h2>
+        <ul>
+            <li>customSections()</li>
+            <li>exports()</li>
+            <li>imports()</li>
+        </ul>
+    </section>
 
-		<h2>Методы:</h2>
-		<ul>
-			<li>customSections()</li>
-			<li>exports()</li>
-			<li>imports()</li>
-		</ul>
-	</section>
+    <section class="slide">
+        <h2>Память:</h2>
+        <ul>
+            <li>new WebAssembly.Memory({ initial: 3, maximum: 10 })</li>
+        </ul>
 
-	<section class="slide">
-		<h2>Память:</h2>
-		<ul>
-			<li>new WebAssembly.Memory({ initial: 3, maximum: 10 })</li>
-		</ul>
+        <h2>Методы и свойства:</h2>
+        <ul>
+            <li>grow()</li>
+            <li>buffer</li>
+        </ul>
+    </section>
 
-		<h2>Методы и свойства:</h2>
-		<ul>
-			<li>grow()</li>
-			<li>buffer</li>
-		</ul>
-	</section>
+    <section class="slide">
+        <h2>Таблица:</h2>
+        <ul>
+            <li>new WebAssembly.Table({initial:2, element:"anyfunc"})</li>
+        </ul>
 
-	<section class="slide">
-		<h2>Таблица:</h2>
-		<ul>
-			<li>new WebAssembly.Table({initial:2, element:"anyfunc"})</li>
-		</ul>
+        <h2>Методы и свойства:</h2>
+        <ul>
+            <li>grow()</li>
+            <li>get()</li>
+            <li>set()</li>
+        </ul>
+    </section>
 
-		<h2>Методы и свойства:</h2>
-		<ul>
-			<li>grow()</li>
-			<li>get()</li>
-			<li>set()</li>
-		</ul>
-	</section>
+    <section class="slide">
+        <h2>Экземпляр:</h2>
+        <ul>
+            <li>new WebAssembly.Instance(module, importObject)</li>
+            <li>WebAssembly.instantiate(module, importObject)</li>
+        </ul>
 
-	<section class="slide">
-		<h2>Экземпляр:</h2>
-		<ul>
-			<li>new WebAssembly.Instance(module, importObject)</li>
-			<li>WebAssembly.instantiate(module, importObject)</li>
-		</ul>
+        <h2>Методы и свойства:</h2>
+        <ul>
+            <li>exports</li>
+        </ul>
+    </section>
 
-		<h2>Методы и свойства:</h2>
-		<ul>
-			<li>exports</li>
-		</ul>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Как его применить в браузере?</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Как его применить в браузере?</h2>
-	</section>
+    <section class="slide">
+        <pre>
+            <code>fetch("fun.wasm").then(response =></code>
+              <code>	response.arrayBuffer()</code>
+            <code>).then(bytes =></code>
+              <code>	WebAssembly.compile(bytes)</code>
+            <code>).then(module =></code>
+            <code>	WebAssembly.instantiate(module, importObject)</code>
+            <code>).then(instance =></code>
+            <code>	instance.exports.exported_func();</code>
+            <code>)</code>
+        </pre>
+    </section>
 
-	<section class="slide">
-		<pre>
-			<code>fetch("fun.wasm").then(response =></code>
-  			<code>	response.arrayBuffer()</code>
-			<code>).then(bytes =></code>
-  			<code>	WebAssembly.compile(bytes)</code>
-			<code>).then(module =></code>
-			<code>	WebAssembly.instantiate(module, importObject)</code>
-			<code>).then(instance =></code>
-			<code>	instance.exports.exported_func();</code>
-			<code>)</code>
-		</pre>
-	</section>
+    <section class="slide">
+        <pre>
+            <code><mark>fetch("fun.wasm")</mark>.then(response =></code>
+              <code>	response.arrayBuffer()</code>
+            <code>).then(bytes =></code>
+              <code>	WebAssembly.compile(bytes)</code>
+            <code>).then(module =></code>
+            <code>	WebAssembly.instantiate(module, importObject)</code>
+            <code>).then(instance =></code>
+            <code>	instance.exports.exported_func();</code>
+            <code>)</code>
+        </pre>
+    </section>
 
-	<section class="slide">
-		<pre>
-			<code><mark>fetch("fun.wasm")</mark>.then(response =></code>
-  			<code>	response.arrayBuffer()</code>
-			<code>).then(bytes =></code>
-  			<code>	WebAssembly.compile(bytes)</code>
-			<code>).then(module =></code>
-			<code>	WebAssembly.instantiate(module, importObject)</code>
-			<code>).then(instance =></code>
-			<code>	instance.exports.exported_func();</code>
-			<code>)</code>
-		</pre>
-	</section>
+    <section class="slide">
+        <pre>
+            <code>fetch("fun.wasm").then(response =></code>
+              <code>	<mark>response.arrayBuffer()</mark></code>
+            <code>).then(bytes =></code>
+              <code>	WebAssembly.compile(bytes)</code>
+            <code>).then(module =></code>
+            <code>	WebAssembly.instantiate(module, importObject)</code>
+            <code>).then(instance =></code>
+            <code>	instance.exports.exported_func();</code>
+            <code>)</code>
+        </pre>
+    </section>
 
-	<section class="slide">
-		<pre>
-			<code>fetch("fun.wasm").then(response =></code>
-  			<code>	<mark>response.arrayBuffer()</mark></code>
-			<code>).then(bytes =></code>
-  			<code>	WebAssembly.compile(bytes)</code>
-			<code>).then(module =></code>
-			<code>	WebAssembly.instantiate(module, importObject)</code>
-			<code>).then(instance =></code>
-			<code>	instance.exports.exported_func();</code>
-			<code>)</code>
-		</pre>
-	</section>
+    <section class="slide">
+        <pre>
+            <code>fetch("fun.wasm").then(response =></code>
+              <code>	response.arrayBuffer()</code>
+            <code>).then(bytes =></code>
+              <code>	<mark>WebAssembly.compile(bytes)</mark></code>
+            <code>).then(module =></code>
+            <code>	WebAssembly.instantiate(module, importObject)</code>
+            <code>).then(instance =></code>
+            <code>	instance.exports.exported_func();</code>
+            <code>)</code>
+        </pre>
+    </section>
 
-	<section class="slide">
-		<pre>
-			<code>fetch("fun.wasm").then(response =></code>
-  			<code>	response.arrayBuffer()</code>
-			<code>).then(bytes =></code>
-  			<code>	<mark>WebAssembly.compile(bytes)</mark></code>
-			<code>).then(module =></code>
-			<code>	WebAssembly.instantiate(module, importObject)</code>
-			<code>).then(instance =></code>
-			<code>	instance.exports.exported_func();</code>
-			<code>)</code>
-		</pre>
-	</section>
+    <section class="slide">
+        <pre>
+            <code>fetch("fun.wasm").then(response =></code>
+              <code>	response.arrayBuffer()</code>
+            <code>).then(bytes =></code>
+              <code>	WebAssembly.compile(bytes)</code>
+            <code>).then(module =></code>
+            <code>	<mark>WebAssembly.instantiate(module, importObject)</mark></code>
+            <code>).then(instance =></code>
+            <code>	instance.exports.exported_func();</code>
+            <code>)</code>
+        </pre>
+    </section>
 
-	<section class="slide">
-		<pre>
-			<code>fetch("fun.wasm").then(response =></code>
-  			<code>	response.arrayBuffer()</code>
-			<code>).then(bytes =></code>
-  			<code>	WebAssembly.compile(bytes)</code>
-			<code>).then(module =></code>
-			<code>	<mark>WebAssembly.instantiate(module, importObject)</mark></code>
-			<code>).then(instance =></code>
-			<code>	instance.exports.exported_func();</code>
-			<code>)</code>
-		</pre>
-	</section>
+    <section class="slide">
+        <pre>
+            <code>fetch("fun.wasm").then(response =></code>
+              <code>	response.arrayBuffer()</code>
+            <code>).then(bytes =></code>
+              <code>	WebAssembly.compile(bytes)</code>
+            <code>).then(module =></code>
+            <code>	WebAssembly.instantiate(module, importObject)</code>
+            <code>).then(instance =></code>
+            <code>	<mark>instance.exports.exported_func();</mark></code>
+            <code>)</code>
+        </pre>
+    </section>
 
-	<section class="slide">
-		<pre>
-			<code>fetch("fun.wasm").then(response =></code>
-  			<code>	response.arrayBuffer()</code>
-			<code>).then(bytes =></code>
-  			<code>	WebAssembly.compile(bytes)</code>
-			<code>).then(module =></code>
-			<code>	WebAssembly.instantiate(module, importObject)</code>
-			<code>).then(instance =></code>
-			<code>	<mark>instance.exports.exported_func();</mark></code>
-			<code>)</code>
-		</pre>
-	</section>
+    <section class="slide">
+        <h2>Результаты:</h2>
+        <ol>
+            <li class="next">Вызов exported_func</li>
+            <li class="next">CompileError</li>
+            <li class="next">LinkError</li>
+            <li class="next">RuntimeError</li>
+        </ol>
+    </section>
 
-	<section class="slide">
-		<h2>Результаты:</h2>
-		<ol>
-			<li class="next">Вызов exported_func</li>
-			<li class="next">CompileError</li>
-			<li class="next">LinkError</li>
-			<li class="next">RuntimeError</li>
-		</ol>
-	</section>
+    <section class="slide cover">
+        <img src="pictures/3.jpg" alt="" class="cover">
+    </section>
 
-	<section class="slide cover">
-		<img src="pictures/3.jpg" alt="" class="cover">
-	</section>
+    <section class="slide">
+        <h2 class="shout">Будущее WebAssembly</h2>
+    </section>	
 
-	<section class="slide">
-		<h2 class="shout">Будущее WebAssembly</h2>
-	</section>	
+    <section class="slide">
+        <h2>Будущее</h2>
+        <ol>
+            <li>Больше инструментов</li>
+            <li class="next">Потоки и процессы</li>
+            <li class="next">Доступ к DOM и JS API</li>
+            <li class="next">Доступ к сборщику мусора</li>
+            <li class="next">JIT</li>
+            <li class="next">Тестирование</li>
+            <li class="next">Корутины</li>
+            <li class="next">И много другое</li>
+        </ol>
+    </section>
 
-	<section class="slide">
-		<h2>Будущее</h2>
-		<ol>
-			<li>Больше инструментов</li>
-			<li class="next">Потоки и процессы</li>
-			<li class="next">Доступ к DOM и JS API</li>
-			<li class="next">Доступ к сборщику мусора</li>
-			<li class="next">JIT</li>
-			<li class="next">Тестирование</li>
-			<li class="next">Корутины</li>
-			<li class="next">И много другое</li>
-		</ol>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Как писать на WebAssembly?</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Как писать на WebAssembly?</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Скомпилировать компилятор)</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Скомпилировать компилятор)</h2>
-	</section>
+    <section class="slide">
+        <h2>Как это сделать:</h2>
+        <ol>
+            <li>Установить git</li>
+            <li class="next">Установить cmake</li>
+            <li class="next">Установить C/C++ компилятор</li>
+            <li class="next">Установить Python 2.7</li>
+            <li class="next">./emsdk install sdk-incoming-64bit binaryen-master-64bit</li>
+            <li class="next">./emsdk activate sdk-incoming-64bit binaryen-master-64bit</li>
+            <li class="next">emcc hello.c -s WASM=1 -o target.wasm -g</li>
+        </ol>
+    </section>
 
-	<section class="slide">
-		<h2>Как это сделать:</h2>
-		<ol>
-			<li>Установить git</li>
-			<li class="next">Установить cmake</li>
-			<li class="next">Установить C/C++ компилятор</li>
-			<li class="next">Установить Python 2.7</li>
-			<li class="next">./emsdk install sdk-incoming-64bit binaryen-master-64bit</li>
-			<li class="next">./emsdk activate sdk-incoming-64bit binaryen-master-64bit</li>
-			<li class="next">emcc hello.c -s WASM=1 -o target.wasm -g</li>
-		</ol>
-	</section>
+    <section class="slide">
+        <h2>Как это сделать:</h2>
+        <ol>
+            <li>mir2wasm (nightly-2017-03-03)</li>
+            <li class="next">ams2wasm + emscripten</li>
+            <li class="next">emscripten + binaryen</li>
+        </ol>
+    </section>
 
-	<section class="slide">
-		<h2>Как это сделать:</h2>
-		<ol>
-			<li>mir2wasm (nightly-2017-03-03)</li>
-			<li class="next">ams2wasm + emscripten</li>
-			<li class="next">emscripten + binaryen</li>
-		</ol>
-	</section>
+    <section class="slide">
+        <h2>Вопросы:</h2>
+        <ol>
+            <li>Нужно ли мне бросать учить JavaScript?</li>
+            <li>Front End от Java программистов: хорошо ли это?</li>
+            <li>Если скомпилировать мой JavaScript в WebAssembly, то он станет быстрее?</li>
+        </ol>
+    </section>
 
-	<section class="slide">
-		<h2>Вопросы:</h2>
-		<ol>
-			<li>Нужно ли мне бросать учить JavaScript?</li>
-			<li>Front End от Java программистов: хорошо ли это?</li>
-			<li>Если скомпилировать мой JavaScript в WebAssembly, то он станет быстрее?</li>
-		</ol>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Нет</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Нет</h2>
-	</section>
-
-	<section class="slide cover">
-		<img src="pictures/5.png" alt="" class="cover">
-	</section>
-	
-	<div class="progress"></div>
-	<script src="shower/shower.min.js"></script>
+    <section class="slide cover">
+        <img src="pictures/5.png" alt="" class="cover">
+    </section>
+    
+    <div class="progress"></div>
 </body>
+<script src="../shower/shower.min.js"></script>
 </html>
