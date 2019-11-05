@@ -1,646 +1,646 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Доклад 21+. Что такое Rust</title>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">	
-	<style type="text/css">
-		.pad {
-			padding-left: 50px;
-		}
+    <title>Доклад 21+. Что такое Rust</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../shower/themes/ribbon/styles/screen-16x10.css">	
+    <style type="text/css">
+        .pad {
+            padding-left: 50px;
+        }
 
-		#free {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translateX(-50%) translateY(-50%);
-			z-index: 5000;
-			cursor: pointer;
-		}
+        #free {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: 5000;
+            cursor: pointer;
+        }
 
-		.black-slide {
-			background-color: #000;
-		}
+        .black-slide {
+            background-color: #000;
+        }
 
-		.black-slide::after {
-			content: "";
-			display: none;
-		}
+        .black-slide::after {
+            content: "";
+            display: none;
+        }
 
-		.squ {
-			width: 100px;
-			height: 100px;
-			background-color: red;
-			position: relative;
-		}
-	</style>
+        .squ {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+        }
+    </style>
 </head>
 <body class="shower list">
-	<header class="caption">
-		<h1>Доклад 21+. Что такое Rust</h1>
-		<p>Владимир Дашукевич</p>
-	</header>
-	<section class="slide cover black-slide" id="face"><div>
-		<div style="color: #fff; font-size: 1.4em;">
-			<div>{</div>
-			<div class="pad">Тема: <mark>Доклад 21+. Что такое Rust</mark>,</div>
-			<div class="pad">Спикер: <mark>Владимир Дашукевич</mark>,</div>
-			<div class="pad">Компания: <mark>XBSoftware</mark>,</div>
-			<div class="pad">Конференция: <mark>4front</mark></div>
-			<div>}</div>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<img class="cover w" src="pictures/41.png">
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<video class="cover h" src="pictures/1.mp4" autoplay loop muted>
-		</div>
-	</section>
-	<section class="slide">
-		<h2 class="shout">Доклад 21+</h2>
-	</section>
-	<section class="slide">
-		<div>
-			<img class="cover h" src="pictures/1.png">
-		</div>
-	</section>
-	<section class="slide">
-		<h2 class="shout">Web сайты медленный</h2>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Что же в сайтах медленного?</h2>
-			<ol>
-				<li class="next">DOM медленный</li>
-				<li class="next">Операции рендера</li>
-				<li class="next">Перерисовка медленная</li>
-				<li class="next">React, angular ...</li>
-			</ol>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<img class="cover h" src="pictures/1.jpg">
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<img class="cover w" src="pictures/2.png">
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<img class="cover h" src="pictures/4.jpg">
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<img class="cover h" src="pictures/2.jpg">
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<img class="cover h" src="pictures/3.jpg">
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Что сейчас необходимо?</h2>
-			<ol>
-				<li class="next">Огромное количество элементов</li>
-				<li class="next">Все адаптивное</li>
-				<li class="next">Плавные анимации</li>
-				<li class="next">Для всех устройств</li>
-			</ol>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<video class="cover h" src="pictures/2.mp4" autoplay loop muted>
-		</div>
-	</section>
-	<section class="slide">
-		<h2 class="shout">Как же это сделать?</h2>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Подходы</h2>
-			<ol>
-				<li class="next">Оптимизировать код</li>
-				<li class="next">Распараллелить выполнение задачи</li>
-				<li class="next">Пытаться угадать тайный замысел разработчика</li>
-				<li class="next">Забить, пусть разработчик сам думает</li>
-			</ol>
-		</div>
-	</section>
-	<section class="slide">
-		<h2 class="shout">Оптимизировать код</h2>
-	</section>
-	<section class="slide">
-		<h2 class="shout">Lazy computations</h2>
-	</section>
-	<section class="slide">
-		<div>
-			<pre>
-				<code>let elts = document.querySelectorAll("div");</code> 
-				<code>for (let i = 0; i &lt; elts.length; ++i) {</code> 
-				<code>	elts[i].style.width = (elts[i].offsetWidth + 1) + "px";</code> 
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<pre>
-				<code>let elts = document.querySelectorAll("div");</code> 
-				<code>for (let i = 0; i &lt; elts.length; ++i) {</code> 
-				<code>	elts[i].style.width = (<mark>elts[i].offsetWidth</mark> + 1) + "px";</code> 
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<pre>
-				<code>elt.style.left = "0%";</code> 
-				<code>elt.style.transition = "left 1s";</code> 
-				<code>elt.style.left = "100%";</code> 
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<div class="squ" id="squ"></div>
-			<button id="move">Нажми на меня полностью</button>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<pre>
-				<code>elt.style.left = "0%";</code>
-				<code><mark>elt.offsetWidth;</mark></code> 
-				<code>elt.style.transition = "left 1s";</code> 
-				<code>elt.style.left = "100%";</code> 
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<div class="squ" id="squ2"></div>
-			<button id="move2">Нажми на меня полностью</button>
-		</div>
-	</section>
-	<section class="slide">
-		<h2 class="shout">Слои</h2>
-	</section>
-	<section class="slide">
-		<div>
-			<img class="cover w" src="pictures/5.jpg">
-		</div>
-	</section>
-	<section class="slide">
-		<img class="cover w" src="pictures/3.png">
-	</section>
-	<section class="slide">
-		<div>
-			<pre>
-				<code>transform: translateZ(0);</code>
-				<code>will-change: left, top;</code> 
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<img class="cover w" src="pictures/6.jpg">
-		</div>
-	</section>
-	<section class="slide">
-		<h2 class="shout">Все равно медленно(</h2>
-	</section>
+    <header class="caption">
+        <h1>Доклад 21+. Что такое Rust</h1>
+        <p>Владимир Дашукевич</p>
+    </header>
+    <section class="slide cover black-slide" id="face"><div>
+        <div style="color: #fff; font-size: 1.4em;">
+            <div>{</div>
+            <div class="pad">Тема: <mark>Доклад 21+. Что такое Rust</mark>,</div>
+            <div class="pad">Спикер: <mark>Владимир Дашукевич</mark>,</div>
+            <div class="pad">Компания: <mark>XBSoftware</mark>,</div>
+            <div class="pad">Конференция: <mark>4front</mark></div>
+            <div>}</div>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <img class="cover w" src="pictures/41.png">
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <video class="cover h" src="pictures/1.mp4" autoplay loop muted>
+        </div>
+    </section>
+    <section class="slide">
+        <h2 class="shout">Доклад 21+</h2>
+    </section>
+    <section class="slide">
+        <div>
+            <img class="cover h" src="pictures/1.png">
+        </div>
+    </section>
+    <section class="slide">
+        <h2 class="shout">Web сайты медленный</h2>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Что же в сайтах медленного?</h2>
+            <ol>
+                <li class="next">DOM медленный</li>
+                <li class="next">Операции рендера</li>
+                <li class="next">Перерисовка медленная</li>
+                <li class="next">React, angular ...</li>
+            </ol>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <img class="cover h" src="pictures/1.jpg">
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <img class="cover w" src="pictures/2.png">
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <img class="cover h" src="pictures/4.jpg">
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <img class="cover h" src="pictures/2.jpg">
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <img class="cover h" src="pictures/3.jpg">
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Что сейчас необходимо?</h2>
+            <ol>
+                <li class="next">Огромное количество элементов</li>
+                <li class="next">Все адаптивное</li>
+                <li class="next">Плавные анимации</li>
+                <li class="next">Для всех устройств</li>
+            </ol>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <video class="cover h" src="pictures/2.mp4" autoplay loop muted>
+        </div>
+    </section>
+    <section class="slide">
+        <h2 class="shout">Как же это сделать?</h2>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Подходы</h2>
+            <ol>
+                <li class="next">Оптимизировать код</li>
+                <li class="next">Распараллелить выполнение задачи</li>
+                <li class="next">Пытаться угадать тайный замысел разработчика</li>
+                <li class="next">Забить, пусть разработчик сам думает</li>
+            </ol>
+        </div>
+    </section>
+    <section class="slide">
+        <h2 class="shout">Оптимизировать код</h2>
+    </section>
+    <section class="slide">
+        <h2 class="shout">Lazy computations</h2>
+    </section>
+    <section class="slide">
+        <div>
+            <pre>
+                <code>let elts = document.querySelectorAll("div");</code> 
+                <code>for (let i = 0; i &lt; elts.length; ++i) {</code> 
+                <code>	elts[i].style.width = (elts[i].offsetWidth + 1) + "px";</code> 
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <pre>
+                <code>let elts = document.querySelectorAll("div");</code> 
+                <code>for (let i = 0; i &lt; elts.length; ++i) {</code> 
+                <code>	elts[i].style.width = (<mark>elts[i].offsetWidth</mark> + 1) + "px";</code> 
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <pre>
+                <code>elt.style.left = "0%";</code> 
+                <code>elt.style.transition = "left 1s";</code> 
+                <code>elt.style.left = "100%";</code> 
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <div class="squ" id="squ"></div>
+            <button id="move">Нажми на меня полностью</button>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <pre>
+                <code>elt.style.left = "0%";</code>
+                <code><mark>elt.offsetWidth;</mark></code> 
+                <code>elt.style.transition = "left 1s";</code> 
+                <code>elt.style.left = "100%";</code> 
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <div class="squ" id="squ2"></div>
+            <button id="move2">Нажми на меня полностью</button>
+        </div>
+    </section>
+    <section class="slide">
+        <h2 class="shout">Слои</h2>
+    </section>
+    <section class="slide">
+        <div>
+            <img class="cover w" src="pictures/5.jpg">
+        </div>
+    </section>
+    <section class="slide">
+        <img class="cover w" src="pictures/3.png">
+    </section>
+    <section class="slide">
+        <div>
+            <pre>
+                <code>transform: translateZ(0);</code>
+                <code>will-change: left, top;</code> 
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <img class="cover w" src="pictures/6.jpg">
+        </div>
+    </section>
+    <section class="slide">
+        <h2 class="shout">Все равно медленно(</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Chrome 52</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Chrome 52</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">CSS Containment</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">CSS Containment</h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<img class="cover w" style="background-color: white;" src="pictures/5.png">
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>contain</h2>
-			<ol>
-				<li>none no effect</li>
-				<li>layout turns on layout containment</li>
-				<li>style turns on style containment</li>
-				<li>paint turns on paint containment</li>
-				<li>size turns on size containment</li>
-				<li>content all, except size containment</li>
-				<li>strict layout, style and paint combined</li>
-			</ol>
-		</div>
-	</section>
+    <section class="slide">
+        <div>
+            <img class="cover w" style="background-color: white;" src="pictures/5.png">
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>contain</h2>
+            <ol>
+                <li>none no effect</li>
+                <li>layout turns on layout containment</li>
+                <li>style turns on style containment</li>
+                <li>paint turns on paint containment</li>
+                <li>size turns on size containment</li>
+                <li>content all, except size containment</li>
+                <li>strict layout, style and paint combined</li>
+            </ol>
+        </div>
+    </section>
 
-	<section class="slide">
-		<div>
-			<img class="cover w" src="pictures/4.png">
-		</div>
-	</section>
-	<section class="slide">
-		<h2 class="shout">Заставляют разработчиков думать</h2>
-	</section>
+    <section class="slide">
+        <div>
+            <img class="cover w" src="pictures/4.png">
+        </div>
+    </section>
+    <section class="slide">
+        <h2 class="shout">Заставляют разработчиков думать</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Распараллелить выполнение задачи</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Распараллелить выполнение задачи</h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<img class="cover w" style="background-color: white;" src="pictures/5.png">
-		</div>
-	</section>
-	<section class="slide">
-		<h2 class="shout">Deadlocks и race condition</h2>
-	</section>
+    <section class="slide">
+        <div>
+            <img class="cover w" style="background-color: white;" src="pictures/5.png">
+        </div>
+    </section>
+    <section class="slide">
+        <h2 class="shout">Deadlocks и race condition</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Race condition</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Race condition</h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<img class="cover h" src="pictures/7.jpg">
-		</div>
-	</section>
+    <section class="slide">
+        <div>
+            <img class="cover h" src="pictures/7.jpg">
+        </div>
+    </section>
 
-	<section class="slide">
-		<div>
-			<img class="cover h" src="pictures/8.jpg">
-		</div>
-	</section>
+    <section class="slide">
+        <div>
+            <img class="cover h" src="pictures/8.jpg">
+        </div>
+    </section>
 
-	<section class="slide">
-		<div>
-			<img class="cover w" src="pictures/10.png">
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<img class="cover h" src="pictures/9.jpg">
-		</div>
-	</section>
+    <section class="slide">
+        <div>
+            <img class="cover w" src="pictures/10.png">
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <img class="cover h" src="pictures/9.jpg">
+        </div>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Race condition в JS</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Race condition в JS</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Starbucks</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Starbucks</h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<h2>Решения</h2>
-			<ol>
-				<li>mutex</li>
-				<li>Semaphore</li>
-				<li>lock</li>
-				<li>synchronization</li>
-			</ol>
-		</div>
-	</section>
+    <section class="slide">
+        <div>
+            <h2>Решения</h2>
+            <ol>
+                <li>mutex</li>
+                <li>Semaphore</li>
+                <li>lock</li>
+                <li>synchronization</li>
+            </ol>
+        </div>
+    </section>
 
-	<section class="slide">
-		<div>
-			<img class="cover w" src="pictures/10.png">
-		</div>
-	</section>
-	<section class="slide">
-		<h2 class="shout">GIL</h2>
-	</section>
+    <section class="slide">
+        <div>
+            <img class="cover w" src="pictures/10.png">
+        </div>
+    </section>
+    <section class="slide">
+        <h2 class="shout">GIL</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Deadlocks</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Deadlocks</h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<img class="cover h" src="pictures/10.jpg">
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<img class="cover w" src="pictures/11.png">
-		</div>
-	</section>
-	<section class="slide">
-		<img class="cover h" src="pictures/11.jpg">
-	</section>
+    <section class="slide">
+        <div>
+            <img class="cover h" src="pictures/10.jpg">
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <img class="cover w" src="pictures/11.png">
+        </div>
+    </section>
+    <section class="slide">
+        <img class="cover h" src="pictures/11.jpg">
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Deadlocks в JS</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Deadlocks в JS</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">SharedArrayBuffer</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">SharedArrayBuffer</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Runtime</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Runtime</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Parallel rendering</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Parallel rendering</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Webkit</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Webkit</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Gecko</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Gecko</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">C/C++</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">C/C++</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">no GC</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">no GC</h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<img class="cover w" src="pictures/12.jpg">
-		</div>
-	</section>
-	<section class="slide">
-		<h2 class="shout">Mozilla</h2>
-	</section>
+    <section class="slide">
+        <div>
+            <img class="cover w" src="pictures/12.jpg">
+        </div>
+    </section>
+    <section class="slide">
+        <h2 class="shout">Mozilla</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Rust</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Rust</h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<h2>История</h2>
-			<ol>
-				<li>Появление 2010 (LLVM)</li>
-				<li>Компилятор на Rust 2011</li>
-				<li>Mай 15, 2015 - Rust 1.0</li>
-			</ol>
-		</div>
-	</section>
+    <section class="slide">
+        <div>
+            <h2>История</h2>
+            <ol>
+                <li>Появление 2010 (LLVM)</li>
+                <li>Компилятор на Rust 2011</li>
+                <li>Mай 15, 2015 - Rust 1.0</li>
+            </ol>
+        </div>
+    </section>
 
-	<section class="slide">
-		<div>
-			<h2>Rust</h2>
-			<ol>
-				<li class="next">Системный язык программирования</li>
-				<li class="next">Без GC</li>
-				<li class="next">Мультипарадигменный</li>
-				<li class="next">LLVM</li>
-				<li class="next">С-подобный синтаксис</li>
-			</ol>
-		</div>
-	</section>
+    <section class="slide">
+        <div>
+            <h2>Rust</h2>
+            <ol>
+                <li class="next">Системный язык программирования</li>
+                <li class="next">Без GC</li>
+                <li class="next">Мультипарадигменный</li>
+                <li class="next">LLVM</li>
+                <li class="next">С-подобный синтаксис</li>
+            </ol>
+        </div>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Сценка</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Сценка</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Я пишу компилирующийся код С/C++/Java/C#</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Я пишу компилирующийся код С/C++/Java/C#</h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<img class="cover w" src="pictures/1.gif">
-		</div>
-	</section>
-	<section class="slide">
-		<video class="cover h" src="pictures/3.mp4" autoplay loop muted>
-	</section>
+    <section class="slide">
+        <div>
+            <img class="cover w" src="pictures/1.gif">
+        </div>
+    </section>
+    <section class="slide">
+        <video class="cover h" src="pictures/3.mp4" autoplay loop muted>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Я пишу компилирующийся код Rust</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Я пишу компилирующийся код Rust</h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<img class="cover w" src="pictures/2.gif">
-		</div>
-	</section>
-	<section class="slide">
-		<h2 class="shout">Осторожно 21+</h2>
-	</section>
+    <section class="slide">
+        <div>
+            <img class="cover w" src="pictures/2.gif">
+        </div>
+    </section>
+    <section class="slide">
+        <h2 class="shout">Осторожно 21+</h2>
+    </section>
 
-	<section class="slide">
-		<h2 class="shout">Безопасность, скорость и параллелизм</h2>
-	</section>
+    <section class="slide">
+        <h2 class="shout">Безопасность, скорость и параллелизм</h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<h2>Решения Rust</h2>
-			<ol>
-				<li>Чистые функции</li>
-				<li>Неизменяемость данных</li>
-				<li>Структуры данных функционального программирования</li>
-				<li>Контроль над использованием памяти</li>
-				<li>Умные указатели на кучу</li>
-			</ol>
-		</div>
-	</section>
+    <section class="slide">
+        <div>
+            <h2>Решения Rust</h2>
+            <ol>
+                <li>Чистые функции</li>
+                <li>Неизменяемость данных</li>
+                <li>Структуры данных функционального программирования</li>
+                <li>Контроль над использованием памяти</li>
+                <li>Умные указатели на кучу</li>
+            </ol>
+        </div>
+    </section>
 
-	<section class="slide"><div>
-		<h2 class="shout">Чистые функции</h2>
-	</section>
+    <section class="slide"><div>
+        <h2 class="shout">Чистые функции</h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<h2>Чистые функции</h2>
-			<ol>
-				<li>является детерминированной</li>
-				<li>не обладает побочными эффектами</li>
-			</ol>
-		</div>
-	</section>
+    <section class="slide">
+        <div>
+            <h2>Чистые функции</h2>
+            <ol>
+                <li>является детерминированной</li>
+                <li>не обладает побочными эффектами</li>
+            </ol>
+        </div>
+    </section>
 
-	<section class="slide">
-		<div>
-			<img class="cover h" src="pictures/12.png">
-		</div>
-	</section>
+    <section class="slide">
+        <div>
+            <img class="cover h" src="pictures/12.png">
+        </div>
+    </section>
 
-	<section class="slide"><div>
-		<h2 class="shout">Нет</h2>
-	</section>
+    <section class="slide"><div>
+        <h2 class="shout">Нет</h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<img class="cover w" src="pictures/13.png">
-		</div>
-	</section>
-	<section class="slide"><div>
-		<h2 class="shout">Нет</h2>
-	</section>
+    <section class="slide">
+        <div>
+            <img class="cover w" src="pictures/13.png">
+        </div>
+    </section>
+    <section class="slide"><div>
+        <h2 class="shout">Нет</h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<img class="cover w" src="pictures/14.png">
-		</div>
-	</section>
-	<section class="slide"><div>
-		<h2 class="shout">Нет</h2>
-	</section>
+    <section class="slide">
+        <div>
+            <img class="cover w" src="pictures/14.png">
+        </div>
+    </section>
+    <section class="slide"><div>
+        <h2 class="shout">Нет</h2>
+    </section>
 
-	<section class="slide"><div>
-		<h2 class="shout">getElementById</h2>
-	</section>
+    <section class="slide"><div>
+        <h2 class="shout">getElementById</h2>
+    </section>
 
-	<section class="slide"><div>
-		<h2 class="shout">Да</h2>
-	</section>
+    <section class="slide"><div>
+        <h2 class="shout">Да</h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<img class="cover h" src="pictures/15.png">
-		</div>
-	</section>
-	
-	<section class="slide"><div>
-		<h2 class="shout">Нет</h2>
-	</section>
+    <section class="slide">
+        <div>
+            <img class="cover h" src="pictures/15.png">
+        </div>
+    </section>
+    
+    <section class="slide"><div>
+        <h2 class="shout">Нет</h2>
+    </section>
 
-	<section class="slide"><div>
-		<h2 class="shout">Умные указатели на кучу</h2>
-	</section>
+    <section class="slide"><div>
+        <h2 class="shout">Умные указатели на кучу</h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<img class="cover w" src="pictures/16.png">
-		</div>
-	</section>
-	<section class="slide"><div>
-		<h2 class="shout">Структуры данных</h2>
-	</section>
+    <section class="slide">
+        <div>
+            <img class="cover w" src="pictures/16.png">
+        </div>
+    </section>
+    <section class="slide"><div>
+        <h2 class="shout">Структуры данных</h2>
+    </section>
 
-	<section class="slide"><div>
-		<h2 class="shout">Option<T></h2>
-	</section>
+    <section class="slide"><div>
+        <h2 class="shout">Option<T></h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<h2>Option&lt;T&gt;</h2>
-			<ol>
-				<li>Some&lt;T&gt;</li>
-				<li>None</li>
-			</ol>
-		</div>
-	</section>
+    <section class="slide">
+        <div>
+            <h2>Option&lt;T&gt;</h2>
+            <ol>
+                <li>Some&lt;T&gt;</li>
+                <li>None</li>
+            </ol>
+        </div>
+    </section>
 
-	<section class="slide"><div>
-		<h2 class="shout">arr&lt;i32&gt;.pop()</h2>
-	</section>
+    <section class="slide"><div>
+        <h2 class="shout">arr&lt;i32&gt;.pop()</h2>
+    </section>
 
-	<section class="slide"><div>
-		<h2 class="shout">Контроль над использованием памяти</h2>
-	</section>
+    <section class="slide"><div>
+        <h2 class="shout">Контроль над использованием памяти</h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<h2>Rust</h2>
-			<ol>
-				<li>Borrowing</li>
-				<li>Ownership</li>
-				<li>lifetimes</li>
-			</ol>
-		</div>
-	</section>
+    <section class="slide">
+        <div>
+            <h2>Rust</h2>
+            <ol>
+                <li>Borrowing</li>
+                <li>Ownership</li>
+                <li>lifetimes</li>
+            </ol>
+        </div>
+    </section>
 
-	<section class="slide"><div>
-		<h2 class="shout">Пример</h2>
-	</section>
+    <section class="slide"><div>
+        <h2 class="shout">Пример</h2>
+    </section>
 
-	<section class="slide"><div>
-		<h2 class="shout">Quantum</h2>
-	</section>
+    <section class="slide"><div>
+        <h2 class="shout">Quantum</h2>
+    </section>
 
-	<section class="slide"><div>
-		<h2 class="shout">Servo</h2>
-	</section>
+    <section class="slide"><div>
+        <h2 class="shout">Servo</h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<video class="cover h" src="pictures/2.mp4" autoplay loop muted>
-		</div>
-	</section>
+    <section class="slide">
+        <div>
+            <video class="cover h" src="pictures/2.mp4" autoplay loop muted>
+        </div>
+    </section>
 
-	<section class="slide"><div>
-		<h2 class="shout"><a href="https://servo.org/">Servo</a></h2>
-	</section>
+    <section class="slide"><div>
+        <h2 class="shout"><a href="https://servo.org/">Servo</a></h2>
+    </section>
 
-	<section class="slide">
-		<div>
-			<img class="cover w" src="pictures/8.png">
-		</div>
-	</section>
-	<section class="slide">
-		<img class="cover w" src="pictures/6.png">
-	</section>
-	<section class="slide">
-		<img class="cover h" src="pictures/7.png">
-	</section>
+    <section class="slide">
+        <div>
+            <img class="cover w" src="pictures/8.png">
+        </div>
+    </section>
+    <section class="slide">
+        <img class="cover w" src="pictures/6.png">
+    </section>
+    <section class="slide">
+        <img class="cover h" src="pictures/7.png">
+    </section>
 
-	<section class="slide">
-		<div>
-			<img class="cover h" src="pictures/9.png">
-		</div>
-	</section>
+    <section class="slide">
+        <div>
+            <img class="cover h" src="pictures/9.png">
+        </div>
+    </section>
 
-	<section class="slide"><div>
-		<h2 class="shout">Во имя добра учите Rust)</h2>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Questions</h2>
-			<div>Facebook: <a href="https://www.facebook.com/dashukevich.vova">dashukevich.vova</a></div>
-			<div>Twitter: <a href="https://twitter.com/life__777">life__777</a></div>
-		</div>
-	</section>
-	<div class="progress"></div>
+    <section class="slide"><div>
+        <h2 class="shout">Во имя добра учите Rust)</h2>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Questions</h2>
+            <div>Facebook: <a href="https://www.facebook.com/dashukevich.vova">dashukevich.vova</a></div>
+            <div>Twitter: <a href="https://twitter.com/life__777">life__777</a></div>
+        </div>
+    </section>
+    <div class="progress"></div>
 </body>
-<script src="shower/shower.min.js"></script>
+<script src="../shower/shower.min.js"></script>
 <script type="text/javascript">
-	document.getElementById("move").addEventListener("click", function(){
-		var el = document.getElementById("squ");
+    document.getElementById("move").addEventListener("click", function(){
+        var el = document.getElementById("squ");
 
-		el.style.transition = "";
-		el.style.left = "0";
-		el.style.transition = "left 1s";
-		el.style.left = "100%";
-	}, false);
+        el.style.transition = "";
+        el.style.left = "0";
+        el.style.transition = "left 1s";
+        el.style.left = "100%";
+    }, false);
 
-	document.getElementById("move2").addEventListener("click", function(){
-		var el = document.getElementById("squ2");
+    document.getElementById("move2").addEventListener("click", function(){
+        var el = document.getElementById("squ2");
 
-		el.style.transition = "";
-		el.style.left = "0";
-		el.offsetWidth;
-		el.style.transition = "left 1s";
-		el.style.left = "100%";
-	}, false);
+        el.style.transition = "";
+        el.style.left = "0";
+        el.offsetWidth;
+        el.style.transition = "left 1s";
+        el.style.left = "100%";
+    }, false);
 </script>
 </html>
