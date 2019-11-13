@@ -1,1068 +1,1068 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ES2015</title>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">	
-	<style type="text/css">
-		.pad {
-			padding-left: 50px;
-		}
+    <title>ES2015</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../shower/themes/ribbon/styles/screen-16x10.css">	
+    <style type="text/css">
+        .pad {
+            padding-left: 50px;
+        }
 
-		#free {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translateX(-50%) translateY(-50%);
-			z-index: 5000;
-			cursor: pointer;
-		}
+        #free {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: 5000;
+            cursor: pointer;
+        }
 
-		.black-slide {
-			background-color: #000;
-		}
+        .black-slide {
+            background-color: #000;
+        }
 
-		.black-slide::after {
-			content: "";
-			display: none;
-		}
+        .black-slide::after {
+            content: "";
+            display: none;
+        }
 
-		.squ {
-			width: 100px;
-			height: 100px;
-			background-color: red;
-			position: relative;
-		}
-	</style>
+        .squ {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+        }
+    </style>
 </head>
 <body class="shower list">
-	<header class="caption">
-		<h1>ES2015</h1>
-		<p>Владимир Дашукевич</p>
-	</header>
-	<section class="slide" id="face"><div>
-		<h2>ES2015 или куда идет Javascript</h2>
-		<p>Владимир Дашукевич</p>
-		<img class="cover" src="pictures/speech1.jpg" alt="">
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout"><a href="https://github.com/life777/ES2015-exaples">Examples</a></h2>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Where can I try it?</h2>
-			<ol>
-				<li class="next"><a href="https://kangax.github.io/compat-table/es6/">Chrome 49</a></li>
-				<li class="next"><a href="https://babeljs.io/repl/">Babel.js</li>
-				<li class="next"><a href="https://google.github.io/traceur-compiler/demo/repl.html">Traceur</a></li>
-				<li class="next"><a href="https://github.com/es-shims/es6-shim">ES6 Shim</a></li>
-			</ol>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">ES2015 is the best practice</h2>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Are you ready for pain)</h2>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">3</h2>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">2</h2>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">1</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<img class="cover h" src="pictures/1.gif">
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">JS everywhere</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]][([][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+([][[]]+[])[+!+[]]+(![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[+!+[]]+([][[]]+[])[+[]]+([][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+(!![]+[])[+!+[]]]((![]+[])[+!+[]]+(![]+[])[!+[]+!+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]+(!![]+[])[+[]]+(![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[!+[]+!+[]+[+[]]]+[+!+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[!+[]+!+[]+[+[]]])()
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<img class="cover h" src="pictures/1.jpg">
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<img class="cover h" src="pictures/2.jpg">
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Blocks</h2>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout" style="font-size: 100px;">ES5.1: Scope === function</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>function(){</code>
-				<code>	<mark>var a = 2;</mark></code>
-				<code>	if (true) {</code>
-				<code>		<mark>var b = 3;</mark></code>
-				<code>	}</code>
-				<code>	return a + b;</code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout" style="font-size: 100px;">ES6: Scope === {} or () (t)</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>function(){</code>
-				<code>	let a = 2;</code>
-				<code>	if (true) <mark>{</mark></code>
-				<code>		let b = 3;</code>
-				<code>	<mark>}</mark></code>
-				<code>	return a + b; //???</code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>function(){</code>
-				<code>	let a = 2;</code>
-				<code>	if (true) <mark>{</mark></code>
-				<code>		let b = 3;</code>
-				<code>	<mark>}</mark></code>
-				<code>	return a + b; // ReferenceError</code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Loops and arguments (t)</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>function(){</code>
-				<code>	<mark>for (let i = 0; i &lt; 6; i++) {</mark></code>
-				<code>		setTimeout(() => { console.log(i) }, 1); // ???</code>
-				<code>	<mark>}</mark></code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>function(){</code>
-				<code>	<mark>for (let i = 0; i &lt; 6; i++) {</mark></code>
-				<code>		setTimeout(() => { console.log(i) }, 1); // 1, 2, 3, 4, 5</code>
-				<code>	<mark>}</mark></code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Hoisting</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>function(){</code>
-				<code>	a; // ???</code>
-				<code>	b; // ???</code>
-				<code>	var a = 1;</code>
-				<code>	var b = 3;</code>
-				<code>	var c = a + b;</code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>a;</code>
-				<code>b;</code>
-				<code><mark>var a</mark> = 1;</code>
-				<code>var b = 3;</code>
-				<code>var c = a + b;</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>a;</code>
-				<code>b;</code>
-				<code>var a = 1;</code>
-				<code><mark>var b</mark> = 3;</code>
-				<code>var c = a + b;</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>a;</code>
-				<code>b;</code>
-				<code>var a = 1;</code>
-				<code>var b = 3;</code>
-				<code><mark>var c</mark> = a + b;</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code><mark>a;</mark></code>
-				<code>b;</code>
-				<code>var a = 1;</code>
-				<code>var b = 3;</code>
-				<code>var c = a + b;</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>var a;</code>
-				<code>var b;</code>
-				<code>var c;</code>
-				<code>a;</code>
-				<code>b;</code>
-				<code>a = 1;</code>
-				<code>b = 3;</code>
-				<code>c = a + b;</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>a; // undefined</code>
-				<code>b; // undefined</code>
-				<code>var a = 1;</code>
-				<code>var b = 3;</code>
-				<code>var c = a + b;</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>a; // ReferenceError</code>
-				<code>b; // ReferenceError</code>
-				<code>let a = 1;</code>
-				<code>let b = 3;</code>
-				<code>let c = a + b;</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Second declaration (t)</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>let a = 1;</code>
-				<code>let a = 3; // Error</code>
-				<code>var a = 3; // Error</code>
-				<code>var b = 3; </code>
-				<code>let b = 3; // Error</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Const (t)</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>const a = 1;</code>
-				<code>a = 3; //Error</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>const a = [1, 2, 3];</code>
-				<code>a[1] = "Hello"; // a -> [1, "Hello", 3]</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout" style="font-size: 100px;">Blocks: const === let</h2>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Let или var?</h2>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Function or =></h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>var sum = {</code>
-				<code>	sum: 0,</code>
-				<code>	add: function(num){</code>
-				<code>		this.sum += num;</code>
-				<code>	},</code>
-				<code>	inc: function(){</code>
-				<code>		this.sum++;</code>
-				<code>	}</code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>sum.add(5); //sum.sum === 5</code>
-				<code class="next">sum.inc(); //sum.sum === 6</code>
-				<code class="next">elem.addEventListener("click", sum.inc, false); // Error</code>
-				<code class="next">elem.addEventListener("click", sum.inc<mark>.bind(sum)</mark>, false);</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>var sum = {</code>
-				<code>	sum: 0,</code>
-				<code>	add: (function(num){</code>
-				<code>		this.sum += num;</code>
-				<code>	}).bind(sum),</code>
-				<code>	inc: (function(){</code>
-				<code>		this.sum++;</code>
-				<code>	}).bind(sum)</code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">=></h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>var sum = {</code>
-				<code>	sum: 0,</code>
-				<code>	add: () => {</code>
-				<code>		this.sum += num;</code>
-				<code>	},</code>
-				<code>	inc: () => {</code>
-				<code>		this.sum++;</code>
-				<code>	}</code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Где она полезна?</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>model.user = {</code>
-				<code>	find:function(){ ... },</code>
-				<code>	findFirst: function(){ </code>
-				<code>		return new Promise((resolve, reject) => {</code>
-				<code>			this.find(...);</code>
-				<code>		})</code>
-				<code>	}</code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>elem.addEventListener("click", e => {</code>
-				<code>	this.doSomething();</code>
-				<code>});</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Везде где вы используете this)))</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<h2>Test</h2>
-			<pre>
-				<code class="next">(() => this.outerWidth).apply({ outerWidth: 20 }); // ???</code>
-				<code class="next">(() => this.outerWidth).bind({ outerWidth: 20 })(); // ???</code>
-				<code class="next">(() => arguments[0])(1, 2, 3, 4); // ???</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<img class="cover h" src="pictures/2.gif">
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Rest parameters</h2>
-		</div>
-	</section>	
-	<section class="slide">
-		<div>
-			<h2 class="shout">Rest !== arguments</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>var foo = function(a, <mark>...rest</mark>){</code>
-				<code>	rest.forEach(function(a){</code> 
-				<code>		console.log(a)</code>
-				<code>	})</code>
-				<code>});</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>foo(1, 2, 3); // 2, 3</code>
-				<code>foo(1, 2, 3, 4); // 2, 3, 4</code>
-				<code>foo();// </code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Default Parameter Values</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>function foo(x,y) {</code>
-				<code>	x = x || 11;</code> 
-				<code>	y = y || 31;</code>
-				<code>	console.log( x + y );</code>
-				<code>};</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Когда это сработает:</h2>
-			<ol>
-				<li class="next">x = undefined</li>
-				<li class="next">x = 0</li>
-				<li class="next">x = ""</li>
-				<li class="next">x = null</li>
-			</ol>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>function foo(x = 11, y = 31) {</code>
-				<code>	console.log( x + y );</code>
-				<code>};</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Когда это сработает:</h2>
-			<ol>
-				<li class="next">x = undefined</li>
-				<li class="next">Все))))</li>
-			</ol>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>let a = 10;</code>
-				<code>function foo(<mark>x = a + 1</mark>, y = bar(), z = x + 2) {</code>
-				<code>	console.log( x + y );</code>
-				<code>};</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>let a = 10;</code>
-				<code>function foo(x = a + 1, <mark>y = bar()</mark>, z = x + 2) {</code>
-				<code>	console.log( x + y );</code>
-				<code>};</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>let a = 10;</code>
-				<code>function foo(<mark>x</mark> = a + 1, y = bar(), z = <mark>x</mark> + 2) {</code>
-				<code>	console.log( x + y );</code>
-				<code>};</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>let a = 10;</code>
-				<code>function foo(<mark>func = (function(){ return "hello"; })()</mark>) {</code>
-				<code>	console.log( x + y );</code>
-				<code>};</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Destruction</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<img class="cover h" src="pictures/3.gif">
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<h2>Destruction</h2>
-			<pre>
-				<code class="next">let [x, y] = [1, 2]</code>
-				<code class="next">let [,, y] = [1, 2, 3]</code>
-				<code class="next">let {x, y} = foo();</code>
-				<code class="next">let {x = 31, y} = foo();</code>
-				<code class="next">let {a: x, b: y} = {a: 1, b: 2}</code>
-				<code class="next">let {a: {x: X, x: Y}, a } = {a: {x: 1}};</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">source: target</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<h2>Arguments</h2>
-			<pre>
-				<code>function foo({x: a, y: b}) {</code>
-				<code>	console.log( a + b );</code>
-				<code>};</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<h2>Promise</h2>
-			<pre>
-				<code>Promise.all([...]).then([users, routes, hotels]) {</code>
-				<code>	...</code>
-				<code>};</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">От создателей destruction</h2>
-		</div>
-	</section>
+    <header class="caption">
+        <h1>ES2015</h1>
+        <p>Владимир Дашукевич</p>
+    </header>
+    <section class="slide" id="face"><div>
+        <h2>ES2015 или куда идет Javascript</h2>
+        <p>Владимир Дашукевич</p>
+        <img class="cover" src="pictures/speech1.jpg" alt="">
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout"><a href="https://github.com/life777/ES2015-exaples">Examples</a></h2>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Where can I try it?</h2>
+            <ol>
+                <li class="next"><a href="https://kangax.github.io/compat-table/es6/">Chrome 49</a></li>
+                <li class="next"><a href="https://babeljs.io/repl/">Babel.js</li>
+                <li class="next"><a href="https://google.github.io/traceur-compiler/demo/repl.html">Traceur</a></li>
+                <li class="next"><a href="https://github.com/es-shims/es6-shim">ES6 Shim</a></li>
+            </ol>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">ES2015 is the best practice</h2>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Are you ready for pain)</h2>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">3</h2>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">2</h2>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">1</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <img class="cover h" src="pictures/1.gif">
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">JS everywhere</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                [][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]][([][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+([][[]]+[])[+!+[]]+(![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[+!+[]]+([][[]]+[])[+[]]+([][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+(!![]+[])[+!+[]]]((![]+[])[+!+[]]+(![]+[])[!+[]+!+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]+(!![]+[])[+[]]+(![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[!+[]+!+[]+[+[]]]+[+!+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[!+[]+!+[]+[+[]]])()
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <img class="cover h" src="pictures/1.jpg">
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <img class="cover h" src="pictures/2.jpg">
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Blocks</h2>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout" style="font-size: 100px;">ES5.1: Scope === function</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>function(){</code>
+                <code>	<mark>var a = 2;</mark></code>
+                <code>	if (true) {</code>
+                <code>		<mark>var b = 3;</mark></code>
+                <code>	}</code>
+                <code>	return a + b;</code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout" style="font-size: 100px;">ES6: Scope === {} or () (t)</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>function(){</code>
+                <code>	let a = 2;</code>
+                <code>	if (true) <mark>{</mark></code>
+                <code>		let b = 3;</code>
+                <code>	<mark>}</mark></code>
+                <code>	return a + b; //???</code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>function(){</code>
+                <code>	let a = 2;</code>
+                <code>	if (true) <mark>{</mark></code>
+                <code>		let b = 3;</code>
+                <code>	<mark>}</mark></code>
+                <code>	return a + b; // ReferenceError</code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Loops and arguments (t)</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>function(){</code>
+                <code>	<mark>for (let i = 0; i &lt; 6; i++) {</mark></code>
+                <code>		setTimeout(() => { console.log(i) }, 1); // ???</code>
+                <code>	<mark>}</mark></code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>function(){</code>
+                <code>	<mark>for (let i = 0; i &lt; 6; i++) {</mark></code>
+                <code>		setTimeout(() => { console.log(i) }, 1); // 1, 2, 3, 4, 5</code>
+                <code>	<mark>}</mark></code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Hoisting</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>function(){</code>
+                <code>	a; // ???</code>
+                <code>	b; // ???</code>
+                <code>	var a = 1;</code>
+                <code>	var b = 3;</code>
+                <code>	var c = a + b;</code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>a;</code>
+                <code>b;</code>
+                <code><mark>var a</mark> = 1;</code>
+                <code>var b = 3;</code>
+                <code>var c = a + b;</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>a;</code>
+                <code>b;</code>
+                <code>var a = 1;</code>
+                <code><mark>var b</mark> = 3;</code>
+                <code>var c = a + b;</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>a;</code>
+                <code>b;</code>
+                <code>var a = 1;</code>
+                <code>var b = 3;</code>
+                <code><mark>var c</mark> = a + b;</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code><mark>a;</mark></code>
+                <code>b;</code>
+                <code>var a = 1;</code>
+                <code>var b = 3;</code>
+                <code>var c = a + b;</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>var a;</code>
+                <code>var b;</code>
+                <code>var c;</code>
+                <code>a;</code>
+                <code>b;</code>
+                <code>a = 1;</code>
+                <code>b = 3;</code>
+                <code>c = a + b;</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>a; // undefined</code>
+                <code>b; // undefined</code>
+                <code>var a = 1;</code>
+                <code>var b = 3;</code>
+                <code>var c = a + b;</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>a; // ReferenceError</code>
+                <code>b; // ReferenceError</code>
+                <code>let a = 1;</code>
+                <code>let b = 3;</code>
+                <code>let c = a + b;</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Second declaration (t)</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>let a = 1;</code>
+                <code>let a = 3; // Error</code>
+                <code>var a = 3; // Error</code>
+                <code>var b = 3; </code>
+                <code>let b = 3; // Error</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Const (t)</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>const a = 1;</code>
+                <code>a = 3; //Error</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>const a = [1, 2, 3];</code>
+                <code>a[1] = "Hello"; // a -> [1, "Hello", 3]</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout" style="font-size: 100px;">Blocks: const === let</h2>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Let или var?</h2>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Function or =></h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>var sum = {</code>
+                <code>	sum: 0,</code>
+                <code>	add: function(num){</code>
+                <code>		this.sum += num;</code>
+                <code>	},</code>
+                <code>	inc: function(){</code>
+                <code>		this.sum++;</code>
+                <code>	}</code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>sum.add(5); //sum.sum === 5</code>
+                <code class="next">sum.inc(); //sum.sum === 6</code>
+                <code class="next">elem.addEventListener("click", sum.inc, false); // Error</code>
+                <code class="next">elem.addEventListener("click", sum.inc<mark>.bind(sum)</mark>, false);</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>var sum = {</code>
+                <code>	sum: 0,</code>
+                <code>	add: (function(num){</code>
+                <code>		this.sum += num;</code>
+                <code>	}).bind(sum),</code>
+                <code>	inc: (function(){</code>
+                <code>		this.sum++;</code>
+                <code>	}).bind(sum)</code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">=></h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>var sum = {</code>
+                <code>	sum: 0,</code>
+                <code>	add: () => {</code>
+                <code>		this.sum += num;</code>
+                <code>	},</code>
+                <code>	inc: () => {</code>
+                <code>		this.sum++;</code>
+                <code>	}</code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Где она полезна?</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>model.user = {</code>
+                <code>	find:function(){ ... },</code>
+                <code>	findFirst: function(){ </code>
+                <code>		return new Promise((resolve, reject) => {</code>
+                <code>			this.find(...);</code>
+                <code>		})</code>
+                <code>	}</code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>elem.addEventListener("click", e => {</code>
+                <code>	this.doSomething();</code>
+                <code>});</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Везде где вы используете this)))</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <h2>Test</h2>
+            <pre>
+                <code class="next">(() => this.outerWidth).apply({ outerWidth: 20 }); // ???</code>
+                <code class="next">(() => this.outerWidth).bind({ outerWidth: 20 })(); // ???</code>
+                <code class="next">(() => arguments[0])(1, 2, 3, 4); // ???</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <img class="cover h" src="pictures/2.gif">
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Rest parameters</h2>
+        </div>
+    </section>	
+    <section class="slide">
+        <div>
+            <h2 class="shout">Rest !== arguments</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>var foo = function(a, <mark>...rest</mark>){</code>
+                <code>	rest.forEach(function(a){</code> 
+                <code>		console.log(a)</code>
+                <code>	})</code>
+                <code>});</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>foo(1, 2, 3); // 2, 3</code>
+                <code>foo(1, 2, 3, 4); // 2, 3, 4</code>
+                <code>foo();// </code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Default Parameter Values</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>function foo(x,y) {</code>
+                <code>	x = x || 11;</code> 
+                <code>	y = y || 31;</code>
+                <code>	console.log( x + y );</code>
+                <code>};</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Когда это сработает:</h2>
+            <ol>
+                <li class="next">x = undefined</li>
+                <li class="next">x = 0</li>
+                <li class="next">x = ""</li>
+                <li class="next">x = null</li>
+            </ol>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>function foo(x = 11, y = 31) {</code>
+                <code>	console.log( x + y );</code>
+                <code>};</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Когда это сработает:</h2>
+            <ol>
+                <li class="next">x = undefined</li>
+                <li class="next">Все))))</li>
+            </ol>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>let a = 10;</code>
+                <code>function foo(<mark>x = a + 1</mark>, y = bar(), z = x + 2) {</code>
+                <code>	console.log( x + y );</code>
+                <code>};</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>let a = 10;</code>
+                <code>function foo(x = a + 1, <mark>y = bar()</mark>, z = x + 2) {</code>
+                <code>	console.log( x + y );</code>
+                <code>};</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>let a = 10;</code>
+                <code>function foo(<mark>x</mark> = a + 1, y = bar(), z = <mark>x</mark> + 2) {</code>
+                <code>	console.log( x + y );</code>
+                <code>};</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>let a = 10;</code>
+                <code>function foo(<mark>func = (function(){ return "hello"; })()</mark>) {</code>
+                <code>	console.log( x + y );</code>
+                <code>};</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Destruction</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <img class="cover h" src="pictures/3.gif">
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <h2>Destruction</h2>
+            <pre>
+                <code class="next">let [x, y] = [1, 2]</code>
+                <code class="next">let [,, y] = [1, 2, 3]</code>
+                <code class="next">let {x, y} = foo();</code>
+                <code class="next">let {x = 31, y} = foo();</code>
+                <code class="next">let {a: x, b: y} = {a: 1, b: 2}</code>
+                <code class="next">let {a: {x: X, x: Y}, a } = {a: {x: 1}};</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">source: target</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <h2>Arguments</h2>
+            <pre>
+                <code>function foo({x: a, y: b}) {</code>
+                <code>	console.log( a + b );</code>
+                <code>};</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <h2>Promise</h2>
+            <pre>
+                <code>Promise.all([...]).then([users, routes, hotels]) {</code>
+                <code>	...</code>
+                <code>};</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">От создателей destruction</h2>
+        </div>
+    </section>
 
-	<section class="slide"><div>
-		<div>
-			<h2>Spread</h2>
-			<pre>
-				<code>var a = [2,3,4];</code>
-				<code>var b = [ 1, ...a, 5 ]; // [1,2,3,4,5]</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Templates</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>let name = "Vladimir"</code>
-				<code>let a = `My name is ${ name }`;</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>let name = "Vladimir"</code>
-				<code>let a = `My name </code>
-				<code>			is ${ name }`;</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>let foo = (strings, ...value) => { ... }</code>
-				<code>let a = foo`My name is ${ name }`;</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>let foo = (<mark>strings</mark>, ...value) => { ... }</code>
-				<code>let a = foo`<mark>My name is </mark>${ name }<mark>!</mark>`;</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>let foo = (strings, <mark>...value</mark>) => { ... }</code>
-				<code>let a = foo`My name is <mark>${ name + "'s" }</mark>!`;</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Symbol</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>let s = Symbol("Login")</code>
-				<code>typeof s === "symbol"</code>
-				<code>s.toString(); //Symbol(Login)</code>
-				<code>{ [s]: "property that can only be assecced through Symbol" }</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>const s = Symbol.for("Login")</code>
-				<code>s === Symbol.for("Login")</code>
-				<code>Symbol.keyFor(a) // "Login"</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Class</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<img class="cover h" src="pictures/3.jpg">
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Ruby</h2>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Class === function</h2>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">For Java people</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<img class="cover h" src="pictures/4.gif">
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>class a { </code>
-				<code>	constructor(){ ... }</code>
-				<code>	get prop(){ return "hello" }</code>
-				<code>	set prop(val){ ... }</code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>class b extend a { </code>
-				<code>	constructor(){ super(...) }</code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>class b extend a { </code>
-				<code>	constructor(){ new.target }</code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">static</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>class B {</code>
-				<code>	static doWork(){ return "done"; }</code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">static нормального человека</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>B a = new B();</code>
-				<code>a.doWork(); // done</code>
-				<code>B.doWork(); // done</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">static в JS</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>let a = new B();</code>
-				<code>a.doWork(); // ReferenceError</code>
-				<code>B.doWork(); // done</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<img class="cover h" src="pictures/5.gif">
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Classes (t)</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>var a = class b{}</code>
-				<code>typeof a; // ???</code>
-				<code>typeof b; // ???</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<img class="cover h" src="pictures/file.gif">
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Modules</h2>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Old story with new words</h2>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>(function(){</code>
-				<code>	var a;// private</code>
-				<code>	return {</code>
-				<code>		doWork: function(){ ... }</code>
-				<code>	}</code>
-				<code>})();</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<div>
-			<pre>
-				<code>export {a: 1, foo}</code>
-				<code>import {a} as value from "module.js"</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Положитльые моменты</h2>
-			<ol>
-				<li class="next">Все модули по файлам</li>
-				<li class="next">Решение проблемы круговой зависимости</li>
-				<li class="next">Импорт модулей происходит по ссылке</li>
-			</ol>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Как подгружать модули</h2>
-			<ol>
-				<li class="next"><a href="http://whatwg.github.io/loader/">Loader</a></li>
-				<li class="next">Webpack</li>
-			</ol>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Collections</h2>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Стуктуры данных</h2>
-			<ol>
-				<li class="next">Типизированные массивы</li>
-				<li class="next">Map и WeakMap</li>
-				<li class="next">Set и WeakSet</li>
-			</ol>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Своя стуктура данных</h2>
-			<ol>
-				<li>Symbol.iterator</li>
-				<li>Symbol.toStringTag //toString() -> [object Foo]</li>
-				<li>Symbol.hasInstance //instanceof</li>
-				<li>Symbol.species //constructor</li>
-				<li>Symbol.toPrimitive //operator overload</li>
-				<li>isConcatSpreadable //[].concat(a, b) -> [1,2,[3,4]]</li>
-				<li>Symbol.unscopables //with</li>
-			</ol>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Promise</h2>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Promise</h2>
-			<ol>
-				<li><mark>Promise.then</mark></li>
-				<li><mark>Promise.catch</mark></li>
-				<li>Promise.resolve</li>
-				<li>Promise.reject</li>
-				<li>Promise.all</li>
-				<li>Promise.race</li>
-			</ol>
-		</div>
-	</section>	
-	<section class="slide">
-		<div>
-			<h2>Promise</h2>
-			<ol>
-				<li>Promise.then</li>
-				<li>Promise.catch</li>
-				<li><mark>Promise.resolve</mark></li>
-				<li><mark>Promise.reject</mark></li>
-				<li>Promise.all</li>
-				<li>Promise.race</li>
-			</ol>
-		</div>
-	</section>	
-	<section class="slide">
-		<div>
-			<h2>Promise</h2>
-			<ol>
-				<li>Promise.then</li>
-				<li>Promise.catch</li>
-				<li>Promise.resolve</li>
-				<li>Promise.reject</li>
-				<li><mark>Promise.all</mark></li>
-				<li><mark>Promise.race</mark></li>
-			</ol>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Promise (t)</h2>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Generators</h2>
-		</div>
-	</section>
-	<section class="slide cons">
-		<div>
-			<pre>
-				<code>var gen = function* count(){</code>
-				<code>	for (var x = 0; true; x++) {</code>
-				<code>		yield x</code>
-				<code>	}</code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide cons">
-		<div>
-			<pre>
-				<code>var a = gen()</code>
-				<code>a.next(); // => 0</code>
-				<code>a.next(); // => 1</code>
-				<code>a.next(); // => 2</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide cons">
-		<div>
-			<pre>
-				<code>function* showFeed(){</code>
-				<code><mark>	var countries = yield getCountries();</mark></code>
-				<code>	renderCountries(countries);</code>
-				<code><mark>	var hotels = yield getHotels(countries);</mark></code>
-				<code>	renderHotels(hotels);</code>
-				<code><mark>	var rooms = yield getRooms(hotels);</mark></code>
-				<code>	renderRooms(rooms);</code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
-	<section class="slide"><div>
-		<img class="cover w" src="pictures/40.png" alt="">
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Generators (t)</h2>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Meta programming</h2>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Proxy (t)</h2>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Proxy</h2>
-			<ol>
-				<li class="next">get</li>
-				<li class="next">set</li>
-				<li class="next">deleteProperty</li>
-				<li class="next">apply</li>
-				<li class="next">construct</li>
-				<li class="next">getOwnPropertyDescriptor</li>
-				<li class="next">defineProperty</li>
-				<li class="next">getPrototypeOf</li>
-				<li class="next">setPrototypeOf</li>
-				<li class="next">enumerate</li>
-			</ol>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Зачем это нужно))</h2>
-			<ol>
-				<li>Обработка ошибок</li>
-				<li>Логирование при дебаге</li>
-				<li>Оптимизация в процессе исполнения</li>
-			</ol>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2>Мелочь</h2>
-			<ol>
-				<li class="next">Array methods .of, .find, .from, .findIndex, .includes ...</li>
-				<li class="next">Object methods .is, .assign ...</li>
-				<li class="next">Math methods sh, ch ...</li>
-				<li class="next">Tail calls</li>
-				<li class="next">Regex</li>
-				<li class="next">Unicode</li>
-			</ol>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout"><a href="https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20%26%20beyond">You don't know JS</a></h2>
-		</div>
-	</section>
-	<section class="slide">
-		<div>
-			<h2 class="shout">Questions</h2>
-		</div>
-	</section>
-	<div class="progress"></div>
+    <section class="slide"><div>
+        <div>
+            <h2>Spread</h2>
+            <pre>
+                <code>var a = [2,3,4];</code>
+                <code>var b = [ 1, ...a, 5 ]; // [1,2,3,4,5]</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Templates</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>let name = "Vladimir"</code>
+                <code>let a = `My name is ${ name }`;</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>let name = "Vladimir"</code>
+                <code>let a = `My name </code>
+                <code>			is ${ name }`;</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>let foo = (strings, ...value) => { ... }</code>
+                <code>let a = foo`My name is ${ name }`;</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>let foo = (<mark>strings</mark>, ...value) => { ... }</code>
+                <code>let a = foo`<mark>My name is </mark>${ name }<mark>!</mark>`;</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>let foo = (strings, <mark>...value</mark>) => { ... }</code>
+                <code>let a = foo`My name is <mark>${ name + "'s" }</mark>!`;</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Symbol</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>let s = Symbol("Login")</code>
+                <code>typeof s === "symbol"</code>
+                <code>s.toString(); //Symbol(Login)</code>
+                <code>{ [s]: "property that can only be assecced through Symbol" }</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>const s = Symbol.for("Login")</code>
+                <code>s === Symbol.for("Login")</code>
+                <code>Symbol.keyFor(a) // "Login"</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Class</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <img class="cover h" src="pictures/3.jpg">
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Ruby</h2>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Class === function</h2>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">For Java people</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <img class="cover h" src="pictures/4.gif">
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>class a { </code>
+                <code>	constructor(){ ... }</code>
+                <code>	get prop(){ return "hello" }</code>
+                <code>	set prop(val){ ... }</code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>class b extend a { </code>
+                <code>	constructor(){ super(...) }</code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>class b extend a { </code>
+                <code>	constructor(){ new.target }</code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">static</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>class B {</code>
+                <code>	static doWork(){ return "done"; }</code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">static нормального человека</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>B a = new B();</code>
+                <code>a.doWork(); // done</code>
+                <code>B.doWork(); // done</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">static в JS</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>let a = new B();</code>
+                <code>a.doWork(); // ReferenceError</code>
+                <code>B.doWork(); // done</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <img class="cover h" src="pictures/5.gif">
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Classes (t)</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>var a = class b{}</code>
+                <code>typeof a; // ???</code>
+                <code>typeof b; // ???</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <img class="cover h" src="pictures/file.gif">
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Modules</h2>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Old story with new words</h2>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>(function(){</code>
+                <code>	var a;// private</code>
+                <code>	return {</code>
+                <code>		doWork: function(){ ... }</code>
+                <code>	}</code>
+                <code>})();</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <div>
+            <pre>
+                <code>export {a: 1, foo}</code>
+                <code>import {a} as value from "module.js"</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Положитльые моменты</h2>
+            <ol>
+                <li class="next">Все модули по файлам</li>
+                <li class="next">Решение проблемы круговой зависимости</li>
+                <li class="next">Импорт модулей происходит по ссылке</li>
+            </ol>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Как подгружать модули</h2>
+            <ol>
+                <li class="next"><a href="http://whatwg.github.io/loader/">Loader</a></li>
+                <li class="next">Webpack</li>
+            </ol>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Collections</h2>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Стуктуры данных</h2>
+            <ol>
+                <li class="next">Типизированные массивы</li>
+                <li class="next">Map и WeakMap</li>
+                <li class="next">Set и WeakSet</li>
+            </ol>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Своя стуктура данных</h2>
+            <ol>
+                <li>Symbol.iterator</li>
+                <li>Symbol.toStringTag //toString() -> [object Foo]</li>
+                <li>Symbol.hasInstance //instanceof</li>
+                <li>Symbol.species //constructor</li>
+                <li>Symbol.toPrimitive //operator overload</li>
+                <li>isConcatSpreadable //[].concat(a, b) -> [1,2,[3,4]]</li>
+                <li>Symbol.unscopables //with</li>
+            </ol>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Promise</h2>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Promise</h2>
+            <ol>
+                <li><mark>Promise.then</mark></li>
+                <li><mark>Promise.catch</mark></li>
+                <li>Promise.resolve</li>
+                <li>Promise.reject</li>
+                <li>Promise.all</li>
+                <li>Promise.race</li>
+            </ol>
+        </div>
+    </section>	
+    <section class="slide">
+        <div>
+            <h2>Promise</h2>
+            <ol>
+                <li>Promise.then</li>
+                <li>Promise.catch</li>
+                <li><mark>Promise.resolve</mark></li>
+                <li><mark>Promise.reject</mark></li>
+                <li>Promise.all</li>
+                <li>Promise.race</li>
+            </ol>
+        </div>
+    </section>	
+    <section class="slide">
+        <div>
+            <h2>Promise</h2>
+            <ol>
+                <li>Promise.then</li>
+                <li>Promise.catch</li>
+                <li>Promise.resolve</li>
+                <li>Promise.reject</li>
+                <li><mark>Promise.all</mark></li>
+                <li><mark>Promise.race</mark></li>
+            </ol>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Promise (t)</h2>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Generators</h2>
+        </div>
+    </section>
+    <section class="slide cons">
+        <div>
+            <pre>
+                <code>var gen = function* count(){</code>
+                <code>	for (var x = 0; true; x++) {</code>
+                <code>		yield x</code>
+                <code>	}</code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide cons">
+        <div>
+            <pre>
+                <code>var a = gen()</code>
+                <code>a.next(); // => 0</code>
+                <code>a.next(); // => 1</code>
+                <code>a.next(); // => 2</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide cons">
+        <div>
+            <pre>
+                <code>function* showFeed(){</code>
+                <code><mark>	var countries = yield getCountries();</mark></code>
+                <code>	renderCountries(countries);</code>
+                <code><mark>	var hotels = yield getHotels(countries);</mark></code>
+                <code>	renderHotels(hotels);</code>
+                <code><mark>	var rooms = yield getRooms(hotels);</mark></code>
+                <code>	renderRooms(rooms);</code>
+                <code>}</code>
+            </pre>
+        </div>
+    </section>
+    <section class="slide"><div>
+        <img class="cover w" src="pictures/40.png" alt="">
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Generators (t)</h2>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Meta programming</h2>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Proxy (t)</h2>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Proxy</h2>
+            <ol>
+                <li class="next">get</li>
+                <li class="next">set</li>
+                <li class="next">deleteProperty</li>
+                <li class="next">apply</li>
+                <li class="next">construct</li>
+                <li class="next">getOwnPropertyDescriptor</li>
+                <li class="next">defineProperty</li>
+                <li class="next">getPrototypeOf</li>
+                <li class="next">setPrototypeOf</li>
+                <li class="next">enumerate</li>
+            </ol>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Зачем это нужно))</h2>
+            <ol>
+                <li>Обработка ошибок</li>
+                <li>Логирование при дебаге</li>
+                <li>Оптимизация в процессе исполнения</li>
+            </ol>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>Мелочь</h2>
+            <ol>
+                <li class="next">Array methods .of, .find, .from, .findIndex, .includes ...</li>
+                <li class="next">Object methods .is, .assign ...</li>
+                <li class="next">Math methods sh, ch ...</li>
+                <li class="next">Tail calls</li>
+                <li class="next">Regex</li>
+                <li class="next">Unicode</li>
+            </ol>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout"><a href="https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20%26%20beyond">You don't know JS</a></h2>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2 class="shout">Questions</h2>
+        </div>
+    </section>
+    <div class="progress"></div>
 </body>
-<script src="shower/shower.min.js"></script>
+<script src="../shower/shower.min.js"></script>
 </html>
