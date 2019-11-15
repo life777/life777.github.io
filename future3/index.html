@@ -7,14 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../shower/themes/ribbon/styles/screen-16x10.css">
     <style type="text/css">
-        .pad {
-            padding-left: 50px;
-        }
-
-        .super-pad {
-            padding-left: 100px;
-        }
-
         .black-slide {
             background-color: #000;
         }
@@ -22,11 +14,6 @@
         .black-slide::after {
             content: "";
             display: none;
-        }
-
-        .warn {
-            background-color: #c00 !important;
-            color: #fff;
         }
 
         .slide table.short td:first-child {
@@ -42,24 +29,6 @@
             top: 250px;
             margin-left: -20px;
         }
-
-        #face {
-            background-color: #000;
-        }
-
-        #face::after {
-            content: "";
-            display: none;
-        }
-
-        #free {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            z-index: 5000;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body class="shower list">
@@ -67,7 +36,7 @@
         <h1>Будущее JavaScript</h1>
         <p>XBSoftware</p>
     </header>
-    <section class="slide cover" id="face">
+    <section class="slide cover black-slide">
         <img src="pictures/start.png" alt="" class="cover">	
     </section>
     <section class="slide">
