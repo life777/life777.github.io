@@ -1,4 +1,36 @@
 .wide-result {
-    line-height: 2.9;
-    font-size: 1.6em;
+    line-height: 1.5;
+    font-size: 1.4em;
+}
+
+.header {
+    color: #EF5350;
+    margin-top: 0;
+}
+
+.fieldset-wrap,
+.fieldset {
+    width: 100%;
+    max-width: 1000px;;
+}
+
+.input-field {
+    margin: 0;
+}
+
+.result {
+    padding: 0 10px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.result-row {
+    color: #AAA;
+    font-size: 0.9em;
+}
+
+.result-value {
+    color: #000;
+    white-space: nowrap;
+    font-size: 1.1em;
 }

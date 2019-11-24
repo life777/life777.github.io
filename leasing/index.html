@@ -10,51 +10,61 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <fieldset>
-        <legend>Параметры для вычисления</legend>
-        <div class="row">
-            <div class="input-field col s5">
-                <label for="eqCost">Стоимость оборудования с НДС (BYN)</label>
-                <input id="eqCost" class="validate" type="number">
+    <h3 class="header">Параметры для вычисления</h3>
+    <div class="row fieldset-wrap">
+        <div class="fieldset card-panel">
+            <div class="row">
+                <div class="input-field">
+                    <label for="eqCost">Стоимость оборудования с НДС (BYN)</label>
+                    <input id="eqCost" class="validate" type="number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field">
+                    <label for="leftCostAfterLeasing">Выкупная стоимость предмета лизинга (%)</label>
+                    <input id="leftCostAfterLeasing" type="number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field">
+                    <label for="firstPayPart">Участие стобственного капитала (%)</label>
+                    <input id="firstPayPart" type="number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field">
+                    <label for="depositProfit">Ставка по депозиту (за год %)</label>
+                    <input id="depositProfit" type="number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field">
+                    <label for="leasePeriod">Срок лизинга (в месяцах)</label>
+                    <input id="leasePeriod" type="number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field">
+                    <label for="ammortizationPeriod">Установленный амортизационный период (в месяцах)</label>
+                    <input id="ammortizationPeriod" type="number">
+                </div>
+            </div>
+            <div class="row">
+                    <div class="input-field">
+                        <label for="leasingCostPart">Ставка по договору лизинга (в %)</label>
+                        <input id="leasingCostPart" type="number">
+                    </div>
+                </div>
+            <div class="row">
+                <button id="doCalc" class="waves-effect waves-light btn">Сделать расчет</button>
             </div>
         </div>
-        <div class="row">
-            <div class="input-field col s5">
-                <label for="leftCostAfterLeasing">Выкупная стоимость предмета лизинга (%)</label>
-                <input id="leftCostAfterLeasing" type="number">
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s5">
-                <label for="firstPayPart">Участие стобственного капитала (%)</label>
-                <input id="firstPayPart" type="number">
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s5">
-                <label for="depositProfit">Ставка по депозиту (за год %)</label>
-                <input id="depositProfit" type="number">
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s5">
-                <label for="leasePeriod">Срок лизинга (в месяцах)</label>
-                <input id="leasePeriod" type="number">
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s5">
-                <label for="ammortizationPeriod">Установленный амортизационный период (в месяцах)</label>
-                <input id="ammortizationPeriod" type="number">
-            </div>
-        </div>
-        <div class="row">
-            <button id="doCalc" class="waves-effect waves-light btn">Сделать расчет</button>
-        </div>
-    </fieldset>
-    <div class="row">
-        <div class="card-panel col s7 wide-result">
-            Доход полученный в результате экономии по налогу на прибыль: <span id="profit"></span>
+    </div>
+    <div class="row result">
+        <div class="card-panel wide-result">
+            <div class="result-row">Доход полученный в результате экономии по налогу на прибыль: <span class="result-value" id="profit"></span></div>
+            <div class="result-row">Доход в процентах годовых в результате экономии по налогу на прибыль: <span class="result-value" id="profitPartPerYear"></span></div>
+            <div class="result-row">Реальная лизенговая ставка: <span class="result-value" id="newLeasingCost"></span></div>
         </div>
     </div>
 </body>

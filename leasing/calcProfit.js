@@ -1,6 +1,19 @@
 const NDS = 1.2; // NDS tax
 const TAX_PROFIT = 0.18; // profit tax
 
+const finFormat = (num) => {
+    let fr = num % 1;
+    let dec = Math.floor(num);
+    let decStr = dec.toString().split("").reverse();
+
+    let str = fr.toFixed(3).substr(1);
+    for (let i = 0; i < decStr.length; i++) {
+        str = ((i > 0 && (i + 1) % 3 === 0) ? " " : "") + decStr[i] + str;
+    }
+
+    return str;
+}
+
 document.getElementById("doCalc").addEventListener("click", () => {
     const eqCost = +document.getElementById("eqCost").value;
     const leftCostAfterLeasing = +document.getElementById("leftCostAfterLeasing").value / 100;
@@ -60,5 +73,17 @@ document.getElementById("doCalc").addEventListener("click", () => {
         arrDepositProfit[i] = calcDepositProfit(depositQuartalSum, ammortizationPeriodQuartal - i, quartalDepositProfitPart);
     }
 
-    document.getElementById("profit").textContent = arrDepositProfit.reduce((a, b) => a + b, 0) + " BYN";
+    const profit = arrDepositProfit.reduce((a, b) => a + b, 0);
+    document.getElementById("profit").textContent = finFormat(profit) + " BYN";
+
+    const ammortizationPeriodYears = ammortizationPeriod / 12;
+    const profitPart = profit / eqCost;
+    const profitPartPerYear = (profitPart / ammortizationPeriodYears) * 100;
+
+    document.getElementById("profitPartPerYear").textContent = profitPartPerYear.toFixed(3) + "%";
+
+    const leasingCostPart = +document.getElementById("leasingCostPart").value;
+    const newLeasingCost = leasingCostPart - profitPartPerYear;
+
+    document.getElementById("newLeasingCost").textContent = newLeasingCost.toFixed(3);
 }, false);
